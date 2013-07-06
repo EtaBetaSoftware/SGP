@@ -1,0 +1,96 @@
+\documentclass[a4paper,10pt,twoside]{article}
+
+%*******************************************************************************
+% Codifica e lingua
+%*******************************************************************************
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,italian]{babel}
+
+%*******************************************************************************
+% Qualche macro utile a tutti
+%*******************************************************************************
+\newcommand{\docRoot}{..}
+\newcommand{\inglese}[1]{\foreignlanguage{english}{\textit{#1}}}
+\newcommand{\team}{EtaBeta Software\xspace}
+\newcommand{\caName}{BPM-1.0\xspace}
+
+%*******************************************************************************
+% Figure e immagini
+%*******************************************************************************
+\usepackage{graphicx}
+\graphicspath{{\docRoot/shared/pictures/}}
+
+%*******************************************************************************
+% Tabelle
+%*******************************************************************************
+\usepackage{booktabs}
+
+%*******************************************************************************
+% Elenchi puntati personalizzati
+%*******************************************************************************
+\usepackage{enumitem}
+
+%*************************************************
+% Collegamenti intra- e intertestuali
+%*************************************************
+\usepackage{hyperref}
+\hypersetup{%
+    colorlinks=false,linktocpage=false,pdfborder={0 0 0},%
+    pdfstartpage=1, pdfstartview=FitV,plainpages=false,%
+    urlcolor=Black, linkcolor=Black,
+    pdfcreator={pdfLaTeX},%
+    pdfproducer={pdfLaTeX with hyperref package}%
+}
+
+% **************************************************
+% Definizione geometria della pagina
+% **************************************************
+\usepackage[a4paper,head=4cm,top=4.5cm,bottom=3cm,left=3cm,right=3cm,bindingoffset=5mm]{geometry}
+
+%*******************************************************************************
+% Altri pacchetti
+%*******************************************************************************
+\usepackage{xspace} % per spazi condizionali extra
+\usepackage{lastpage} % per sapere il numero totale di pagine
+
+% *************************************************
+% Intestazioni e piè di pagina personalizzati
+% *************************************************
+\usepackage{fancyhdr}
+
+% stile normale
+\fancypagestyle{normal}{
+\fancyhead{}
+\fancyhead[LE,RO]{
+\sffamily\team
+}
+\fancyhead[RE,LO]{
+\sffamily\caName
+}
+\renewcommand{\headrulewidth}{.4pt}
+\cfoot{}
+\fancyfoot[RO,LE]{\sffamily
+  pag. \thepage{} di \pageref{LastPage}}
+\fancyfoot[RE,LO]{\sffamily\doctitle}
+\renewcommand{\footrulewidth}{.4pt}
+}
+
+% stile per gli indici
+\fancypagestyle{toc}{
+\fancyhead{}
+\fancyhead[LE,RO]{
+\sffamily\team
+}
+\fancyhead[RE,LO]{
+\sffamily\caName
+}
+\renewcommand{\headrulewidth}{.4pt}
+\cfoot{}
+\fancyfoot[RO,LE]{\sffamily\thepage{}}
+\fancyfoot[RE,LO]{\sffamily\doctitle{}}
+\renewcommand{\footrulewidth}{.4pt}
+}
+
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markboth{#1}{#1}}
