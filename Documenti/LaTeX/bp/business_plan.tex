@@ -18,8 +18,6 @@
 \input{\sharedPath/front.tex}
 \input{\sharedPath/toc.tex}
 
-
-
 \section{Introduzione}
 
 \subsection{Non-Disclosure Agreement}
@@ -53,7 +51,6 @@ Infine, sarà illustrata la strategia di uscita, descrivendo con maggiori dettag
 %   - area finanziaria
 %   - management e team di sviluppo
 
-
 \clearpage
 
 \section{Informazioni sulla società}\label{sec:whoweare}
@@ -76,19 +73,86 @@ Le soluzioni proposte da \team rendono possibile innovare il proprio modello di 
 % - pm
 % - responsabile mktg
 
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}
+\tikzstyle{every node} = [font = \sffamily\bfseries]
+
+\node[drop shadow,fill=white,inner sep=0pt] (titolare) at (6, 10) {
+  \begin{tabular}{|c|}
+  \hline
+  Titolare\\
+  \hline  
+  \end{tabular}
+};
+
+\node[drop shadow,fill=white,inner sep=0pt] (pm) at (6, 9) {
+  \begin{tabular}{|c|}
+  \hline
+  Project Manager\\
+  \hline  
+  \end{tabular}
+};
+
+\node[drop shadow,fill=white,inner sep=0pt] (admin) at (2, 9) {
+  \begin{tabular}{|c|}
+  \hline
+  Amministratore\\
+  \hline  
+  \end{tabular}
+};
+
+\node[drop shadow,fill=white,inner sep=0pt] (mktg) at (10, 9) {
+  \begin{tabular}{|c|}
+  \hline
+  Responsabile MKTG\\
+  \hline  
+  \end{tabular}
+};
+
+\node[drop shadow,fill=white,inner sep=0pt] (anal) at (4, 8) {
+  \begin{tabular}{|c|}
+  \hline
+  Analista\\
+  \hline  
+  \end{tabular}
+};
+
+\node[drop shadow,fill=white,inner sep=0pt] (prog) at (8, 8) {
+  \begin{tabular}{|c|}
+  \hline
+  Programmatore\\
+  \hline  
+  \end{tabular}
+};
+
+% linea di primo livello
+\draw (admin.north) -- ++(0, .2) -- ++(8, 0) -- (mktg.north);
+\draw (pm.north) -- ++(0, .55);
+
+% linea di secondo livello
+\draw (anal.north) -- ++(0, .2) -- ++(4, 0) -- (prog.north);
+\draw (pm.south) -- ++(0, -.35);
+
+\end{tikzpicture}
+\end{figure}
+
 \subsection{Strategia di \inglese{management}}
 % evidenziare il management solido e le competenze dei dirigenti: il progetto non dovrà fallire o essere consegnato in ritardo
 
 \subsection{Le risorse disponibili}
 Il \inglese{team} di \team è composto in parte da esperti di \bsn \inglese{analysis} e organizzazione aziendale e in parte da ingegneri del \sw in grado di creare soluzioni apposite da integrare con quelle esistenti per conseguire gli obiettivi prefissati e automatizzare la gestione dei processi aziendali migliorandone l'efficienza.
-% risorse: tecnologia, brevetti, prodotti&servizi
-
+% tecnologia
+% brevetti
+% prodotti e servizi (make or buy)
 
 \subsection{Traction}
 % quali sono i prodotti realizzati? sono in vendita (se no indicare il TTM)
 % successi della storia aziendale
 % modello business e quanto verrà a costare (o vengono a costare progetti simili)
 % obiettivi raggiunti e da raggiungere nel corso del tempo (roadmap)
+
+\clearpage
 
 \section{Il mercato di riferimento}\label{sec:whattheproblemis}
 %TODO Citare sempre fonti a supporto delle affermazioni
@@ -97,7 +161,6 @@ Il \inglese{team} di \team è composto in parte da esperti di \bsn \inglese{anal
 % dimensioni del target di mercato (in prospettiva diacronica)
 % segmentazione del mercato target
 % come avviene la distribuzione
-
 
 \subsection{Analisi di settore}
 % dimensioni e andamento del settore
@@ -117,6 +180,8 @@ Il \inglese{team} di \team è composto in parte da esperti di \bsn \inglese{anal
 % - UC
 % - obiettivi e milestones
 
+\clearpage
+
 \section{Strategie di \mktg}\label{sec:exitstrategy}
 % tecniche di mktg (eventualmente riferendo progetti già esistenti)
 % scelte operative e scelte produttive
@@ -128,6 +193,8 @@ Il \inglese{team} di \team è composto in parte da esperti di \bsn \inglese{anal
 % immagine da trasmettere e credibilità aziendale
 % investimenti in PR
 % canali distributivi e modalità di vendita + assistenza post-vendita
+
+\clearpage
 
 \section{Analisi finanziaria}
 % prospettive di vendite e guadagni rispetto alle spese sostenute (almeno su 3 anni)
