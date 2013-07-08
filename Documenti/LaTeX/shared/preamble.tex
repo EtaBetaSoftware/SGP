@@ -70,15 +70,15 @@
 % stile normale
 \fancypagestyle{normal}{
 \fancyhead{}
-\fancyhead[LE,RO]{
+\fancyhead[RE,LO]{
 \sffamily\team
 }
-\fancyhead[RE,LO]{
+\fancyhead[LE,RO]{
 \sffamily\leftmark
 }
 \renewcommand{\headrulewidth}{.4pt}
 \cfoot{}
-\fancyfoot[RO,LE]{\sffamily
+\fancyfoot[LE,RO]{\sffamily
   pag. \thepage{} di \pageref{LastPage}}
 \fancyfoot[RE,LO]{\sffamily\doctitle}
 \renewcommand{\footrulewidth}{.4pt}
@@ -87,13 +87,7 @@
 % stile per gli indici
 \fancypagestyle{toc}{
 \fancyhead{}
-\fancyhead[LE,RO]{
-\sffamily\team
-}
-\fancyhead[RE,LO]{
-\sffamily\caName
-}
-\renewcommand{\headrulewidth}{.4pt}
+\renewcommand{\headrulewidth}{0pt}
 \cfoot{}
 \fancyfoot[RO,LE]{\sffamily\thepage{}}
 \fancyfoot[RE,LO]{\sffamily\doctitle{}}
