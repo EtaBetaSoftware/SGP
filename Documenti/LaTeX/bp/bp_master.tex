@@ -1,0 +1,27 @@
+%*******************************************************************************
+% Macro per il documento corrente
+%*******************************************************************************
+\newcommand{\sharedPath}{../shared}
+\newcommand{\doctitle}{Business Plan}
+
+%*******************************************************************************
+% Preambolo
+%*******************************************************************************
+\input{\sharedPath/preamble.tex}
+
+%*******************************************************************************
+% Inizio documento
+%*******************************************************************************
+\begin{document}
+
+\input{\sharedPath/front.tex}
+\input{\sharedPath/toc.tex}
+
+\include{intro}
+\include{summary}
+\include{companyinfo}
+\include{targetmarket}
+\include{exitstrategy}
+\include{financialanalysis}
+
+\end{document}
