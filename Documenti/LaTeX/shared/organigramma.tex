@@ -1,7 +1,7 @@
 \begin{tikzpicture}
 \tikzstyle{every node} = [font = \sffamily\bfseries]
 
-\node[drop shadow,fill=white,inner sep=0pt] (titolare) at (6, 10) {
+\node[drop shadow,fill=white,inner sep=0pt] (head) at (6, 10) {
   \begin{tabular}{|c|}
   \hline
   Titolare\\
@@ -9,10 +9,10 @@
   \end{tabular}
 };
 
-\node[drop shadow,fill=white,inner sep=0pt] (pm) at (6, 9) {
+\node[drop shadow,fill=white,inner sep=0pt] (pm) at (4.5, 9) {
   \begin{tabular}{|c|}
   \hline
-  Project Manager\\
+  PM\\
   \hline  
   \end{tabular}
 };
@@ -25,10 +25,18 @@
   \end{tabular}
 };
 
-\node[drop shadow,fill=white,inner sep=0pt] (mktg) at (10, 9) {
+\node[drop shadow,fill=white,inner sep=0pt] (mktg) at (7, 9) {
   \begin{tabular}{|c|}
   \hline
-  Responsabile MKTG\\
+  Resp. MKTG\\
+  \hline  
+  \end{tabular}
+};
+
+\node[drop shadow, fill=white, inner sep=0pt] (qa) at (10, 9) {
+  \begin{tabular}{|c|}
+  \hline
+  Resp. QA\\
   \hline  
   \end{tabular}
 };
@@ -50,8 +58,10 @@
 };
 
 % linea di primo livello
-\draw (admin.north) -- ++(0, .2) -- ++(8, 0) -- (mktg.north);
-\draw (pm.north) -- ++(0, .55);
+\draw (admin.north) -- ++(0, .2) -- ++(8, 0) -- (qa.north);
+\draw (pm.north) -- ++(0, .2);
+\draw (mktg.north) -- ++(0, .2);
+\draw (head.south) -- ++(0, -.35);
 
 % linea di secondo livello
 \draw (anal.north) -- ++(0, .2) -- ++(4, 0) -- (prog.north);
