@@ -268,9 +268,9 @@
 </wbs_diff>
 
 		</wbs_view>
-		<wbs_view id="Flags View" pagelayout="Page Layout 8" borderpolicy="flags" outlinesymbolpos="bottomcenter" field="ID">
-			<item id="summary" before="14.4pt"/>
-			<item id="task" before="10.8pt" listmode="stemleft"/>
+		<wbs_view id="Flags View" pagelayout="Page Layout 8" borderpolicy="flags" outlinesymbolpos="bottomcenter" field="Duration">
+			<item id="summary" stem="60%" drop="32pt" before="24.2pt"/>
+			<item id="task" before="20.6pt" listmode="stemleft"/>
 			<border id="Critical Task" shdir="bottom_right" shdepth="3pt" shcolor="red" bkcolor="lightyellow"/>
 			<border id="Critical Milestone" shdir="bottom_right" shdepth="3pt" shcolor="red" bkcolor="lightyellow"/>
 			<border id="Critical Summary" shdir="bottom_right" shdepth="3pt" shcolor="red" bkcolor="lightyellow"/>
@@ -341,7 +341,7 @@
 			<border id="Flag20" bkcolor="none"/>
 			<grid id="summary" rows="3" cols="2">
 				<row stretch="yes">
-					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="1.45pt" bottom_p="1.45pt" left_s="solid" right_s="solid" bottom_s="solid" colspan="2" stretch="yes" charlen="20"/>
+					<cell field="Name" type="wraptext" font-size="11pt" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="1.45pt" bottom_p="1.45pt" left_s="solid" right_s="solid" bottom_s="solid" colspan="2" stretch="yes" charlen="20"/>
 				</row>
 				<row>
 					<cell field="ID" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" right_s="solid" top_s="solid" bottom_s="solid"/>
@@ -354,7 +354,7 @@
 			</grid>
 			<grid id="task" rows="3" cols="2">
 				<row stretch="yes">
-					<cell field="Name" type="wraptext" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="1.45pt" bottom_p="1.45pt" left_s="solid" right_s="solid" bottom_s="solid" barcolor="red" colspan="2" stretch="yes" charlen="20"/>
+					<cell field="Name" type="wraptext" font-size="10pt" bold="yes" left_p="3.6pt" right_p="3.6pt" top_p="1.45pt" bottom_p="1.45pt" left_s="solid" right_s="solid" bottom_s="solid" barcolor="red" colspan="2" stretch="yes" charlen="20"/>
 				</row>
 				<row>
 					<cell field="ID" left_p="3.6pt" right_p="3.6pt" top_p="0.7pt" bottom_p="0.7pt" left_s="solid" right_s="solid" top_s="solid" bottom_s="solid"/>
@@ -368,9 +368,11 @@
 <wbs_diff>
 	<treediff id="1">
 		<item before="13.65pt" conalign="yes"/>
-		<border shape="curved_rect" shdir="bottom_right" shdepth="3pt">
-			<border_edge id="left" shape="none" depth="0pt"/>
-			<border_edge id="right" shape="none" depth="0pt"/>
+		<border shape="curved_rect" shdir="bottom_right" shdepth="3pt" shcolor="blue" color="blue">
+			<border_edge id="top" color="blue"/>
+			<border_edge id="left" shape="none" depth="0pt" color="blue"/>
+			<border_edge id="bottom" color="blue"/>
+			<border_edge id="right" shape="none" depth="0pt" color="blue"/>
 		</border>
 	</treediff>
 	<treediff id="7">
