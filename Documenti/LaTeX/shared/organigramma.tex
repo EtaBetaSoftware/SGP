@@ -41,7 +41,7 @@
   \end{tabular}
 };
 
-\node[drop shadow,fill=white,inner sep=0pt] (anal) at (4, 8) {
+\node[drop shadow,fill=white,inner sep=0pt] (anal) at (3, 8) {
   \begin{tabular}{|c|}
   \hline
   Analista\\
@@ -49,7 +49,7 @@
   \end{tabular}
 };
 
-\node[drop shadow,fill=white,inner sep=0pt] (prog) at (8, 8) {
+\node[drop shadow,fill=white,inner sep=0pt] (prog) at (6, 8) {
   \begin{tabular}{|c|}
   \hline
   Programmatore\\
@@ -64,7 +64,7 @@
 \draw (head.south) -- ++(0, -.35);
 
 % linea di secondo livello
-\draw (anal.north) -- ++(0, .2) -- ++(4, 0) -- (prog.north);
+\draw (anal.north) -- ++(0, .2) -- ++(3, 0) -- (prog.north);
 \draw (pm.south) -- ++(0, -.35);
 
 \end{tikzpicture}
