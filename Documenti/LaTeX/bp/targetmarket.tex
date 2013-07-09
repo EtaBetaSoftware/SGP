@@ -3,11 +3,33 @@
 
 \subsection{Descrizione del problema}
 
-L'adozione di un \inglese{workflow management system} ha il vantaggio di comportare un incremento dell'efficienza a seguito dell'automazione delle stesse nonché l'eliminazione degli \inglese{step} intermedi non necessari dovuta all'acquisizione di maggior consapevolezza derivante dalla formalizzazione dei processi aziendali in modelli astratti (situazione corrente `as is').
+L'adozione di una soluzione di BPM ha il vantaggio di comportare un incremento dell'efficienza a seguito dell'automazione delle stesse nonché l'eliminazione degli \inglese{step} intermedi non necessari dovuta all'acquisizione di maggior consapevolezza derivante dalla formalizzazione dei processi aziendali in modelli astratti (situazione corrente `as is').
 
-Implicando la standardizzazione del metodo di lavoro, l'implementazione di un controllo dei flussi di lavoro permette l'adozione di strumenti di verifica e di generazione automatica di \inglese{report} sulle attività ordinarie dell'azienda che consentono di monitorare gli indicatori chiave con estrema accuratezza. Si tratta di condizioni imprescindibili per una buona pianificazione e per l'ottimizzazione dei processi (situazione ideale o `to be') e per passare dalla semplice modellazione dei processi aziendali (\bsn \inglese{process modelling}) a una rivisitazione critica degli stessi (\bsn \inglese{process reengineering}).
+Implicando la standardizzazione del metodo di lavoro, l'implementazione di un \inglese{workflow management system} come conseguenza del BPM permette l'adozione di strumenti di verifica e di generazione automatica di \inglese{report} sulle attività ordinarie dell'azienda che consentono di monitorare gli indicatori chiave con estrema accuratezza. Si tratta di condizioni imprescindibili per una buona pianificazione e per l'ottimizzazione dei processi (situazione ideale o `to be') e per passare dalla semplice modellazione dei processi aziendali (\bsn \inglese{process modeling}) a una rivisitazione critica degli stessi (\bsn \inglese{process reengineering}).
 
-La gestione della non-linearità dei processi, inoltre, denota la flessibilità di tali sistemi, che sono in grado di soddisfare le istanze di modellazione di situazioni che non sono prevedibili aprioristicamente.
+La gestione della non-linearità dei processi, inoltre, denota la flessibilità di tali sistemi, che sono in grado di soddisfare le istanze di modellazione di situazioni che non sono prevedibili aprioristicamente, per adattarsi ai cicli di vita di sempre più ridotte dimensioni per la gestione degli ordini e a un ambiente competitivo in costante evoluzione.
+
+Infine, tramite una gestione controllata dei processi, è possibile incrementare l'efficienza anche in caso di \inglese{workflow} collaborativi, rendendo più trasparente lo scambio di informazioni fra la totalità dei soggetti coinvolti, la condivisione della conoscenza nonché la drastica riduzione dei tempi di accesso alle basi di conoscenza aziendali, incrementandone al contempo l'utilità e le dimensioni perché il flusso di lavoro diviene tracciato, codificato e ripetibile anche in caso di situazioni potenzialmente complesse in maniera indipendente dalla soggettività/esperienza degli incaricati.
+
+La soluzione BPM da adottare dovrà quindi essere in grado di garantire le seguenti funzionalità minime:
+\begin{itemize}
+  \item[--] rappresentare con un certo livello di astrazione gli attuali processi aziendali di \customer al fine di permetterne la pianificazione (\bsn \inglese{process modeling}) e l'eventuale modifica;
+  \item[--] registrare lo svolgimento del processo secondo gli standard del modello configurati nella fase precedente in forma quanto più `trasparente' per gli utilizzatori integrandosi il più possibile all'interno del normale svolgimento delle attività;
+  \item[--] fornire adeguati strumenti di \inglese{report} e diagnostica di difetti nella gestione, circoli che potrebbero causare ritardi o, in generale, fonti di criticità;
+  \item[--] mettere a disposizione degli operatori i dati prodotti dagli altri soggetti coinvolti per facilitare la collaborazione e gestire i contenuti documentali e i metadati di processo aumentando in tal modo la base di conoscenza sia implicita che esplicita di \customer.
+\end{itemize}
+
+\begin{figure}
+  \centering
+  \input{uc1.tex}
+  \caption{Operazioni svolte dal commerciale (UC1)}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \input{uc2.tex}
+  \caption{Operazioni svolte dallo sviluppatore (UC2)}
+\end{figure}
 
 % - problem breakdown
 % - SWOT e cazzivari
