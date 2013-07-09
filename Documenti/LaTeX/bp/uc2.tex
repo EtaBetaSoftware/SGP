@@ -1,0 +1,26 @@
+\begin{tikzpicture}
+\tikzstyle{every node} = [font = \sffamily\footnotesize]
+
+
+\draw[semithick] (1, 5) circle (.1);
+\draw[semithick] (.9, 4.8) -- ++(.1, .1) -- ++(.1, -.1);
+\node at (1.1, 4.7) (developer) {};
+\draw[semithick] (1, 4.9) -- ++(0, -.25);
+\draw[semithick] (.9, 4.55) -- ++(.1, .1) -- ++(.1, -.1);
+\node at (.7, 4.3) {sviluppatore};
+
+\node[draw, ellipse] (uc1) at (6, 5.6)  {UC2.1 visualizza offerte da eseguire};
+\node[draw, ellipse] (uc2) at (6, 4.8)  {UC2.2 visualizza ordini};
+\node[draw, ellipse] (uc3) at (6, 4)  {UC2.3 visualizza dettagli offerta};
+\node[draw, ellipse] (uc4) at (6, 3.2)  {UC2.4 inserisci preventivo};
+\node[draw, ellipse] (uc5) at (6, 2.4)  {UC2.5 aggiorna dettagli offerta};
+
+\draw(developer.east) -- (uc1.west)
+  (developer.east) -- (uc2.west)
+  (developer.east) -- (uc3.west)
+  (developer.east) -- (uc4.west)
+  (developer.east) -- (uc5.west);
+
+\draw (2.5, 1.9) rectangle ++(7, 4.4) node[below left] {ERP-1};
+
+\end{tikzpicture}
