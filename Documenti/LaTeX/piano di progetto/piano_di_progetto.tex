@@ -615,6 +615,9 @@ Ovviamente anche adottando tali accorgimenti si potrà generare la situazione in
 	Per mitigare gli effetti di tali rischi il \inglese{team} potrà avvalersi di eventuali consulenti e dell'aiuto del docente.
 \end{description}	
 
+%*******************************************************************************
+% STUDIO DI MERCATO
+%*******************************************************************************
 
 \chapter{Studio di Mercato}
 \section{Introduzione}
@@ -662,92 +665,108 @@ Possiamo quindi riassumere i vantaggi che scaturiscono dall'adozione di \sw BPM 
 	\subsection{Cosa offre il mercato}
 	
 \section{Software selezionati}
-	\subsection{Bonitasoft}
+\subsection{Bonita Open Solution}
+
+\begin{picture}(0,0)
+  \put(250, 10){\includegraphics[width=.3\textwidth]{bonitasoft_logo}}
+\end{picture}
+
+\textbf{Descrizione}
+Il \sw è distribuito secondo un modello `open core', vale a dire le funzionalità di base sono rilasciate con una licenza \inglese{open source} e possono essere utilizzate e distribuite liberamente, mentre per avere accesso a funzionalità aggiuntive è necessario utilizzare estensioni proprietarie per cui è necessario acquisire una licenza d'uso dal produttore \textsf{BonitaSoft}.
+
+Il nucleo `open' dell'applicativo è costituito a sua volta in una serie di moduli grafici e da un motore di esecuzione dei processi.
+
+I tre moduli grafici permettono, rispettivamente, di modellare i processi esistenti mediante un editor di flussi di lavoro (\textsf{Bonita Studio}), di realizzare dei \inglese{form} personalizzati a supporto dello svolgimento delle attività codificate nell'editor dei processi (\textsf{Bonita Form Builder}) e, infine, dal modulo \textsf{Bonita User Experience} che permette di visualizzare per ciascun soggetto coinvolto nella realizzazione di un processo delle attività da svolgere.
+
+Il motore di esecuzione permette invece, una volta creato e configurato il processo e ottenuto il \inglese{business archive} (BAR) corrispondente al diagramma eseguibile BPMN,\footnote{%
+		Il \inglese{Business Process Model and Notation} è un linguaggio standard di rappresentazione dei processi di \bsn che si inseriscono all'interno del modello di \bsn di un'azienda. La versione 2.0 dello standard introduce, accanto alla notazione per la rappresentazione visuale, il BPMN eseguibile che permette l'automazione dei processi.
+		}
+di portarne a termine l'esecuzione provocando la visualizzazione dei \inglese{form} per l'input dei dati agli utenti finali coinvolti nelle operazioni.
 		
 \textbf{Requisiti di sistema}	
 	\begin{itemize}
-		\item xxx	
+		\item Java SE Runtime Environment (versione 6 o superiore) per l'esecuzione in locale;
+		\item un server Java EE (ad esempio Tomcat versione 6.x o superiore) per il \inglese{deployment} dell'applicazione in remoto.
 	\end{itemize}		
 
-	
 \textbf{Pregi}
 \begin{itemize}
-		\item diagrammi intuitivi
-		\item lingua italiana offerta come modulo standard
-		\item funzionalità di simulazione dei processi
-		\item funzionalità di automazione?
+		\item realizzazione dei diagrammi di processo intuitiva tramite un \inglese{editor} grafico;
+		\item utilizzo dello standard BPMN 2.0 per la rappresentazione dei flussi di lavoro;
+		\item lingua italiana offerta come parte del pacchetto standard;
+		\item funzionalità di simulazione dei processi;
+		\item funzionalità di esecuzione automatica dei processi;
 		\item modularità?
-		\item monitoraggio dei processi, con sistema di report automatico al termine e con possibilità di impostazione di tempistiche intermedie.		
-		\item modulo End Users per  disporre di due tipologie di interfacciamento (utente semplice e amministratore)
-		\item Possibilità di interfacciamento con sistemi/servizi LDAP 	
-		
+		\item monitoraggio dei processi, con sistema di \inglese{report} automatico al termine e con possibilità di impostazione di tempistiche intermedie;
+		\item modulo \textsf{User Experience} per  disporre di due tipologie di interfacciamento (utente semplice e amministratore);
+		\item possibilità di interfacciamento con servizi LDAP per la condivisione di risorse.
 \end{itemize}	
 	
 \textbf{Difetti}
-	
+\begin{itemize}
+	\item complesso da installare in tutte le sue estensioni
+	\item non si può interfacciare con altri programmi?
+	\item funzionalità aggiuntive potenzialmente molto interessanti sono a pagamento, ad esempio:
 	\begin{itemize}
-		\item complesso da installare in tutte le sue estensioni
-		\item non si può interfacciare con altri programmi?
-	\end{itemize}		
-	
-	\subsection{ProcessMaker}
-	
-	
+	  \item per avere accesso a funzionalità collaborative (\inglese{repository});
+	  \item per avere un maggior controllo sullo stato di avanzamento delle sotto-attività e sull'utilizzo delle risorse;
+	  \item per interfacciarsi con applicativi gestionali SAP tramite gli appositi connettori.
+	\end{itemize}
+\end{itemize}		
+
+\subsection{ProcessMaker}
+\begin{picture}(0,0)
+  \put(250, 10){\includegraphics[width=.3\textwidth]{processmaker_logo}}
+\end{picture}
+
 \textbf{Requisiti di sistema}	
-	\begin{itemize}
-		\item xxx	
-	\end{itemize}		
+\begin{itemize}
+	\item xxx	
+\end{itemize}		
 
 \textbf{Pregi}	
-	
 \begin{itemize}
-		\item Possiede la funzionalità di visualizzazione dello stato di avanzamento dei processi tramite un cruscotto che costituisce un'ottima metafora		
-\item Possiede la funzionalità gestione automatizzata di alcuni processi e di invio delle notifiche
-		\item Possibilità di interfacciamento con Microsoft Outlook tramite un plug-in 
-		\item Possibilità di interfacciamento con sistemi/servizi LDAP tramite un plug-in
-					
-		\end{itemize}
-
-
+	\item Possiede la funzionalità di visualizzazione dello stato di avanzamento dei processi tramite un cruscotto che costituisce un'ottima metafora		
+  \item Possiede la funzionalità gestione automatizzata di alcuni processi e di invio delle notifiche
+	\item Possibilità di interfacciamento con Microsoft Outlook tramite un plug-in 
+	\item Possibilità di interfacciamento con sistemi/servizi LDAP tramite un plug-in			
+\end{itemize}
 
 \textbf{Difetti}	
-	\begin{itemize}
-		\item richiede PHP MySql Apache con moduli non offerti di default
-		\item non offre la funzionalità di Undo
-		\item lingua italiana offerta solo come modulo integrativo e non completo
-		\item diagrammi non offrono le funzionalità minimali (es. non offre l'inserimento automatico delle guardie  e dei nomi 					dei nodi)
-		\item si è costretti a fare drag an ddrop per creare i diagrammi e da quanto emerge dai più recenti studi di usabilità il D and D non costituisce  
-		\item creazione dei diagrammi non intuitiva		
-				
-		
-	\end{itemize}
+\begin{itemize}
+	\item richiede PHP MySql Apache con moduli non offerti di default
+	\item non offre la funzionalità di Undo
+	\item lingua italiana offerta solo come modulo integrativo e non completo
+	\item diagrammi non offrono le funzionalità minimali (es. non offre l'inserimento automatico delle guardie  e dei nomi 					dei nodi)
+	\item si è costretti a fare drag an ddrop per creare i diagrammi e da quanto emerge dai più recenti studi di usabilità il D and D non costituisce  
+	\item creazione dei diagrammi non intuitiva
+\end{itemize}
 	
+\subsection{Arxivar}
+\begin{picture}(0,0)
+  \put(250, 10){\includegraphics[width=.3\textwidth]{arxivar_logo}}
+\end{picture}
 
-		
-
-	\subsection{Arxivar}
 \textbf{Requisiti di sistema}	
-	\begin{itemize}
+\begin{itemize}
 		\item xxx	
-	\end{itemize}
-
+\end{itemize}
 
 \textbf{Pregi}
-	\begin{itemize}
+\begin{itemize}
 	\item soluzione made in Italy
 	\item pensato solo per la gestione dei documenti. Dispone di un modulo workflow ma è secondario
-	
-	\end{itemize}
+\end{itemize}
 
 \textbf{Difetti}
-	\begin{itemize}
+\begin{itemize}
 	\item pensato solo per la gestione dei documenti. Dispone di un modulo workflow ma è secondario ed è comunque usato principalmente per la gestione dei documenti
-	
-	
-	
-	\end{itemize}
+\end{itemize}
 
+\subsection{Perceptive}
 
-	\subsection{Perceptive}
+\begin{picture}(0,0)
+  \put(250, 10){\includegraphics[width=.3\textwidth]{perceptivesoftware_logo}}
+\end{picture}
 
 \end{document}
