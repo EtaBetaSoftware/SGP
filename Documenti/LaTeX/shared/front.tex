@@ -10,23 +10,27 @@ a.a. 2012--2013
 
 {
 \setlength{\fboxsep}{.2pt}
-\fbox{\includegraphics[width=\textwidth]{logo}}
-}
-
-\vskip .5cm
-
-{\Huge\sffamily\bfseries
-\team
+\ifthenelse{\equal{\docauthor}{\team}}{
+  \fbox{\includegraphics[width=\textwidth]{logo}}
+  } {
+  \fbox{\includegraphics[width=\textwidth]{alpha}}
+  }
 }
 
 \vskip 1.5cm
+
+{\Huge\sffamily\bfseries
+\docauthor
+}
+
+\vskip 2.5cm
 
 % titolo del progetto
 {\Large\sffamily\bfseries
 \caName
 }
 
-\vskip 1cm
+\vskip 2cm
 
 % titolo del documento
 \hrule
