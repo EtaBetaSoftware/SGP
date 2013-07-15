@@ -849,16 +849,14 @@ da vedere:
   \put(250, 10){\includegraphics[width=.3\textwidth]{processmaker_logo}}
 \end{picture}
 
-\subsubsection{Descrizione}
-%TODO da fare
-
-\subsubsection{Requisiti di sistema}	
+\textbf{Requisiti di sistema}	
 \begin{itemize}
 	\item installazione di un \inglese{web server} \swname{Apache} versione 2.2.x con abilitati i moduli necessari (\texttt{deflate}, \texttt{expires}, \texttt{rewrite} e \texttt{vhost\_alias}) e la pagina di \inglese{default} disabilitata;
 	\item presenza dell'interprete \swname{PHP} versione 5.1.6  (o superiore) con installati i moduli obbligatori \texttt{mysql}, \texttt{xml} e \texttt{curl};
 	\item \inglese{Relational Database Management System} \swname{MySQL} versione 5 o superiore installato nello stesso \inglese{server} in cui risiede \progname.
 \end{itemize}
 
+\subsubsection{Descrizione}
 \subsubsection{Caratteristiche}
 Un aspetto fortemente positivo dell'interfaccia grafica di \progname è costituito dalla visualizzazione dello stato di avanzamento dei processi tramite una metafora visiva che ricorda esplicitamente gli indicatori presenti sul quadro strumenti di un macchinario o di un veicolo.%alias il merdometro
 Tale accorgimento ha il vantaggio di fornire una rappresentazione visuale immediata ed efficace della misura dell'indicatore di \inglese{performance} $i_{t}$ definito come il rapporto:
@@ -879,7 +877,7 @@ Per quanto riguarda l'editor di diagrammi, sono da segnalare alcune carenze piut
 
 In secondo luogo, non sono presenti alcune funzionalità visuali come l'inserimento automatico delle guardie per le condizioni di \inglese{branch} (nodi decisionali) e per i nomi dei nodi che rappresentano attività, per cui è necessario configurare le proprietà manualmente in un secondo momento a valle dell'inserimento.
 
-L'interfaccia \inglese{web} costringe inoltre a ricorrere estensivamente alla \inglese{gesture} `\inglese{drag and drop}' per la creazione di diagrammi, caratteristica che non può essere considerata positiva alla luce dei più recenti studi di usabilità in quanto presuppone una maggiore difficoltà di utilizzo e di discosta dalle buone prassi per la realizzazione di interfacce utente \cite{nielsen:mistakes}.
+L'interfaccia \inglese{web} costringe inoltre a ricorrere estensivamente alla \inglese{gesture} `\inglese{drag and drop}' per la creazione di diagrammi, caratteristica che non può essere considerata positiva alla luce dei più recenti studi di usabilità in quanto presuppone una maggiore difficoltà di utilizzo e di discosta dalle buone prassi per la realizzazione di interfacce utente.
 
 Inoltre, l'assenza di una funzionalità di \inglese{undo} rappresenta una grave carenza funzionale in quanto, a causa dei limiti dell'interfaccia utente descritti in precedenza, risulta molto facile per gli analisti di \bsn perdere il \inglese{focus} dell'attenzione e, conseguentemente, commettere errori. Infine, la creazione dei diagrammi nell'editor non è intuitiva.
 
@@ -927,7 +925,6 @@ disponibile in italiano & & & \cross & \tick \\
 \begin{thebibliography}{90}
   \bibitem[Mazzolari, 2007]{mazzolari:bpmita} Mazzolari, F. e Testolin, G., \emph{Document Management}, SistemiNEWS, 2007,\newline disponibile all'indirizzo: \url{http://www.arxivar.it/download/doc_download/99-e-document-management} (consultato il 11/07/2013)
   \bibitem[Bea, 2008]{bea:bpm} BEA Systems, \inglese{The State of the BPM Market}, 2008, \newline disponibile all'indirizzo \url{http://www.inst-informatica.pt/servicos/informacao-e-documentacao/dossiers-tematicos/dossier-tematico-no-6-bpm-business-process/the-state-of-the-bpm-market-businessand-it-solving} (consultato il 12/07/2013)
-  \bibitem[Nielsen, 2008]{nielsen:mistakes} Nielsen, J. \inglese{Top 10 Application-Design Mistakes}, \newline disponibile all'indirizzo: \url{http://www.nngroup.com/articles/top-10-application-design-mistakes} (data di consultazione:  15/07/2013)
 \end{thebibliography}
 
 \end{document}
