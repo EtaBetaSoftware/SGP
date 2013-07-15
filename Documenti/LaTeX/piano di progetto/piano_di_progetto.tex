@@ -630,7 +630,7 @@ Uno dei punti che determinano il successo di un'azienda è costituito dall'organ
 Si tratta di \sw all'avanguardia che permettono la pianificazione, la gestione ed il monitoraggio dei processi.
 I \sw BPM permettono  ai \inglese{leader} di grandi e piccole aziende, di avere una migliore comprensione, di prendere decisioni più rapide e cosa più importante, di eliminare il caos e l'inefficienza che possono avere un'incidenza sul vantaggio competitivo di un'azienda.
 
-Spesso questi \sw permettono di interagire con altri \sw gestionali, database o PIM\@.\footnote{ I Personal Information Manager sono sw che permettono di organizzare un certo tipo di informazioni personali per migliorare la produttività aziendale. In genere questi \sw sono usati per gestire \inglese{email} e rubriche.}
+Spesso questi \sw permettono di interagire con altri \sw gestionali, database o PIM\@.\footnote{I \inglese{Personal Information Manager} sono \sw che permettono di organizzare un certo tipo di informazioni personali per migliorare la produttività aziendale. In genere questi \sw sono usati per gestire \inglese{email} e rubriche.}
 
 Infine, i \sw BPM permettono una corretta gestione dei flussi informativi. Infatti, almeno il 70\% delle informazioni non sono sufficientemente strutturate e quindi perdono valore, come emerge da alcuni studi come ad esempio \cite{mazzolari:bpmita}. Grazie ai \sw BPM è possibile massimizzare l'apporto di valore fornito dalle informazioni ed essere quindi competitivi nel mercato.
 
@@ -657,7 +657,7 @@ Possiamo quindi riassumere i vantaggi che scaturiscono dall'adozione di \sw BPM 
 	\item dematerializzazione dei documenti 	
 \end{itemize}
 	
-\subsection{Cosa offre il mercato}
+\subsection{Cosa offre il mercato}\label{sec:currentmarket}
 Attualmente il mercato offre diverse soluzioni, sia gratuite che a pagamento, più, o meno, complete.	
 Dall'analisi di mercato effettuata, emerge che in generale, le piccole aziende si affidano alle soluzioni gratuite, alcune delle quali sembrano coprire la maggior parte dei requisti richiesti da tali aziende. Le organizzazioni più complesse, invece, preferiscono acquisire \sw non gratuiti perché a volte risultano essere più completi ed adatti ad organizzazioni più grandi.
 
@@ -767,7 +767,7 @@ Un dato più interessante emerge tuttavia incrociando l'analisi sul piano geogra
 
 \section{Software selezionati}
 \subsection{Bonita BPM}
-
+\newcommand{\progname}{\swname{Bonita\,BPM}}
 \begin{picture}(0,0)
   \put(250, 10){\includegraphics[width=.3\textwidth]{bonitasoft_logo}}
 \end{picture}
@@ -802,12 +802,12 @@ Inoltre, L'\inglese{editor} grafico offerto da \swname{Bonita BPM}, rispetta lo 
 
 \swname{Bonota BPM} è dotato della funzionalità di monitoraggio dei processi comprendente un sistema di \inglese{reporting} in grado di attivarsi automaticamente al termine del singoli processi e con possibilità di impostazione di tempistiche intermedie. Questo permette ai responsabili del processo decisionale di essere sempre informati, anche in modo automatico, sulla situazione vigente.
 
-Il sistema permetta supporta la funzionalità di interfacciamento con servizi LDAP\footnote{LDAP,  Lightweight Directory Access Protocol, è un protocollo standard per l'interrogazione e la modifica dei servizi di directory per la condivisione dei dati.}. 
+Il sistema supporta la funzionalità di interfacciamento con servizi LDAP\footnote{LDAP,  Lightweight Directory Access Protocol, è un protocollo standard per l'interrogazione e la modifica dei servizi di directory per la condivisione dei dati.\label{note:ldap}}. 
+
 Questa funzionalità è richiesta dalla maggior parte delle aziende che fanno uso di \sw BPM. Infatti, tale funzione, permette loro di gestire la propria documentazione in modo semplice ed efficace centralizzando l'accesso ai docuemntei che costituiscono il flusso informativo aziendale.
 La condivisione delle risorse non fa parte del pacchetto base di \swname{Bonita BPM}. 
 Tuttavia l'azienda può usufruirne tramite l'installazione del pacchetto \textsf{teamwork}, dietro un minimale corrispettivo.
 Anche questa funzionalità è molto richiesta dalle aziende. Si tratta di una necessità molto risentita in quanto per loro stessa natura i progetti coinvolgono una pluralità di soggetti che hanno l'esigenza di  operare sinergicamente da diverse postazioni.
-
 
 La versione base del \sw dispone, inoltre, del modulo \swname{User Experience}. Tale modulo permette all'azienda che adotta \swname{Bointa BPM}, di disporre di due tipologie di interfacciamento:
 \begin{itemize}
@@ -819,10 +819,6 @@ In questo modo l'utente semplice, specialmente se inesperto, non disponendo di a
 
 Per quanto riguarda la documentazione fornita dal \inglese{team} di sviluppo, fornisce spiegazioni molto esaustive e  che comprende anche degli ottimi \inglese{tutorial} di supporto. 
 Tuttavia, la documentazione è disponibile solo nelle versione inglese. Questo potrebbe causare dei problemi all'azienda acquirente qualora non disponga di personale con una sufficiente preparazione linguistica.
-
-
-
-
 
 \swname{Bonita BPM}, purtroppo, risulta non avere una facile installazione e inoltre la predisposizione di tutti i moduli e, delle eventuali versioni in abbonamento, risulta essere complessa. Si prevede quindi la necessità, in caso di scelta di questo \sw , di disporre di una figura atta all'installazione del sistema in azienda. 
 
@@ -848,34 +844,43 @@ da vedere:
 
 	
 \subsection{ProcessMaker}
+\renewcommand{\progname}{\swname{ProcessMaker}\xspace}
 \begin{picture}(0,0)
   \put(250, 10){\includegraphics[width=.3\textwidth]{processmaker_logo}}
 \end{picture}
 
 \textbf{Requisiti di sistema}	
 \begin{itemize}
-	\item installazione di un \inglese{web server} Apache versione 2.2.x con abilitati i moduli necessari (\texttt{deflate}, \texttt{expires}, \texttt{rewrite} e \texttt{vhost\_alias}) e la pagina di \inglese{default} disabilitata;
-	\item interprete PHP versione 5.1.6  (o superiore) con i moduli \texttt{mysql}, \texttt{xml} e \texttt{curl};
-	\item DBMS MySQL versione 5 o superiore.
-\end{itemize}		
-
-\textbf{Pregi}	
-\begin{itemize}
-	\item Possiede la funzionalità di visualizzazione dello stato di avanzamento dei processi tramite un cruscotto che costituisce un'ottima metafora		
-  \item Possiede la funzionalità gestione automatizzata di alcuni processi e di invio delle notifiche
-	\item Possibilità di interfacciamento con Microsoft Outlook tramite un plug-in 
-	\item Possibilità di interfacciamento con sistemi/servizi LDAP tramite un plug-in		
+	\item installazione di un \inglese{web server} \swname{Apache} versione 2.2.x con abilitati i moduli necessari (\texttt{deflate}, \texttt{expires}, \texttt{rewrite} e \texttt{vhost\_alias}) e la pagina di \inglese{default} disabilitata;
+	\item presenza dell'interprete \swname{PHP} versione 5.1.6  (o superiore) con installati i moduli obbligatori \texttt{mysql}, \texttt{xml} e \texttt{curl};
+	\item \inglese{Relational Database Management System} \swname{MySQL} versione 5 o superiore installato nello stesso \inglese{server} in cui risiede \progname.
 \end{itemize}
 
-\textbf{Difetti}	
-\begin{itemize}
-	\item richiede PHP MySql Apache con moduli non offerti di default
-	\item non offre la funzionalità di \inglese{undo}
-	\item lingua italiana offerta solo come modulo integrativo e non completo
-  \item diagrammi non offrono le funzionalità minimali (es. non offre l'inserimento automatico delle guardie e dei nomi dei nodi)
-  \item si è costretti a fare \inglese{drag and drop} per creare i diagrammi e da quanto emerge dai più recenti studi di usabilità questo non rappresenta una buona pratica in quanto presuppone una maggiore difficoltà di utilizzo;
-  \item creazione dei diagrammi non intuitiva.
-\end{itemize}
+\subsubsection{Descrizione}
+Un aspetto fortemente positivo dell'interfaccia grafica di \progname è costituito dalla visualizzazione dello stato di avanzamento dei processi tramite una metafora visiva che ricorda esplicitamente gli indicatori presenti sul quadro strumenti di un macchinario o di un veicolo.%alias il merdometro
+Tale accorgimento ha il vantaggio di fornire una rappresentazione visuale immediata ed efficace della misura dell'indicatore di \inglese{performance} $i_{t}$ definito come il rapporto:
+\[
+i_{t} = \frac{N^{C}_{t}}{N^{T}}
+\]
+dove $N^{C}_{t}$ rappresenta il numero di \inglese{task} completati all'istante $t$ e $N^{T}$ il numero totale di \inglese{task} in cui è stato complessivamente decomposto il processo. Il \sw rende quindi possibile ai responsabili decisionali valutare a colpo d'occhio la situazione e stabilire se è richiesta l'adozione di misure correttive in tempo reale (modalità a `latenza zero', cfr.~sez.~\ref{sec:currentmarket}).
+
+L'architettura basata su un \inglese{server} cui si accede tramite un'interfaccia \inglese{web-based} permette di svincolare in maniera pressoché totale la piattaforma \sw responsabile della memorizzazione dei dati e dell'esecuzione della logica applicativa dai sistemi \inglese{client} che la utilizzeranno, facendo uso di tecnologie estremamente diffuse come \swname{Apache}, \swname{MySQL} e \swname{PHP} che costituiscono la piattaforma AMP\@. Nonostante tale soluzione sia declinabile anche in versione \swname{Microsoft Windows} (WAMP), tuttavia, rimane il problema di gestire la coesistenza fra \swname{Internet Information Services (IIS)} presente nell'ambiente \swname{Microsoft Small Business server} e il \inglese{web server} \swname{Apache}, che dovrà essere affidata a personale dedicato e in possesso delle necessarie qualifiche.
+
+Inoltre, la procedura di installazione di tutti i servizi citati nei requisiti di sistema può risultare complessa in quanto non tutti i moduli richiesti sono disponibili nelle installazioni tipiche e, nonostante il \inglese{wizard} di configurazione offerto da \progname semplifichi la procedura, questa può risultare comunque ostica per i non addetti ai lavori.
+
+Per quanto concerne l'interfacciamento con applicativi di terze parti, \progname nativamente non dispone di funzionalità degne di nota ma è possibile ricorrere a una serie di \inglese{plug-in} esterni. In tal modo, ad esempio, è possibile integrare la soluzione con piattaforme per la condivisione di risorse basate su LDAP (cfr.~nota~\ref{note:ldap}).
+
+Un'ulteriore possibilità di estensione ottenibile tramite \inglese{plug-in} è l'integrazione con \swname{Microsoft Outlook} per gestire automaticamente l'invio delle notifiche ai collaboratori coinvolti nei processi aziendali. \progname consente infatti la gestione automatizzata dei processi che sono stati modellati attraverso l'editor grafico e l'invio delle notifiche	via \inglese{email} ai collaboratori.
+
+Per quanto riguarda l'editor di diagrammi, sono da segnalare alcune carenze piuttosto rilevanti. In primo luogo, il modello di rappresentazione visuale dei processi utilizza una sintassi simile ai diagrammi di flusso o ai diagrammi di attività UML ma non rispetta lo standard BPMN e questo pone seri limiti all'interoperabilità con applicativi di terze parti. 
+
+In secondo luogo, non sono presenti alcune funzionalità visuali come l'inserimento automatico delle guardie per le condizioni di \inglese{branch} (nodi decisionali) e per i nomi dei nodi che rappresentano attività, per cui è necessario configurare le proprietà manualmente in un secondo momento a valle dell'inserimento.
+
+L'interfaccia \inglese{web} costringe inoltre a ricorrere estensivamente alla \inglese{gesture} `\inglese{drag and drop}' per la creazione di diagrammi, caratteristica che non può essere considerata positiva alla luce dei più recenti studi di usabilità in quanto presuppone una maggiore difficoltà di utilizzo e di discosta dalle buone prassi per la realizzazione di interfacce utente.
+
+Inoltre, l'assenza di una funzionalità di \inglese{undo} rappresenta una grave carenza funzionale in quanto, a causa dei limiti dell'interfaccia utente descritti in precedenza, risulta molto facile per gli analisti di \bsn perdere il \inglese{focus} dell'attenzione e, conseguentemente, commettere errori. Infine, la creazione dei diagrammi nell'editor non è intuitiva.
+
+Infine, si segnala che la localizzazione in lingua italiana non è offerta nativamente ma solo come modulo integrativo e che il file PO messo a disposizione dalla comunità di utilizzatori di \progname contiene tutte le stringhe per la traduzione dell'interfaccia, con il conseguente risultato che alcune voci di menu non contengono alcuna etichetta testuale, in quanto non viene visualizzata nemmeno la stringa originale.
 	
 \subsection{Arxivar}
 \begin{picture}(0,0)
