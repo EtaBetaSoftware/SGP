@@ -661,7 +661,7 @@ Possiamo quindi riassumere i vantaggi che scaturiscono dall'adozione di \sw BPM 
 Attualmente il mercato offre diverse soluzioni, sia gratuite che a pagamento, più, o meno, complete.	
 Dall'analisi di mercato effettuata, emerge che in generale, le piccole aziende si affidano alle soluzioni gratuite, alcune delle quali sembrano coprire la maggior parte dei requisti richiesti da tali aziende. Le organizzazioni più complesse, invece, preferiscono acquisire \sw non gratuiti perché a volte risultano essere più completi ed adatti ad organizzazioni più grandi.
 
-Occorre tuttavia tenere presente che nel mercato vi sono \sw distribuiti con una licenza \inglese{open source} e gratuiti, come \swname{Bonitasoft}, che sono in grado di gestire situazioni molto complesse e offrono numerose funzionalità anche di alto livello come parte del pacchetto di base per cui non è necessario sostenere alcun costo di acquisizione.
+Occorre tuttavia tenere presente che nel mercato vi sono \sw distribuiti con una licenza \inglese{open source} e gratuiti, come \swname{Bonita BPM}, che sono in grado di gestire situazioni molto complesse e offrono numerose funzionalità anche di alto livello come parte del pacchetto di base per cui non è necessario sostenere alcun costo di acquisizione.
  
 I \inglese{leader} attuali del mercato mondiale, in particolare quello legato alle soluzioni \sw a pagamento, sono grandi colossi del calibro di \swname{IBM}, \swname{Microsoft} e \swname{Oracle}. Tali organizzazioni hanno compreso fin da subito la necessità di offrire alle aziende \sw per la gestione di processi e si sono affermate nel tempo offrendo soluzioni con funzionalità ad alto livello che permettono anche l'interazione con \sw di terze parti.\footnote{%
 Un esempio dell'interoperabilità tra le soluzioni offerte e applicazioni esterne è rappresentato da \swname{Bonita Open Solution} che permette, sottoscrivendo un abbonamento di tipo `\textsf{efficiency}', l'interfacciamento con applicativi \swname{SAP}.
@@ -727,14 +727,14 @@ Il grafico riportato in \figurename~\ref{fig:trend} rappresenta l'andamento mond
 \end{figure}
 
 \section{Software selezionati}
-\subsection{Bonita Open Solution}
+\subsection{Bonita BPM}
 
 \begin{picture}(0,0)
   \put(250, 10){\includegraphics[width=.3\textwidth]{bonitasoft_logo}}
 \end{picture}
 
 \textbf{Descrizione}
-Il \sw è distribuito secondo un modello `open core', vale a dire le funzionalità di base sono rilasciate con una licenza \inglese{open source} e possono essere utilizzate e distribuite liberamente, mentre per avere accesso a funzionalità aggiuntive è necessario utilizzare estensioni proprietarie per cui è necessario acquisire una licenza d'uso dal produttore \textsf{BonitaSoft}.
+Il \sw è distribuito secondo un modello `open core', vale a dire le funzionalità di base sono rilasciate con una licenza \inglese{open source} e possono essere utilizzate e distribuite liberamente, mentre per avere accesso a funzionalità aggiuntive è necessario utilizzare estensioni proprietarie per cui è necessario acquisire una licenza d'uso dal produttore \swname{Bonita BPM}.
 
 Il nucleo `open' dell'applicativo è costituito a sua volta in una serie di moduli grafici e da un motore di esecuzione dei processi.
 
@@ -753,15 +753,30 @@ di portarne a termine l'esecuzione provocando la visualizzazione dei \inglese{fo
 
 \textbf{Pregi}
 \begin{itemize}
-\item realizzazione dei diagrammi di processo intuitiva tramite un \inglese{editor} grafico;
-\item utilizzo dello standard BPMN 2.0 per la rappresentazione dei flussi di lavoro;
-\item lingua italiana offerta come parte del pacchetto standard;
-\item funzionalità di simulazione dei processi;
-\item funzionalità di esecuzione automatica dei processi;
-\item modularità %TODO questo resta da capire
-\item monitoraggio dei processi, con sistema di \inglese{report} automatico al termine e con possibilità di impostazione di tempistiche intermedie;
+\item %realizzazione dei diagrammi di processo intuitiva tramite un \inglese{editor} grafico;
+L'\inglese{editor} grafico offerto da \swname{Bonita BPM} si presenta molto intuitivo e semplice da utilizzare. Un qualsiasi utente che abbia una minimale esperienza di \inglese{editor} grafici è in grado di cogliere ed utilizzare le funzionalità base. È  chiaro, però, che per produrre diagrammi di buona qualità e per accedere a funzionalità più specifiche, è necessario consultare la documentazione. 
+
+Inoltre, L'\inglese{editor} grafico offerto da \swname{Bonita BPM}, rispetta lo \inglese{standard} BPMN 2.0 per la rappresentazione dei flussi di lavoro. L'uso dello \inglese{standard} è molto importante perché permette una comunicazione molto più completa e priva di ambiguità, anche con altri operatori del settore. Grazie all'interoperabilità tra strumenti di diversi fornitori garantita dal rispetto degli \inglese{standard}, è possibile diminuire gli eventuali costi di riconversione in una futura migrazione verso altre soluzioni.
+
+\item \swname{Bonita BPM} offre la possibilità di installazione del \sw in lingua italiana come parte del pacchetto di base. Questa caratteristica risulta essere molto significativa in quanto molti \sw non dispongono di una localizzazione nativa e questo potrebbe rappresentare un fattore penalizzante in relazione ai requisiti del cliente. Inoltre, la localizzazione in lingua italiana risulta essere sufficientemente completa e di buona qualità. 
+\item Il sistema \swname{Bonita BPM} comprende nel pacchetto di base, la funzionalità di simulazione dei processi. La simulazione è molto importante perché permette ai responsabili del processo decisionale, soprattutto se poco esperti, di avere una percezione sull'andamento ottimale dei processi. In questo modo si potrà monitorare e controllare la situazione possedendo un metro di confronto.
+
+\item \swname{Bonota BPM} è dotato della funzionalità di monitoraggio dei processi comprendente un sistema di \inglese{reporting} in grado di attivarsi automaticamente al termine del singoli processi e con possibilità di impostazione di tempistiche intermedie. Questo permette ai responsabili del processo decisionale di essere sempre informati, anche in modo automatico, sulla situazione vigente.
+
+\item Il sistema permetta supporta la funzionalità di interfacciamento con servizi LDAP\footnote{LDAP,  Lightweight Directory Access Protocol, è un protocollo standard per l'interrogazione e la modifica dei servizi di directory per la condivisione dei dati.}. 
+Questa funzionalità è richiesta dalla maggior parte delle aziende che fanno uso di \sw BPM. Infatti, tale funzione, permette loro di gestire la propria documentazione in modo semplice ed efficace centralizzando l'accesso ai docuemntei che costituiscono il flusso informativo aziendale.
+\item La condivisione delle risorse non fa parte del pacchetto base di \swname{Bonita BPM}. 
+Tuttavia l'azienda può usufruirne tramite l'installazione del pacchetto \textsf{teamwork}, dietro un minimale corrispettivo.
+Anche questa funzionalità è molto richiesta dalle aziende. Si tratta di una necessità molto risentita in quanto per loro stessa natura i progetti coinvolgono una pluralità di soggetti che hanno l'esigenza di  operare sinergicamente da diverse postazioni.
+
+
 \item modulo \swname{User Experience} per disporre di due tipologie di interfacciamento (utente semplice e amministratore);
-\item possibilità di interfacciamento con servizi LDAP per la condivisione di risorse.
+
+
+\item funzionalità di esecuzione automatica dei processi;
+%TODO controllare
+\item modularità %TODO questo resta da capire
+
 \end{itemize}
 
 \textbf{Difetti}
@@ -773,6 +788,8 @@ di portarne a termine l'esecuzione provocando la visualizzazione dei \inglese{fo
 \item per avere accesso a funzionalità collaborative (\inglese{repository});
 \item per avere un maggior controllo sullo stato di avanzamento delle sotto-attività e sull'utilizzo delle risorse;
 \item per interfacciarsi con applicativi gestionali \swname{SAP} tramite gli appositi connettori.
+\item docuemntazione solo in inglese
+
 \end{itemize}
 \end{itemize} 
 	
