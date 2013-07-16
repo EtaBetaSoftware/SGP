@@ -1053,33 +1053,57 @@ L'interazione degli utenti finali, cioè del personale coinvolto nello svolgimen
 
 La caratteristica fortemente positiva da questo punto di vista è rappresentata dalla facilità d'uso ma anche di realizzazione di questi \inglese{form} tramite modelli predefiniti messi a disposizione dal sistema.
 	
-\subsection{}
+\subsection{Bizagi}
 \renewcommand{\progname}{\swname{Bizagi Process Manager}\xspace}
 \begin{picture}(0,0)
   \put(250, 10){\includegraphics[width=0.2\textwidth]{bizagi_logo}}
 \end{picture}
 
 
-\subsection{Descrizione}
+\subsubsection{Descrizione}
+\progname è un \sw BPM \inglese{open source} sviluppato dalla società inglese \swname{Bizagi}.
+Il \sw si compone di due moduli:
+\begin{itemize}
+\item \swname{Bizagi Process Modeler}, editor per la modellazione dei processi 
+\item \swname{Bizagi Suite}, \sw per la gestione ed il monitoraggio dei processi aziendali \end{itemize}
+
 
 \subsubsection{Requisiti di sistema}
 \begin{itemize}
-\item xxx
+\item sistemi operativi \texttt{windows}
+\item SQL Server Express 2008 SP3 e successivi
+
 \end{itemize}
 
+L'\inglese{editor} grafico è sufficientemente intuitivo e rispetta la notazione BPMN 2.0. Inoltre, l'interfaccia grafica ha un \inglese{look and feel} consistente con la applicazioni del sistema \swname{Windows}. Questo permette alle aziende che decidono di acquisire \progname di ritrovarsi in un contesto già conosciuto e quindi la curva di apprendimento diventa meno ripida.
+Si riporta in figura \ref{fig:diagramma_biz} un esempio di diagramma prodotto con \swname{Bizagi Process Modeler}.
 
-\begin{itemize}
-\item  L'\inglese{editor} grafico è sufficientemente intuitivo e rispetta la notazione BPMN 2.0. Inoltre, l'interfaccia grafica ha un \inglese{look and feel} consistente con la applicazioni del sistema \swname{Windows}. Questo permette alle aziende che decidono di acquisire \progname di ritrovarsi in un contesto già conosciuto e quindi la curva di apprendimento diventa meno ripida.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{diagramma_biz}
+  \caption{Esempio di diagramma creato con  \swname{Bizagi Process Modeler}}
+  \label{fig:diagramma_biz}
+\end{figure}
+
+
+
 L'\inglese{editor} comprende anche la funzionalità di verifica dei diagrammi, che permette di fare il  \inglese{debugging} sui grafici prodotti.
-\item Per quanto riguarda invece, la gestione della lingua, l' italiano è offerto come funzionalità nativa del \sw \progname. Tuttavia, la localizzazione in lingua italiana non è completa e diverse parti risultano essere tradotte male o non tradotte.
+In figura \ref{fig:verifica} è riportato il messaggio restituito dal programma in seguito alla verifica effettuata.
 
-\item \progname permette la simulazione dei processi. In seguito ai test eseguiti, però, risulta essere più deludente rispetto a quella offerta da altri \sw precedentemente verificati.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{verifica}
+  \caption{Messaggio restituito dalla funzionalità di verifica di \swname{Bizagi Process Modeler}}
+  \label{fig:verifica}
+\end{figure}
+Per quanto riguarda invece, la gestione della lingua, l' italiano è offerto come funzionalità nativa del \sw \progname. Tuttavia, la localizzazione in lingua italiana non è completa e diverse parti risultano essere tradotte male o non tradotte.
+
+ \progname permette la simulazione dei processi. In seguito ai test eseguiti, però, risulta essere più deludente rispetto a quella offerta da altri \sw precedentemente verificati.
 I \inglese{report} restituiti dalla simulazione risultano essere poco comprensibili, incompleti e non contengono alcun grafico, che permette ai responsabili decisionali di realizzare molto più velocemente la situazione.
  
+ La documentazione fornita dal \inglese{team} di sviluppo è completa e comprende anche dei video \inglese{tutorial} di supporto. Purtroppo, sia la documentazione che i \inglese{tutorial} sono forniti solo in lingua inglese. Inoltre, \progname mette a disposizione dei \inglese{process template}, che permettono agli utenti non esperti di avere la concezione delle potenzialità del programma.
 
 
-
-\end{itemize}
 
 \subsubsection{Caratteristiche}
 \textbf{Difetti}
