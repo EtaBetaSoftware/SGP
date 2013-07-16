@@ -912,11 +912,38 @@ Il \sw è completo delle funzionalità necessarie a una PMI come \customer e pu�
 
 
 \subsubsection{Caratteristiche}
+L'architettura basata su un \inglese{server} cui si accede tramite un'interfaccia \inglese{web-based} permette di svincolare in maniera pressoché totale la piattaforma \sw responsabile della memorizzazione dei dati e dell'esecuzione della logica applicativa dai sistemi \inglese{client} che la utilizzeranno, facendo uso di tecnologie estremamente diffuse come \swname{Apache}, \swname{MySQL} e \swname{PHP} che costituiscono la piattaforma AMP.
+
+Nonostante tale soluzione sia declinabile anche in versione \swname{Microsoft Windows} (WAMP), tuttavia, rimane il problema di gestire la coesistenza fra \swname{Internet Information Services (IIS)} presente nell'ambiente \swname{Microsoft Small Business server} e il \inglese{web server} \swname{Apache}, che dovrà essere affidata a personale dedicato e in possesso delle necessarie qualifiche.
+
+Inoltre, la procedura di installazione di tutti i servizi citati nei requisiti di sistema può risultare complessa in quanto non tutti i moduli richiesti sono disponibili nelle installazioni tipiche e, nonostante il \inglese{wizard} di configurazione offerto da \progname semplifichi la procedura, questa può risultare comunque ostica per i non addetti ai lavori.
+
+Per quanto concerne l'interfacciamento con applicativi di terze parti, \progname nativamente non dispone di funzionalità degne di nota ma è possibile ricorrere a una serie di \inglese{plug-in} esterni. In tal modo, ad esempio, è possibile integrare la soluzione con piattaforme per la condivisione di risorse basate su LDAP (cfr.~nota~\ref{note:ldap}) o per la gestione del materiale documentale con \swname{KnowledgeTree}.
+
+Un'ulteriore possibilità di estensione ottenibile tramite \inglese{plug-in} è l'integrazione con \swname{Microsoft Outlook} per gestire automaticamente l'invio delle notifiche ai collaboratori coinvolti nei processi aziendali. \progname consente infatti la gestione automatizzata dei processi che sono stati modellati attraverso l'editor grafico e l'invio delle notifiche	via \inglese{email} ai collaboratori.
+
+Per quanto riguarda l'editor di diagrammi, riportato in \figurename{fig:pmeditor}, sono da segnalare alcune carenze piuttosto rilevanti. In primo luogo, il modello di rappresentazione visuale dei processi utilizza una sintassi simile ai diagrammi di flusso o ai diagrammi di attività UML ma non rispetta lo standard BPMN e questo pone seri limiti all'interoperabilità con applicativi di terze parti.
+
+\begin{figure}[H]
+  \centering
+  \caption{L'editor visuale dei processi interno a \progname.}
+  \label{fig:pmeditor}
+  \includegraphics[width=.8\textwidth]{pm_editor}
+\end{figure}
+
+In secondo luogo, non sono presenti alcune funzionalità visuali come l'inserimento automatico delle guardie per le condizioni di \inglese{branch} (nodi decisionali) e per i nomi dei nodi che rappresentano attività, per cui è necessario configurare le proprietà manualmente in un secondo momento a valle dell'inserimento.
+
+L'interfaccia \inglese{web} costringe inoltre a ricorrere estensivamente alla \inglese{gesture} `\inglese{drag and drop}' per la creazione di diagrammi, caratteristica che non può essere considerata positiva alla luce dei più recenti studi di usabilità in quanto presuppone una maggiore difficoltà di utilizzo e di discosta dalle buone prassi per la realizzazione di interfacce utente \cite{nielsen:mistakes}.
+
+Inoltre, l'assenza di una funzionalità di \inglese{undo} rappresenta una grave carenza funzionale in quanto, a causa dei limiti dell'interfaccia utente descritti in precedenza, risulta molto facile per gli analisti di \bsn perdere il \inglese{focus} dell'attenzione e, conseguentemente, commettere errori. Infine, la creazione dei diagrammi nell'editor non è intuitiva.
+
+Infine, si segnala che la localizzazione in lingua italiana non è offerta nativamente ma solo come modulo integrativo e che il file PO (\inglese{Portable Object}) messo a disposizione dalla comunità di utilizzatori di \progname contiene tutte le stringhe per la traduzione dell'interfaccia, con il conseguente risultato che alcune voci di menu non contengono alcuna etichetta testuale, in quanto non viene visualizzata nemmeno la stringa originale.
+
 Un aspetto fortemente positivo dell'interfaccia grafica di \progname è costituito dalla visualizzazione dello stato di avanzamento dei processi tramite una metafora visiva che ricorda esplicitamente gli indicatori presenti sul quadro strumenti di un macchinario o di un veicolo (vedi \figurename~\ref{fig:merdometro}).
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=.35\textwidth]{merdometro}
+  \includegraphics[width=.8\textwidth]{merdometro}
   \caption{Indicatore della misura di avanzamento del lavoro in \progname.}
   \label{fig:merdometro}
 \end{figure}
@@ -925,25 +952,29 @@ Tale accorgimento ha il vantaggio di fornire una rappresentazione visuale immedi
 \[
 i_{t} = \frac{N^{C}_{t}}{N^{T}}
 \]
-dove $N^{C}_{t}$ rappresenta il numero di \inglese{task} completati all'istante $t$ e $N^{T}$ il numero totale di \inglese{task} in cui è stato complessivamente decomposto il processo. Il \sw rende quindi possibile ai responsabili decisionali valutare a colpo d'occhio la situazione e stabilire se è richiesta l'adozione di misure correttive in tempo reale (modalità a `latenza zero', cfr.~sez.~\ref{sec:currentmarket}).
+dove $N^{C}_{t}$ rappresenta il numero di \inglese{task} completati all'istante $t$ e $N^{T}$ il numero totale di \inglese{task} in cui è stato complessivamente decomposto il processo. Il \sw rende quindi possibile ai responsabili decisionali valutare a colpo d'occhio la situazione e stabilire se è richiesta l'adozione di misure correttive in tempo reale (`latenza zero', cfr.~sez.~\ref{sec:currentmarket}).
 
-L'architettura basata su un \inglese{server} cui si accede tramite un'interfaccia \inglese{web-based} permette di svincolare in maniera pressoché totale la piattaforma \sw responsabile della memorizzazione dei dati e dell'esecuzione della logica applicativa dai sistemi \inglese{client} che la utilizzeranno, facendo uso di tecnologie estremamente diffuse come \swname{Apache}, \swname{MySQL} e \swname{PHP} che costituiscono la piattaforma AMP\@. Nonostante tale soluzione sia declinabile anche in versione \swname{Microsoft Windows} (WAMP), tuttavia, rimane il problema di gestire la coesistenza fra \swname{Internet Information Services (IIS)} presente nell'ambiente \swname{Microsoft Small Business server} e il \inglese{web server} \swname{Apache}, che dovrà essere affidata a personale dedicato e in possesso delle necessarie qualifiche.
+Per permettere la gestione e la ripartizione del lavoro tra i soggetti coinvolti in ambito aziendale, \progname premette alle figure di \bsn \inglese{analyst} in qualità di amministratori la creazione di profili degli utenti e di gruppi di appartenenza degli utenti stessi a cui possono essere assegnati i \inglese{task} di cui si compongono i processi, con una \inglese{dashboard} di amministrazione esemplificata in \figurename~\ref{fig:pmuserlist}.
 
-Inoltre, la procedura di installazione di tutti i servizi citati nei requisiti di sistema può risultare complessa in quanto non tutti i moduli richiesti sono disponibili nelle installazioni tipiche e, nonostante il \inglese{wizard} di configurazione offerto da \progname semplifichi la procedura, questa può risultare comunque ostica per i non addetti ai lavori.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.8\textwidth]{pm_userlist}
+  \caption{Interfaccia di amministrazione dei profili utente e gruppi.}
+  \label{fig:pmuserlist}
+\end{figure}
 
-Per quanto concerne l'interfacciamento con applicativi di terze parti, \progname nativamente non dispone di funzionalità degne di nota ma è possibile ricorrere a una serie di \inglese{plug-in} esterni. In tal modo, ad esempio, è possibile integrare la soluzione con piattaforme per la condivisione di risorse basate su LDAP (cfr.~nota~\ref{note:ldap}).
+Infine, all'accesso al sistema, gli utenti cui sono state assegnate le attività possono visualizzare l'elenco dei rispettivi compiti all'interno del \inglese{case} corrente, vale a dire dell'istanza del processo aziendale attualmente in esecuzione, tramite una schermata simile a quella riportata in \figurename~\ref{fig:pmtasklist}.
 
-Un'ulteriore possibilità di estensione ottenibile tramite \inglese{plug-in} è l'integrazione con \swname{Microsoft Outlook} per gestire automaticamente l'invio delle notifiche ai collaboratori coinvolti nei processi aziendali. \progname consente infatti la gestione automatizzata dei processi che sono stati modellati attraverso l'editor grafico e l'invio delle notifiche	via \inglese{email} ai collaboratori.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.8\textwidth]{pm_dashboard}
+  \caption{Visualizzazione della lista dei \inglese{task} di competenza di un utente.}
+  \label{fig:pmtasklist}
+\end{figure}
 
-Per quanto riguarda l'editor di diagrammi, sono da segnalare alcune carenze piuttosto rilevanti. In primo luogo, il modello di rappresentazione visuale dei processi utilizza una sintassi simile ai diagrammi di flusso o ai diagrammi di attività UML ma non rispetta lo standard BPMN e questo pone seri limiti all'interoperabilità con applicativi di terze parti. 
+L'interazione degli utenti finali, cioè del personale coinvolto nello svolgimento delle attività coordinate di cui si compongono i singoli processi, utilizzando \progname passa anche e soprattutto un'interfaccia \inglese{web} all'interno della quale è prevista la compilazione di \inglese{form} dinamici che per il \inglese{team} di sviluppo assumono il nome \swname{Dynaforms}.
 
-In secondo luogo, non sono presenti alcune funzionalità visuali come l'inserimento automatico delle guardie per le condizioni di \inglese{branch} (nodi decisionali) e per i nomi dei nodi che rappresentano attività, per cui è necessario configurare le proprietà manualmente in un secondo momento a valle dell'inserimento.
-
-L'interfaccia \inglese{web} costringe inoltre a ricorrere estensivamente alla \inglese{gesture} `\inglese{drag and drop}' per la creazione di diagrammi, caratteristica che non può essere considerata positiva alla luce dei più recenti studi di usabilità in quanto presuppone una maggiore difficoltà di utilizzo e di discosta dalle buone prassi per la realizzazione di interfacce utente \cite{nielsen:mistakes}.
-
-Inoltre, l'assenza di una funzionalità di \inglese{undo} rappresenta una grave carenza funzionale in quanto, a causa dei limiti dell'interfaccia utente descritti in precedenza, risulta molto facile per gli analisti di \bsn perdere il \inglese{focus} dell'attenzione e, conseguentemente, commettere errori. Infine, la creazione dei diagrammi nell'editor non è intuitiva.
-
-Infine, si segnala che la localizzazione in lingua italiana non è offerta nativamente ma solo come modulo integrativo e che il file PO messo a disposizione dalla comunità di utilizzatori di \progname contiene tutte le stringhe per la traduzione dell'interfaccia, con il conseguente risultato che alcune voci di menu non contengono alcuna etichetta testuale, in quanto non viene visualizzata nemmeno la stringa originale.
+La caratteristica fortemente positiva da questo punto di vista è rappresentata dalla facilità d'uso ma anche di realizzazione di questi \inglese{form} tramite modelli predefiniti messi a disposizione dal sistema.
 	
 \subsection{Arxivar}
 \renewcommand{\progname}{\swname{Arxivar}\xspace}
