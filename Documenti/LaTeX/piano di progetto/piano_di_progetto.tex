@@ -1054,19 +1054,20 @@ L'interazione degli utenti finali, cioè del personale coinvolto nello svolgimen
 La caratteristica fortemente positiva da questo punto di vista è rappresentata dalla facilità d'uso ma anche di realizzazione di questi \inglese{form} tramite modelli predefiniti messi a disposizione dal sistema.
 	
 \subsection{Bizagi}
-\renewcommand{\progname}{\swname{Bizagi Process Manager}\xspace}
+\renewcommand{\progname}{\swname{Bizagi}\xspace}
 \begin{picture}(0,0)
   \put(250, 10){\includegraphics[width=0.2\textwidth]{bizagi_logo}}
 \end{picture}
 
 
 \subsubsection{Descrizione}
-\progname è un \sw BPM \inglese{open source} sviluppato dalla società inglese \swname{Bizagi}.
-Il \sw si compone di due moduli:
+La soluzione \inglese{open source} sviluppata dalla società inglese \swname{Bizagi} si compone di due moduli:
 \begin{itemize}
 \item \swname{Bizagi Process Modeler}, editor per la modellazione dei processi 
 \item \swname{Bizagi Suite}, \sw per la gestione ed il monitoraggio dei processi aziendali \end{itemize}
 
+La soluzione offerta da \progname è completa ed è sicuramente alla portata di una PMI come \customer .
+Si tratta infatti di un \sw particolarmente performante in grado di fornire informazioni molto precise sull'andamento dei processi.
 
 \subsubsection{Requisiti di sistema}
 \begin{itemize}
@@ -1074,7 +1075,7 @@ Il \sw si compone di due moduli:
 \item SQL Server Express 2008 SP3 e successivi
 
 \end{itemize}
-
+\subsubsection{Caratteristiche}
 L'\inglese{editor} grafico è sufficientemente intuitivo e rispetta la notazione BPMN 2.0. Inoltre, l'interfaccia grafica ha un \inglese{look and feel} consistente con la applicazioni del sistema \swname{Windows}. Questo permette alle aziende che decidono di acquisire \progname di ritrovarsi in un contesto già conosciuto e quindi la curva di apprendimento diventa meno ripida.
 Si riporta in figura \ref{fig:diagramma_biz} un esempio di diagramma prodotto con \swname{Bizagi Process Modeler}.
 
@@ -1104,12 +1105,24 @@ I \inglese{report} restituiti dalla simulazione risultano essere poco comprensib
  La documentazione fornita dal \inglese{team} di sviluppo è completa e comprende anche dei video \inglese{tutorial} di supporto. Purtroppo, sia la documentazione che i \inglese{tutorial} sono forniti solo in lingua inglese. Inoltre, \progname mette a disposizione dei \inglese{process template}, che permettono agli utenti non esperti di avere la concezione delle potenzialità del programma.
 
 
+L'interfaccia offerta da \swname{Bizagi Suite} è particolarmente attraente e performante, ma purtroppo poco intuitiva. L'utente, soprattutto se inesperto, fa molta fatica a capire come utilizzare l'applicativo. Anche se la gestione dei processi non è per nulla \inglese{user friendly}, il \sw offre molti strumenti di \inglese{management} e permette di ricavare molte informazioni sull'andamento dei processi.
 
-\subsubsection{Caratteristiche}
-\textbf{Difetti}
-\begin{itemize}
-\item pensato solo per la gestione dei documenti. Dispone di un modulo workflow ma è secondario ed è comunque usato principalmente per la gestione dei documenti
-\end{itemize}
+Inoltre non esistono diverse tipologie di interfacce in relazione ai ruoli ricoperti, funzionalità offerta, invece, da molti altri \sw BPM.
+
+Si riporta in figura \ref{fig:suite} un immagine dell'interfaccia di \swname{Bizagi Suite}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{suite}
+  \caption{Interfaccia di \swname{Bizagi Suite}}
+  \label{fig:suite}
+\end{figure}
+
+
+Come indicato tra i requisiti di sistema, \progname può essere installato solo su piattaforme \inglese{windows}. Questo, in generale, costituisce un limite, tuttavia, in questo caso, visto che \customer dispone di un'infrastruttura \inglese{windows-based}, non vi è alcun problema.
+
+\swname{Bizagi Process Modeler} comprende una \inglese{future} che permette a più utenti di collaborare contemporaneamente alla modellazione di un processo. 
+Si tratta di una funzionalità molto interessante, soprattutto in \inglese{team} numerosi, per parallelizzare il lavoro e quindi aumentare la produttività.
 
 \subsection{Camunda BPM Platform}
 \renewcommand{\progname}{\swname{Camunda}\xspace}
@@ -1139,23 +1152,23 @@ tuttavia, nella sua distribuzione \inglese{standard}, il \sw comprende anche gli
 \toprule
 \bfseries{}Funzionalità & \bfseries{}Bonita\,BPM & \bfseries{}ProcessMaker & \bfseries{}BizAgi & \bfseries{}Camunda\\
 \midrule
-modellazione                                 & \tick  & \tick  &      &      \\
-modellazione tramite editor grafico          & \tick  & \tick  &      &      \\
-rispetto notazione BPMN                      & \tick  & \cross &      &      \\
-monitoraggio dei processi                    & \tick  & \tick  &      &      \\
-sistema di \inglese{reporting}               & \tick  & ¿?      &      &      \\
-indicatori grafici stato di avanzamento      & \cross & \tick  &      &      \\
-ottimizzazione dei processi                  & \tick$^{*}$ & \cross &      &      \\
-simulazione                                  & \tick  & \cross &      &      \\
-sistema di \inglese{reporting} simulazione   & \tick  & \cross &      &      \\
-validazione modelli                          & \tick  & \cross &      &      \\
-esecuzione automatizzata processi            & \tick  & \tick  &      &      \\
-integrazione con \sw di parti terze          & \tick  & \tick  &      &      \\
-interfacciamento con utenti                  & \tick  & \tick  &      &      \\
-\inglese{form} statici                       & \tick  & \tick  &      &      \\
-\inglese{form} dinamici                      & \tick$^{*}$ & \tick  &      &      \\
-\inglese{form} internazionalizzabili         & \tick$^{*}$ & ¿?  &      &      \\
-gestione separata dei ruoli                  & \tick$^{*}$  & ¿?  &      &      \\
+modellazione                                 & \tick  & \tick  & \tick      &      \\
+modellazione tramite editor grafico          & \tick  & \tick  & \tick     &      \\
+rispetto notazione BPMN                      & \tick  & \cross &  \tick     &      \\
+monitoraggio dei processi                    & \tick  & \tick  &  \tick    &      \\
+sistema di \inglese{reporting}               & \tick  & ¿?      &  \tick    &      \\
+indicatori grafici stato di avanzamento      & \cross & \tick  &   ¿?    &      \\
+ottimizzazione dei processi                  & \tick$^{*}$ & \cross & ¿?       &      \\
+simulazione                                  & \tick  & \cross &  \tick       &      \\
+sistema di \inglese{reporting} simulazione   & \tick  & \cross &  \tick      &      \\
+validazione modelli                          & \tick  & \cross &  \tick     &      \\
+esecuzione automatizzata processi            & \tick  & \tick  &   ¿?  &        \\
+integrazione con \sw di parti terze          & \tick  & \tick  &   \tick     &      \\
+interfacciamento con utenti                  & \tick  & \tick  &    ¿?    &      \\
+\inglese{form} statici                       & \tick  & \tick  &    ¿?    &      \\
+\inglese{form} dinamici                      & \tick$^{*}$ & \tick  &¿?        &      \\
+\inglese{form} internazionalizzabili         & \tick$^{*}$ & ¿?  &   ¿?     &      \\
+gestione separata dei ruoli                  & \tick$^{*}$  & ¿?  & \cross       &      \\
 \bottomrule
 \begin{minipage}[b]{.8\textwidth}
 \begin{tabular}{lp{\textwidth}}
