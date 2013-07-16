@@ -1087,17 +1087,33 @@ I \inglese{report} restituiti dalla simulazione risultano essere poco comprensib
 \item pensato solo per la gestione dei documenti. Dispone di un modulo workflow ma è secondario ed è comunque usato principalmente per la gestione dei documenti
 \end{itemize}
 
-\subsection{Perceptive}
-\renewcommand{\progname}{\swname{Perceptive}\xspace}
+\subsection{Camunda BPM Platform}
+\renewcommand{\progname}{\swname{Camunda}\xspace}
 \begin{picture}(0,0)
-  \put(250, 10){\includegraphics[width=.3\textwidth]{perceptivesoftware_logo}}
+  \put(250, 10){\includegraphics[width=.3\textwidth]{camunda_logo}}
 \end{picture}
+
+\subsubsection{Descrizione}
+\progname è una soluzione realizzata da un \inglese{team} di sviluppatori dell'area tedesca e distribuita sotto licenza \inglese{Apache v2.0} e quindi totalmente \inglese{open source}. Il \sw si basa sulla piattaforma Java e nella sua distribuzione di base comprende tre \inglese{front-end} grafici indipendenti: \swname{Tasklist} utilizzato per la gestione dei flussi di lavoro basati sull'interazione con gli utenti umani, \swname{Cockpit} specializzato nella gestione e il controllo delle operazioni aziendali e \swname{Cycle} che permette di importare e rendere eseguibili i modelli di processi BPMN 2.0.
+%TODO parlare del backend che ci sta dietro
+
+\subsubsection{Requisiti di sistema}
+Al fine di eseguire il sistema è richiesta un'installazione di \swname{Apache Tomcat} quindi sono in particolare necessari:
+\begin{itemize}
+  \item il \inglese{servlet container} \swname{Catalina};
+  \item il connettore HTTP \swname{Coyote};
+  \item il motore Java Server Pages \swname{Jasper};
+\end{itemize}
+tuttavia, nella sua distribuzione \inglese{standard}, il \sw comprende anche gli eseguibili binari di un sistema \swname{Tomcat} con \progname già installato e configurato, più gli \inglese{script} di lancio automatico per i sistemi \swname{Windows}.
+
+\subsubsection{Caratteristiche}
+\progname non comprende alcun editor visuale per la modellazione dei processi aziendali al suo interno: tale funzionalità è demandata a \sw di terze parti (ne esistono anche di \inglese{open source} come, ad esempio, \swname{Yaoqiang}) ma, essendo il BPMN un formato \inglese{standard} questo non rappresenta un problema in sede di importazione dei dati all'interno del sistema tramite \swname{Cicle}.
 
 \section{Analisi comparativa}
 \begin{small}
-\begin{longtable}{>{\sffamily}p{.5\textwidth}*{4}{>{\sffamily}c}}
+\begin{longtable}{>{\sffamily}p{.4\textwidth}*{4}{>{\sffamily}c}}
 \toprule
-\bfseries{}Funzionalità & \bfseries{}Bonita\,BPM & \bfseries{}PM & \bfseries{}Arxivar & \bfseries{}Perceptive\\
+\bfseries{}Funzionalità & \bfseries{}Bonita\,BPM & \bfseries{}ProcessMaker & \bfseries{}BizAgi & \bfseries{}Camunda\\
 \midrule
 modellazione                                 & \tick  & \tick  &      &      \\
 modellazione tramite editor grafico          & \tick  & \tick  &      &      \\
