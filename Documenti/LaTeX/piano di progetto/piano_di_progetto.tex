@@ -1133,8 +1133,7 @@ Si tratta di una funzionalità molto interessante, soprattutto in \inglese{team}
 \end{picture}
 
 \subsubsection{Descrizione}
-\progname è una soluzione realizzata da un \inglese{team} di sviluppatori dell'area tedesca e distribuita sotto licenza \inglese{Apache v2.0} e quindi totalmente \inglese{open source}. Il \sw si basa sulla piattaforma Java e nella sua distribuzione di base comprende tre \inglese{front-end} grafici indipendenti: \swname{Tasklist} utilizzato per la gestione dei flussi di lavoro basati sull'interazione con gli utenti umani, \swname{Cockpit} specializzato nella gestione e il controllo delle operazioni aziendali e \swname{Cycle} che permette di importare e rendere eseguibili i modelli di processi BPMN 2.0.
-%TODO parlare del backend che ci sta dietro
+\progname è una soluzione realizzata da un \inglese{team} di sviluppatori dell'area tedesca e distribuita sotto licenza \inglese{Apache v2.0} e quindi totalmente \inglese{open source}. Il \sw si basa sulla piattaforma Java e nella sua distribuzione di base comprende un motore di esecuzione dei processi (`\inglese{process engine}') e tre \inglese{front-end} grafici (`\inglese{process applications}') indipendenti: \swname{Tasklist} utilizzato per la gestione dei flussi di lavoro basati sull'interazione con gli utenti umani, \swname{Cockpit} specializzato nella gestione e il controllo delle operazioni aziendali e \swname{Cycle} che permette di importare e rendere eseguibili i modelli di processi BPMN 2.0.
 
 \subsubsection{Requisiti di sistema}
 Al fine di eseguire il sistema è richiesta un'installazione di \swname{Apache Tomcat} quindi sono in particolare necessari:
@@ -1146,7 +1145,18 @@ Al fine di eseguire il sistema è richiesta un'installazione di \swname{Apache T
 tuttavia, nella sua distribuzione \inglese{standard}, il \sw comprende anche gli eseguibili binari di un sistema \swname{Tomcat} con \progname già installato e configurato, più gli \inglese{script} di lancio automatico per i sistemi \swname{Windows}.
 
 \subsubsection{Caratteristiche}
-\progname non comprende alcun editor visuale per la modellazione dei processi aziendali al suo interno: tale funzionalità è demandata a \sw di terze parti (ne esistono anche di \inglese{open source} come, ad esempio, \swname{Yaoqiang}) ma, essendo il BPMN un formato \inglese{standard} questo non rappresenta un problema in sede di importazione dei dati all'interno del sistema tramite \swname{Cicle}.
+\progname non comprende alcun editor visuale per la modellazione dei processi aziendali al suo interno: tale funzionalità è demandata a \sw di terze parti specializzate a tale scopo (ne esistono anche di \inglese{open source} come, ad esempio, \swname{Yaoqiang}) ed essendo il BPMN un formato \inglese{standard} questo non rappresenta un problema in sede di importazione dei dati all'interno del sistema tramite \swname{Cycle}.
+
+Quest'ultimo permette di creare un collegamento bidirezionale fra la rappresentazione in BPMN del processo di \bsn e il suo \inglese{deployment} nel sistema BPM sia attraverso il \inglese{file system} del server in cui è installato \progname che tramite un sistema di controllo versione (SVN) in modo da permettere ai \bsn \inglese{analyst} di intervenire anche da remoto utilizzando strumenti di modellazione in locale. In alternativa, è possibile utilizzare anche editor di modelli BPMN \inglese{cloud-based} (SaaS) come \swname{Signavio}, per cui \progname mette a disposizione un apposito connettore.
+
+\swname{Cycle} permette inoltre di avere accesso al sistema di gestione delle identità che permette la creazione dei profili degli utenti (semplici o amministratori) del sistema e la loro organizzazione in gruppi che sia in grado di rispecchiare l'organigramma aziendale. La schermata di amministrazione degli utenti di \progname è riportata, a titolo esemplificativo, in \figurename~\ref{fig:comundauserlist}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.8\textwidth]{camunda_userlist}
+  \caption{Configurazione di utenti e gruppi in \progname.}
+  \label{fig:comundauserlist}
+\end{figure}
 
 \section{Analisi comparativa}
 \begin{small}
