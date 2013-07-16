@@ -830,9 +830,21 @@ Un esempio di un semplice diagramma nel formato \inglese{standard} BPMN è ripor
 
 \progname offre la possibilità di installazione del \sw in lingua italiana come parte del pacchetto di base. Questa caratteristica risulta essere molto significativa in quanto molti \sw non dispongono di una localizzazione nativa e questo potrebbe rappresentare un fattore penalizzante in relazione ai requisiti del cliente. Inoltre, la localizzazione in lingua italiana risulta essere sufficientemente completa e di buona qualità.
 
+
  Il sistema \progname comprende nel pacchetto di base, la funzionalità di simulazione dei processi. La simulazione è molto importante perché permette ai responsabili del processo decisionale, soprattutto se poco esperti, di avere una percezione sull'andamento ottimale dei processi. In questo modo si potrà monitorare e controllare la situazione possedendo un metro di confronto.
+Si riporta in figura \ref{fig:simulazione} un estratto del \inglese{report} derivante dalla simulazione di un processo.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=\textwidth]{simulazione}
+  \caption{Estratto di un \inglese{report} di una simulazione con \progname.}
+  \label{fig:simulazione}
+\end{figure}
+
 
 \progname è dotato della funzionalità di monitoraggio dei processi comprendente un sistema di \inglese{reporting} in grado di attivarsi automaticamente al termine del singoli processi e con possibilità di impostazione di tempistiche intermedie. Questo permette ai responsabili del processo decisionale di essere sempre informati, anche in modo automatico, sulla situazione vigente.
+
+Il sistema di \inglese{reporting} è ben strutturato, restituisce un documento sia in formato \texttt{.pdf} che in \texttt{xls}. Tuttavia, il sistema fornisce il \inglese{report} in solo lingua inglese.
 
 Il sistema supporta la funzionalità di interfacciamento con servizi LDAP\footnote{LDAP,  Lightweight Directory Access Protocol, è un protocollo standard per l'interrogazione e la modifica dei servizi di directory per la condivisione dei dati.\label{note:ldap}}. 
 
@@ -880,17 +892,9 @@ Occorre considerare che, molte funzionalità aggiuntive potenzialmente molto int
 
 \end{itemize}
 
+Infine, anticipato in precedenza, \progname comprende la funzionalità di esecuzione automatica dei processi. Infatti, tramite il \inglese{deployment} dei processi è possibile automatizzarne l'esecuzione delle componenti che non devono essere gestite da risorse umane.
 
-da vedere:
-\begin{itemize}
 
-%TODO 	eventuale controllo
-
- \item funzionalità di esecuzione automatica dei processi;
-%TODO controllare
- \item modularità %TODO questo resta da capire
-
-\end{itemize}
 
 \subsection{ProcessMaker}
 \renewcommand{\progname}{\swname{ProcessMaker}\xspace}
