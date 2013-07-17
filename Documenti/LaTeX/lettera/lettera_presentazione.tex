@@ -1,0 +1,64 @@
+\documentclass[a4paper,11pt]{letter}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[italian]{babel}
+\usepackage[osf]{mathpazo}
+
+%*******************************************************************************
+% Dati per la lettera
+%*******************************************************************************
+\address{}
+\signature{Diego Beraldin\\Elena Zecchinato}
+\date{Padova, 19 luglio 2013}
+
+%*******************************************************************************
+% Altri pacchetti utili
+%*******************************************************************************
+\usepackage{xspace} % per spazi condizionali
+
+%*******************************************************************************
+% Un po' di macro
+%*******************************************************************************
+\newcommand{\giraldo}{Ghiraldo\xspace}
+\newcommand{\inglese}[1]{\foreignlanguage{english}{\textit{#1}}}
+\newcommand{\team}{\textsf{EtaBeta\,Software}\xspace}
+\newcommand{\customer}{\textsf{Alpha\,\&\,Partners}\xspace}
+
+%*******************************************************************************
+% Inizio del documento
+%*******************************************************************************
+\begin{document}
+
+\begin{letter}{
+  \textbf{Alla cortese attenzione di:} prof. Filippo \giraldo\\
+  \textbf{Oggetto:} presentazione progetto}
+
+\opening{Egregio prof. \giraldo,}
+
+con la presente Le consegniamo l'elaborato svolto per l'esame di Sviluppo e Gestione Progetti. Il lavoro è composto da due documenti:
+\begin{itemize}
+\renewcommand{\labelitemi}{--}
+  \item `Progetto SGP' (\texttt{progetto\_sgp.pdf});
+  \item `Business Plan' (\texttt{business\_plan.pdf}).
+\end{itemize}
+
+Ai fini della redazione del primo documento, il \inglese{team} ha immaginato di essere \team, una società esterna alla quale \customer si è rivolta per una consulenza in merito all'acquisto di un \inglese{software} BPM.
+
+Per realizzare il secondo documento, invece, il \inglese{team} ha immaginato di essere l'azienda \customer stessa e di redigere un \inglese{business plan} per il progetto di sviluppo interno ad \customer. Il \inglese{team} ha inoltre supposto che \team collaborasse con \customer per la stesura della parte relativa all'acquisizione del \inglese{software} BPM di detto documento.
+
+Per quanto riguarda il consiglio di privilegiare soluzioni \inglese{made in Italy}, il \inglese{team} ha vagliato diversi prodotti tra cui \textsf{Arxivar}, \textsf{NESP} e \textsf{Sherpa}. Purtroppo non è stato possibile testare questi \inglese{sofware} non avendo avuto alcuna risposta da parte delle aziende che erano state contattate per accedere a versioni \inglese{trial} dei programmi.
+
+In relazione al numero di componenti del \inglese{team}, purtroppo si sono verificati dei problemi di natura organizzativa in quanto alcuni membri del gruppo non hanno potuto assicurare la loro piena disponibilità. Il \inglese{team} si è perciò ridotto a due soli componenti. In fondo, come detto da Lei stesso:
+\begin{quotation}\footnotesize
+  <<non è così importante il numero (\dots) quello che conta è la sinergia>>
+\end{quotation}
+
+\closing{Distinti saluti,}
+
+%\cc{Other destination}
+%\ps{PS: PostScriptum}
+%\encl{Enclosures}
+
+\end{letter}
+\end{document}
