@@ -782,45 +782,40 @@ Tale situazione è dovuta al fatto che il settore ha raggiunto un buon livello d
 	
 	Le funzionalità delle quali si terrà conto nell'analisi comparativa dei \sw sono:
 	
-	\begin{enumerate}
-	\renewcommand{\labelenumi}{\arabic{enumi}}		
-		\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
-		\item modellazione
-			\begin{enumerate}
-			\item modellazione tramite editor grafico
-			\item rispetto di notazioni \inglese{standard}	
-			\end{enumerate}
-		\item monitoraggio dei processi
-			\begin{enumerate}
-			\item sistema di \inglese{reporting}
-			\item indicatori grafici dello stato di avanzamento
-			\item ottimizzazione dei processi	
-			\end{enumerate}		
-		\item simulazione
-			\begin{enumerate}
-			\item sistema di \inglese{reporting} simulazione
-			\item validazione modelli 	
-			\end{enumerate}
-		\item esecuzione automatizzata dei processi
-
-		\item integrazione con \sw di parti terze
-						
-			
-		\item interfacciamento con utenti
-			\begin{enumerate}
-			\item \inglese{form} statici
-			\item \inglese{form} dinamici
-			\item \inglese{form} internazionalizzabili
-			\item gestione separata dei ruoli 			
-			\end{enumerate}
+\begin{enumerate}
+\renewcommand{\labelenumi}{\arabic{enumi}}		
+\renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
+  \item modellazione
+ 	\begin{enumerate}
+	  \item modellazione tramite editor grafico
+	  \item rispetto di notazioni \inglese{standard}	
 	\end{enumerate}
-
-
+	\item monitoraggio dei processi
+		\begin{enumerate}
+		  \item sistema di \inglese{reporting}
+		  \item indicatori grafici dello stato di avanzamento
+		  \item ottimizzazione dei processi	
+		\end{enumerate}		
+	\item simulazione
+		\begin{enumerate}
+		  \item sistema di \inglese{reporting} simulazione
+		  \item validazione modelli 	
+		\end{enumerate}
+	\item esecuzione automatizzata dei processi
+	\item integrazione con \sw di parti terze
+	\item interfacciamento con utenti
+	\begin{enumerate}
+	  \item \inglese{form} statici
+	  \item \inglese{form} dinamici
+	  \item \inglese{form} internazionalizzabili
+	  \item gestione separata dei ruoli 			
+	\end{enumerate}
+\end{enumerate}
 
 \subsection{Bonita BPM}
 \newcommand{\progname}{\swname{Bonita\,BPM}\xspace}
 \begin{picture}(0,0)
-  \put(250, 10){\includegraphics[width=.3\textwidth]{bonitasoft_logo}}
+  \put(260, 10){\includegraphics[width=.3\textwidth]{bonitasoft_logo}}
 \end{picture}
 
 \subsubsection{Descrizione}
@@ -837,7 +832,7 @@ di portarne a termine l'esecuzione provocando la visualizzazione dei \inglese{fo
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=.75\textwidth]{bonita_architecture}
+  \includegraphics[width=.8\textwidth]{bonita_architecture}
   \caption{Architettura ad alto livello di \progname.}
   \label{fig:bonitaarchitecture}
 \end{figure}
@@ -846,39 +841,35 @@ In \figurename~\ref{fig:bonitaarchitecture} è riportata un'illustrazione dell'a
 
 \subsubsection{Requisiti di sistema}
 \begin{itemize}
-\item Java SE \inglese{Runtime Environment} (versione 6 o superiore) per l'esecuzione in locale;
-\item un \inglese{server} Java EE (ad esempio Tomcat versione 6.x o superiore) per il \inglese{deployment} dell'applicazione in remoto.
+  \item Java SE \inglese{Runtime Environment} (versione 6 o superiore) per l'esecuzione in locale;
+  \item un \inglese{server} Java EE (ad esempio Tomcat versione 6.x o superiore) per il \inglese{deployment} dell'applicazione in remoto.
 \end{itemize}
 
-
 \subsubsection{Caratteristiche}
+L'\inglese{editor} grafico offerto da \progname si presenta molto intuitivo e semplice da utilizzare. Un qualsiasi utente che abbia una minimale esperienza di \inglese{editor} grafici è in grado di cogliere ed utilizzare le funzionalità base. È chiaro, però, che per produrre diagrammi di buona qualità e per accedere a funzionalità più specifiche, è necessario consultare la documentazione. 
 
-L'\inglese{editor} grafico offerto da \progname si presenta molto intuitivo e semplice da utilizzare. Un qualsiasi utente che abbia una minimale esperienza di \inglese{editor} grafici è in grado di cogliere ed utilizzare le funzionalità base. È  chiaro, però, che per produrre diagrammi di buona qualità e per accedere a funzionalità più specifiche, è necessario consultare la documentazione. 
-
-Inoltre, L'\inglese{editor} grafico offerto da \progname, rispetta lo \inglese{standard} BPMN 2.0 per la rappresentazione dei flussi di lavoro. L'uso dello \inglese{standard} è molto importante perché permette una comunicazione molto più completa e priva di ambiguità, anche con altri operatori del settore. Grazie all'interoperabilità tra strumenti di diversi fornitori garantita dal rispetto degli \inglese{standard}, è possibile diminuire gli eventuali costi di riconversione in una futura migrazione verso altre soluzioni.
+Inoltre, l'\inglese{editor} grafico offerto da \progname, rispetta lo \inglese{standard} BPMN 2.0 per la rappresentazione dei flussi di lavoro. L'uso dello \inglese{standard} è molto importante perché permette una comunicazione molto più completa e priva di ambiguità, anche con altri operatori del settore. Grazie all'interoperabilità tra strumenti di diversi fornitori garantita dal rispetto degli \inglese{standard}, è possibile diminuire gli eventuali costi di riconversione in una futura migrazione verso altre soluzioni.
 
 Un esempio di un semplice diagramma nel formato \inglese{standard} BPMN è riportato in figura \ref{fig:diagramma}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{diagrammi}
+  \includegraphics[width=.9\textwidth]{diagrammi}
   \caption{Diagramma prodotto con il \sw \progname.}
   \label{fig:diagramma}
 \end{figure}
 
 \progname offre la possibilità di installazione del \sw in lingua italiana come parte del pacchetto di base. Questa caratteristica risulta essere molto significativa in quanto molti \sw non dispongono di una localizzazione nativa e questo potrebbe rappresentare un fattore penalizzante in relazione ai requisiti del cliente. Inoltre, la localizzazione in lingua italiana risulta essere sufficientemente completa e di buona qualità.
 
-
- Il sistema \progname comprende nel pacchetto di base, la funzionalità di simulazione dei processi. La simulazione è molto importante perché permette ai responsabili del processo decisionale, soprattutto se poco esperti, di avere una percezione sull'andamento ottimale dei processi. In questo modo si potrà monitorare e controllare la situazione possedendo un metro di confronto.
+Il sistema \progname comprende nel pacchetto di base, la funzionalità di simulazione dei processi. La simulazione è molto importante perché permette ai responsabili del processo decisionale, soprattutto se poco esperti, di avere una percezione sull'andamento ottimale dei processi. In questo modo si potrà monitorare e controllare la situazione possedendo un metro di confronto.
 Si riporta in figura \ref{fig:simulazione} un estratto del \inglese{report} derivante dalla simulazione di un processo.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{simulazione}
+  \includegraphics[width=.9\textwidth]{simulazione}
   \caption{Estratto di un \inglese{report} di una simulazione con \progname.}
   \label{fig:simulazione}
 \end{figure}
-
 
 \progname è dotato della funzionalità di monitoraggio dei processi comprendente un sistema di \inglese{reporting} in grado di attivarsi automaticamente al termine del singoli processi e con possibilità di impostazione di tempistiche intermedie. Questo permette ai responsabili del processo decisionale di essere sempre informati, anche in modo automatico, sulla situazione vigente.
 
@@ -887,6 +878,7 @@ Il sistema di \inglese{reporting} è ben strutturato, restituisce un documento s
 Il sistema supporta la funzionalità di interfacciamento con servizi LDAP\footnote{LDAP,  Lightweight Directory Access Protocol, è un protocollo \inglese{standard} per l'interrogazione e la modifica dei servizi di directory per la condivisione dei dati.\label{note:ldap}}. 
 
 Questa funzionalità è richiesta dalla maggior parte delle aziende che fanno uso di \sw BPM. Infatti, tale funzione, permette loro di gestire la propria documentazione in modo semplice ed efficace centralizzando l'accesso ai documenti che costituiscono il flusso informativo aziendale.
+
 La condivisione delle risorse non fa parte del pacchetto base di \progname. 
 Tuttavia l'azienda può usufruirne tramite l'installazione del pacchetto \textsf{teamwork}, dietro un minimale corrispettivo.
 Anche questa funzionalità è molto richiesta dalle aziende. Si tratta di una necessità molto risentita in quanto per loro stessa natura i progetti coinvolgono una pluralità di soggetti che hanno l'esigenza di  operare sinergicamente da diverse postazioni.
@@ -899,19 +891,18 @@ La versione base del \sw dispone, inoltre, del modulo \swname{User Experience}. 
 
 In questo modo l'utente semplice, specialmente se inesperto, non disponendo di alcuni permessi, non potrà causare eventuali danni che minerebbero il buon funzionamento del \sw.
 
-
-Inoltre, le due interfacce permettono di gestire in maniera adeguata il compito dei diversi ruoli. Infatti, mentre l'interfaccia utente permette di eseguire \inglese{task} e comunicarne, sempre tramite il \sw , lo stato intermedio o la terminazione, l'interfaccia amministrativa permette ai responsabili decisionali, invece, di monitorare la situazione, essendo loro informati sullo stato di ogni \inglese{task} e di effettuare delle modifiche alla pianificazione laddove lo ritengano necessario.
+Inoltre, le due interfacce permettono di gestire in maniera adeguata il compito dei diversi ruoli. Infatti, mentre l'interfaccia utente permette di eseguire \inglese{task} e comunicarne, sempre tramite il \sw, lo stato intermedio o la terminazione, l'interfaccia amministrativa permette ai responsabili decisionali, invece, di monitorare la situazione, essendo loro informati sullo stato di ogni \inglese{task} e di effettuare delle modifiche alla pianificazione laddove lo ritengano necessario.
 Si riporta nella figura \ref{fig:utente} un esempio dell'interfaccia utente e in figura \ref{fig:amministratore} un esempio dell'interfaccia amministrativa.
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{utente}
+  \includegraphics[width=.9\textwidth]{utente}
   \caption{Interfaccia utente di \progname.}
   \label{fig:utente}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{amministratore}
+  \includegraphics[width=.9\textwidth]{amministratore}
   \caption{Interfaccia da amministratore di \progname.}
   \label{fig:amministratore}
 \end{figure}
@@ -919,14 +910,13 @@ Si riporta nella figura \ref{fig:utente} un esempio dell'interfaccia utente e in
 Per quanto riguarda la documentazione fornita dal \inglese{team} di sviluppo, fornisce spiegazioni molto esaustive e comprende anche degli ottimi \inglese{tutorial} di supporto. 
 Tuttavia, la documentazione è disponibile solo nelle versione inglese. Questo potrebbe causare dei problemi all'azienda acquirente qualora non disponga di personale con una sufficiente preparazione linguistica.
 
-\progname, purtroppo, risulta non avere una facile installazione e inoltre la predisposizione di tutti i moduli e, delle eventuali versioni in abbonamento, risulta essere complessa. Si prevede quindi la necessità, in caso di scelta di questo \sw , di disporre di una figura atta all'installazione del sistema in azienda. 
+\progname, purtroppo, risulta non avere una facile installazione e inoltre la predisposizione di tutti i moduli e, delle eventuali versioni in abbonamento, risulta essere complessa. Si prevede quindi la necessità, in caso di scelta di questo \sw, di disporre di una figura atta all'installazione del sistema in azienda. 
 
 Occorre considerare che, molte funzionalità aggiuntive potenzialmente molto interessanti, sono a pagamento, in particolare:
 \begin{itemize}
-\item l' accesso a funzionalità collaborative (\inglese{repository});
-\item controllo sullo stato di avanzamento delle sotto-attività e sull'utilizzo delle risorse;
-\item interfacciamento con applicativi gestionali \swname{SAP} tramite gli appositi connettori.
-
+  \item l' accesso a funzionalità collaborative (\inglese{repository});
+  \item controllo sullo stato di avanzamento delle sotto-attività e sull'utilizzo delle risorse;
+  \item interfacciamento con applicativi gestionali \swname{SAP} tramite gli appositi connettori.
 \end{itemize}
 
 Infine, anticipato in precedenza, \progname comprende la funzionalità di esecuzione automatica dei processi. Infatti, tramite il \inglese{deployment} dei processi è possibile automatizzarne l'esecuzione delle componenti che non devono essere gestite da risorse umane.
@@ -968,7 +958,7 @@ gestione errori                                    & \cross & \cross & \cross & 
 \subsection{ProcessMaker}
 \renewcommand{\progname}{\swname{ProcessMaker}\xspace}
 \begin{picture}(0,0)
-  \put(250, 10){\includegraphics[width=.3\textwidth]{processmaker_logo}}
+  \put(270, 10){\includegraphics[width=.3\textwidth]{processmaker_logo}}
 \end{picture}
 
 \subsubsection{Descrizione}
@@ -982,7 +972,6 @@ Il \sw è completo delle funzionalità necessarie a una PMI come \customer e pu�
 	\item presenza dell'interprete \swname{PHP} versione 5.1.6  (o superiore) con installati i moduli obbligatori \texttt{mysql}, \texttt{xml} e \texttt{curl};
 	\item \inglese{Relational Database Management System} \swname{MySQL} versione 5 o superiore installato nello stesso \inglese{server} in cui risiede \progname.
 \end{itemize}
-
 
 \subsubsection{Caratteristiche}
 L'architettura basata su un \inglese{server} cui si accede tramite un'interfaccia \inglese{web-based} permette di svincolare in maniera pressoché totale la piattaforma \sw responsabile della memorizzazione dei dati e dell'esecuzione della logica applicativa dai sistemi \inglese{client} che la utilizzeranno, facendo uso di tecnologie estremamente diffuse come \swname{Apache}, \swname{MySQL} e \swname{PHP} che costituiscono la piattaforma AMP.
@@ -999,7 +988,7 @@ Per quanto riguarda l'editor di diagrammi, riportato in \figurename{fig:pmeditor
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=.8\textwidth]{pm_editor}
+  \includegraphics[width=.9\textwidth]{pm_editor}
   \caption{L'editor visuale dei processi interno a \progname.}
   \label{fig:pmeditor}
 \end{figure}
@@ -1016,7 +1005,7 @@ Un aspetto fortemente positivo dell'interfaccia grafica di \progname è costitui
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=.8\textwidth]{merdometro}
+  \includegraphics[width=.9\textwidth]{merdometro}
   \caption{Indicatore della misura di avanzamento del lavoro in \progname.}
   \label{fig:merdometro}
 \end{figure}
@@ -1031,7 +1020,7 @@ Per permettere la gestione e la ripartizione del lavoro tra i soggetti coinvolti
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=.8\textwidth]{pm_userlist}
+  \includegraphics[width=.9\textwidth]{pm_userlist}
   \caption{Interfaccia di amministrazione dei profili utente e gruppi.}
   \label{fig:pmuserlist}
 \end{figure}
@@ -1042,7 +1031,7 @@ All'accesso al sistema, gli utenti cui sono state assegnate le attività possono
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=.8\textwidth]{pm_dashboard}
+  \includegraphics[width=.9\textwidth]{pm_dashboard}
   \caption{Visualizzazione della lista dei \inglese{task} di competenza di un utente.}
   \label{fig:pmtasklist}
 \end{figure}
@@ -1056,56 +1045,50 @@ La visualizzazione dell'interfaccia può anche essere personalizzata a livello d
 \subsection{Bizagi}
 \renewcommand{\progname}{\swname{Bizagi}\xspace}
 \begin{picture}(0,0)
-  \put(250, 10){\includegraphics[width=0.2\textwidth]{bizagi_logo}}
+  \put(290, 10){\includegraphics[width=0.2\textwidth]{bizagi_logo}}
 \end{picture}
-
 
 \subsubsection{Descrizione}
 La soluzione \inglese{open source} sviluppata dalla società inglese \swname{Bizagi} si compone di due moduli:
 \begin{itemize}
-\item \swname{Bizagi Process Modeler}, editor per la modellazione dei processi 
-\item \swname{Bizagi Suite}, \sw per la gestione ed il monitoraggio dei processi aziendali \end{itemize}
+  \item \swname{Bizagi Process Modeler}, editor per la modellazione dei processi 
+  \item \swname{Bizagi Suite}, \sw per la gestione ed il monitoraggio dei processi aziendali
+\end{itemize}
 
-La soluzione offerta da \progname è completa ed è sicuramente alla portata di una PMI come \customer .
-Si tratta infatti di un \sw particolarmente performante in grado di fornire informazioni molto precise sull'andamento dei processi.
+La soluzione offerta da \progname è completa ed è sicuramente alla portata di una PMI come \customer. Si tratta infatti di un \sw particolarmente performante in grado di fornire informazioni molto precise sull'andamento dei processi.
 
 \subsubsection{Requisiti di sistema}
 \begin{itemize}
-\item sistemi operativi \swname{Microsoft Windows}
-\item \swname{SQL Server Express 2008 SP3} e successivi
-
-
-
+  \item sistemi operativi \swname{Microsoft Windows}
+  \item \swname{SQL Server Express 2008 SP3} e successivi
 \end{itemize}
+
 \subsubsection{Caratteristiche}
 L'\inglese{editor} grafico è sufficientemente intuitivo e rispetta la notazione BPMN 2.0. Inoltre, l'interfaccia grafica ha un \inglese{look and feel} consistente con la applicazioni del sistema \swname{Windows}. Questo permette alle aziende che decidono di acquisire \progname di ritrovarsi in un contesto già conosciuto e quindi la curva di apprendimento diventa meno ripida.
 Si riporta in figura \ref{fig:diagramma_biz} un esempio di diagramma prodotto con \swname{Bizagi Process Modeler}.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{diagramma_biz}
+  \includegraphics[width=.9\textwidth]{diagramma_biz}
   \caption{Esempio di diagramma creato con  \swname{Bizagi Process Modeler}}
   \label{fig:diagramma_biz}
 \end{figure}
-
-
 
 L'\inglese{editor} comprende anche la funzionalità di verifica dei diagrammi, che permette di fare il  \inglese{debugging} sui grafici prodotti.
 In figura \ref{fig:verifica} è riportato il messaggio restituito dal programma in seguito alla verifica effettuata.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{verifica}
+  \includegraphics[width=.9\textwidth]{verifica}
   \caption{Messaggio restituito dalla funzionalità di verifica di \swname{Bizagi Process Modeler}}
   \label{fig:verifica}
 \end{figure}
-Per quanto riguarda invece, la gestione della lingua, l'italiano è offerto come funzionalità nativa del \sw \progname. Tuttavia, la localizzazione in lingua italiana non è completa e diverse parti risultano essere tradotte male o non tradotte.
+Per quanto riguarda invece, la gestione della lingua, l'italiano è offerto come funzionalità nativa del \sw \progname. Tuttavia, la localizzazione in lingua italiana non è completa e diverse parti risultano essere tradotte male o non tradotte affatto.
 
- \progname permette la simulazione dei processi. In seguito ai test eseguiti, però, risulta essere più deludente rispetto a quella offerta da altri \sw precedentemente verificati.
-I \inglese{report} restituiti dalla simulazione risultano essere poco comprensibili, incompleti e non contengono alcun grafico, il quale, permetterebbe, ai responsabili decisionali, di avere una realizzazione molto più veloce della situazione.
+\progname permette la simulazione dei processi. In seguito ai test eseguiti, però, risulta essere più deludente rispetto a quella offerta da altri \sw presi in considerazione nel corso della presente analisi.
+I \inglese{report} restituiti dalla simulazione risultano essere poco comprensibili, incompleti e non contengono alcun grafico, il quale, permetterebbe ai responsabili decisionali di avere una realizzazione molto più veloce della situazione.
  
- La documentazione fornita dal \inglese{team} di sviluppo è completa e comprende anche dei video \inglese{tutorial} di supporto. Purtroppo, sia la documentazione che i \inglese{tutorial} sono forniti solo in lingua inglese. Inoltre, \progname mette a disposizione dei \inglese{process template}, che permettono agli utenti non esperti di avere la concezione delle potenzialità del programma.
-
+La documentazione fornita dal \inglese{team} di sviluppo è completa e comprende anche dei video \inglese{tutorial} di supporto. Purtroppo, sia la documentazione che i \inglese{tutorial} sono forniti solo in lingua inglese. Inoltre, \progname mette a disposizione dei \inglese{process template}, che permettono agli utenti non esperti di avere la concezione delle potenzialità del programma.
 
 L'interfaccia offerta da \swname{Bizagi Suite} è particolarmente attraente e performante, ma purtroppo poco intuitiva. L'utente, soprattutto se inesperto, fa molta fatica a capire come utilizzare l'applicativo. Anche se la gestione dei processi non è per nulla \inglese{user friendly}, il \sw offre molti strumenti di \inglese{management} e permette di ricavare molte informazioni sull'andamento dei processi.
 Inoltre, non esistono diverse tipologie di interfacce in relazione ai ruoli ricoperti, funzionalità offerta, invece, da molti altri \sw BPM.
@@ -1114,26 +1097,23 @@ Si riporta in figura \ref{fig:suite} un immagine dell'interfaccia di \swname{Biz
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=\textwidth]{suite}
+  \includegraphics[width=.9\textwidth]{suite}
   \caption{Interfaccia di \swname{Bizagi Suite}}
   \label{fig:suite}
 \end{figure}
 
 \progname offre un ottimo sistema di \inglese{reporting}. I dati forniti sono molto dettagliati e la documentazione è disponibile in diversi formati.
 
+\progname supporta l'integrazione con altre applicazioni, in particolare, tra le più importanti troviamo l'integrazione con gli \inglese{Enterprise Content Management} (ECM) come \swname{Sharepoint} e con gestionali \inglese{Customer Relationship Management} (CRM).
 
-\progname supporta l'integrazione con altre applicazioni, in particolare, tra le più importanti troviamo l'integrazione con gli ECM come \swname{Sharepoint} e con gestionali CRM.
+Come indicato tra i requisiti di sistema, \progname può essere installato solo su piattaforme \swname{Windows}. Questo, in generale, costituisce un limite, tuttavia, in questo caso, visto che \customer dispone di un'infrastruttura \swname{Windows}-\inglese{based}, non vi è alcun problema.
 
-
-Come indicato tra i requisiti di sistema, \progname può essere installato solo su piattaforme \inglese{windows}. Questo, in generale, costituisce un limite, tuttavia, in questo caso, visto che \customer dispone di un'infrastruttura \inglese{windows-based}, non vi è alcun problema.
-
-Infine, \swname{Bizagi Process Modeler} comprende una \inglese{future} che permette a più utenti di collaborare contemporaneamente alla modellazione di un processo. 
-Si tratta di una funzionalità molto interessante, soprattutto in \inglese{team} numerosi, per parallelizzare il lavoro e quindi aumentare la produttività.
+Infine, \swname{Bizagi Process Modeler} comprende una \inglese{feature} che permette a più utenti di collaborare contemporaneamente alla modellazione di un processo.  Si tratta di una funzionalità molto interessante, soprattutto in \inglese{team} numerosi, per parallelizzare il lavoro e quindi aumentare la produttività.
 
 \subsection{Camunda BPM Platform}
 \renewcommand{\progname}{\swname{Camunda}\xspace}
 \begin{picture}(0,0)
-  \put(250, 10){\includegraphics[width=.3\textwidth]{camunda_logo}}
+  \put(260, 10){\includegraphics[width=.3\textwidth]{camunda_logo}}
 \end{picture}
 
 \subsubsection{Descrizione}
@@ -1159,7 +1139,7 @@ Quest'ultimo permette di creare un collegamento bidirezionale fra la rappresenta
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=.8\textwidth]{camunda_userlist}
+  \includegraphics[width=.9\textwidth]{camunda_userlist}
   \caption{Configurazione di utenti e gruppi in \swname{Camunda Cycle}.}
   \label{fig:comundauserlist}
 \end{figure}
@@ -1170,7 +1150,7 @@ L'esecuzione dei processi che prevedono l'intervento di attori umani è realizza
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=.8\textwidth]{camunda_tasklist}
+  \includegraphics[width=.9\textwidth]{camunda_tasklist}
   \caption{Visualizzazione di un \inglese{task form} all'interno di \swname{Camunda Tasklist}.}
   \label{fig:camundatasklist}
 \end{figure}
@@ -1181,7 +1161,7 @@ Lo strumento principale per il monitoraggio dei processi all'interno della \ingl
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=.8\textwidth]{camunda_cockpit}
+  \includegraphics[width=.9\textwidth]{camunda_cockpit}
   \caption{Monitoraggio dell'avanzamento di un processo in \swname{Camunda Cockpit}.}
   \label{fig:camundacockpit}
 \end{figure}
