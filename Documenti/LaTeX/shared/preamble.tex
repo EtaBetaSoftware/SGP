@@ -30,6 +30,7 @@
 \usepackage{graphicx}
 \graphicspath{{\docRoot/shared/pictures/}}
 \usepackage{float}
+\usepackage[italian]{varioref}
 
 %*******************************************************************************
 % Tabelle
@@ -119,3 +120,6 @@
 
 \pagestyle{fancy}
 \renewcommand{\sectionmark}[1]{\markboth{#1}{#1}}
+
+% voglio numerare anche le sotto-sotto-sezioni!
+\setcounter{secnumdepth}{3}
