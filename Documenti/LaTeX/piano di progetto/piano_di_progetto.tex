@@ -2,7 +2,7 @@
 % Macro per il documento corrente
 %*******************************************************************************
 \newcommand{\sharedPath}{../shared}
-\newcommand{\doctitle}{Piano di Progetto}
+\newcommand{\doctitle}{Progetto SGP}
 \newcommand{\docauthor}{\team}
 
 %*******************************************************************************
@@ -374,7 +374,7 @@ Esso è costituito da un asse orizzontale, sul quel viene rappresentato l'arco t
 
 \clearpage
 
-\section{Aspetto Economico Finanziario}
+\section{Aspetto Economico Finanziario}\label{sec:aspettoeconomico}
 Il lato economico costituisce l'aspetto primario di ogni organizzazione che abbia scopo di lucro.
 
 È infatti fondamentale avere un utile sufficientemente remunerativo alla fine del progetto. A tale scopo è finalizzata la stima dei costi relativi al progetto. Tale attività è molto delicata in quanto da essa dipende il reale utile che si ottiene. Infatti, se vi è una sottostima dei costi, l'azienda non avrà utile e nel caso peggiore avrà una perdita. È anche vero, però, che se vi è una sovrastima dei costi, l'azienda non potrà essere competitiva nel mercato.
@@ -417,23 +417,6 @@ Si noti che tutte le risorse sono interne ad eccezione del consulente.
 \subsubsection{Pianificazione}
 Per l'attività di Pianificazione il costo previsto è di \textbf{ \text{\euro}1.470,00 }\\	
 I costi per ogni WP della Pianificazione sono riassunti nella seguente tabella.
-\begin{table}[!h]
-\footnotesize
-\centering
-\begin{tabular}{|p{.25\textwidth}|c|c|c|c|c|c|c|}
-\hline
-\textbf{Attività}& \textbf{AM} & \textbf{RMKTG} & \textbf{PM} & \textbf{RQ} & \textbf{PRG} & \textbf{AN} & \textbf{Costo}  \\
-\hline
-analisi del problema e studio di fattibilità  & & & 5& & & 8& \text{\euro} 350,00\\
-pianificazione del lavoro	 				  & & &	16&	6& & & \text{\euro} 600,00 \\	
-redazione Business Plan						& 1 & &16& & & &  	\text{\euro} 520,00 \\			  
-\hline
-\scshape{}pianificazione   							& 1 & &37 &	6 &	&	8 &	\textcolor{red}{ \text{\euro}1.470,00 }\\		 
-\hline
-\end{tabular}
-\caption{costo Pianificazione}\label{tab:pianificazione}
-\end{table}
-
 \begin{table}[!h]
 \footnotesize
 \centering
@@ -511,7 +494,7 @@ Si noti che nelle tabelle relative alle attività non sono inclusi i costi inere
 \scshape{}studio di mercato 	& 5& \text{\euro} 150,00 \\
 \scshape{}proposta 			& &	\text{\euro} 60,00 \\	
 \hline
-Totale				& 6& \text{\euro} 180,00 \\	
+Totale				& 6& \text{\euro} 240,00 \\	
 \hline
 \end{tabular}
 \caption{costo Consulenza}\label{tab:consulenza}
@@ -521,9 +504,7 @@ Come si evince dalla tabella~\ref{tab:consulenza} il costo stimato per le spese 
 
 \subsection{Costo Totale}
 
-Il costo totale stimato ammonta quindi a \textbf	{ \text{\euro} 4.855,00 }.
-Sarà perciò necessario richiedere un corrispettivo maggiorato di una cifra che possa essere sufficientemente remunerativa ma che allo stesso tempo permetta a \team di essere competitiva nel mercato.
-
+Il costo totale stimato ammonta quindi a \textbf{ \text{\euro} 4.915,00}, tale cifra è da considerarsi come comprensiva di un utile sufficientemente remunerativo ma che allo stesso tempo permette a \team di essere competitiva nel mercato. I costi stimati costituiscono un preventivo, \team si riserva di apportare eventuali variazioni a consuntivo.
 
 \section{Gestione dei Rischi}
 Un rischio è un evento incerto o una condizione di incertezza che se accade determina un effetto positivo o negativo sull'obiettivo di progetto.
@@ -1227,15 +1208,35 @@ La gestione invece dell'interazione con gli esecutori dei processi avviene media
 
 Per ulteriori approfondimenti relativi ai pregi e ai difetti rilevati in \progname si rimanda alla sezione \ref{sec:bonita} contenuta nello studio di mercato.
 
-\paragraph{\bfseries\sffamily{}Soluzione ibrida/soluzione ad hoc}\textcolor{white}{ciao ciao stupido LaTeX}\\
-
-\noindent{}In seguito ad un'attenta valutazione \team ha deciso di escludere la possibilità di creare soluzioni ibride o \inglese{ad hoc}. Tale scelta è stata determinata dalla presenza di numerosi \sw già di per sé completi che non giustificherebbe l'ingente esborso di denaro necessario allo sviluppo di una nuova soluzione.
+\bigskip
+\noindent{}{\bfseries\sffamily{}Soluzione ibrida/soluzione ad hoc}\\
+In seguito ad un'attenta valutazione \team ha deciso di escludere la possibilità di creare soluzioni ibride o \inglese{ad hoc}. Tale scelta è stata determinata dalla presenza di numerosi \sw già di per sé completi che non giustificherebbe l'ingente esborso di denaro necessario allo sviluppo di una nuova soluzione.
 
 Lo sviluppo di una soluzione ibrida non è stato ritenuto necessario perché, anche qualora i \sw non fossero completi di \inglese{editor}, questi ultimi sono già predisposti per l'interazione con applicazioni specializzate a tale scopo.
 
 Invece, per quanto riguarda lo sviluppo di una soluzione dedicata, il costo necessario per la realizzazione del prodotto non sarebbe stato sostenibile da \customer né necessario viste le esigue dimensioni dell'azienda.
 
 \section{Costo finale}
+Si riporta un riepilogo delle spese per la consulenza effettuata da \team per \customer:
+
+\begin{center}
+\small
+\begin{tabular}{p{.5\textwidth}r}
+\toprule
+\bfseries\sffamily{}Attività & \bfseries\sffamily{}Costo\\
+\midrule
+\scshape{} pianificazione    & \EUR{1.500,00}\\
+\scshape{} studio di mercato & \EUR{2.450,00}\\
+\scshape{} proposta          & \EUR{905,00}\\
+\midrule
+Totale                       & \textcolor{red}{\EUR{4.855,00}}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Il costo della prestazione di consulenza ammonta pertanto a \textbf{\EUR{4.855,00}}. Pur essendo emerse delle problematiche nella realizzazione del progetto \team si è impegnata a mantenere inalterato il preventivo stabilito apportando come unica variazione la decurtazione del costo di redazione del manuale pari a \EUR{60,00} che non è stato realizzato per i problemi riscontrato. A tale proposito, si rimanda alla documentazione \inglese{online} e si consiglia, eventualmente, data la particolare completezza del manuale, di rivolgersi a un'agenzia di traduzioni.
+
+Il dettaglio dei costi è esposto nella sezione \ref{sec:aspettoeconomico} del presente documento.
 
 \begin{thebibliography}{90}
   \bibitem[Mazzolari, 2007]{mazzolari:bpmita} Mazzolari, F. e Testolin, G., \emph{Document Management}, SistemiNEWS, 2007,\newline disponibile all'indirizzo: \url{http://www.arxivar.it/download/doc_download/99-e-document-management} (consultato il 11/07/2013)
