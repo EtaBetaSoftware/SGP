@@ -812,7 +812,7 @@ Tale situazione è dovuta al fatto che il settore ha raggiunto un buon livello d
 	\end{enumerate}
 \end{enumerate}
 
-\subsection{Bonita BPM}
+\subsection{Bonita BPM}\label{sec:bonita}
 \newcommand{\progname}{\swname{Bonita\,BPM}\xspace}
 \begin{picture}(0,0)
   \put(260, 10){\includegraphics[width=.3\textwidth]{bonitasoft_logo}}
@@ -877,11 +877,11 @@ Il sistema di \inglese{reporting} è ben strutturato, restituisce un documento s
 
 Il sistema supporta la funzionalità di interfacciamento con servizi LDAP\footnote{LDAP,  Lightweight Directory Access Protocol, è un protocollo \inglese{standard} per l'interrogazione e la modifica dei servizi di directory per la condivisione dei dati.\label{note:ldap}}. 
 
-Questa funzionalità è richiesta dalla maggior parte delle aziende che fanno uso di \sw BPM. Infatti, tale funzione, permette loro di gestire la propria documentazione in modo semplice ed efficace centralizzando l'accesso ai documenti che costituiscono il flusso informativo aziendale.
+Questa funzionalità è richiesta dalla maggior parte delle aziende che fanno uso di \sw BPM\@. Infatti, tale funzione, permette loro di gestire la propria documentazione in modo semplice ed efficace centralizzando l'accesso ai documenti che costituiscono il flusso informativo aziendale.
 
-La condivisione delle risorse non fa parte del pacchetto base di \progname. 
-Tuttavia l'azienda può usufruirne tramite l'installazione del pacchetto \textsf{teamwork}, dietro un minimale corrispettivo.
-Anche questa funzionalità è molto richiesta dalle aziende. Si tratta di una necessità molto risentita in quanto per loro stessa natura i progetti coinvolgono una pluralità di soggetti che hanno l'esigenza di  operare sinergicamente da diverse postazioni.
+Inoltre, \progname è in grado di interfacciarsi tramite l'utilizzo di appositi connettori anche alla gestione di contenuti collaborativi offerta da \swname{Microsoft SharePoint} nonché con il sistema di gestione della posta elettronica \swname{Microsoft Exchange} di cui dispone \customer.
+
+La condivisione delle risorse non fa parte del pacchetto base di \progname. Tuttavia l'azienda può usufruirne tramite l'installazione del pacchetto \textsf{teamwork}, dietro un minimale corrispettivo. Anche questa funzionalità è molto richiesta dalle aziende. Si tratta di una necessità molto risentita in quanto per loro stessa natura i progetti coinvolgono una pluralità di soggetti che hanno l'esigenza di  operare sinergicamente da diverse postazioni.
 
 La versione base del \sw dispone, inoltre, del modulo \swname{User Experience}. Tale modulo permette all'azienda che adotta \swname{Bointa BPM}, di disporre di due tipologie di interfacciamento:
 \begin{itemize}
@@ -1144,7 +1144,7 @@ Quest'ultimo permette di creare un collegamento bidirezionale fra la rappresenta
   \label{fig:comundauserlist}
 \end{figure}
 
-\progname permette inoltre la creazione di \inglese{form} personalizzati per la gestione automatizzata dell'interazione degli utenti finali con il sistema BPM. A questo proposito sono distinte due categorie di moduli: i cosiddetti \inglese{start form} visualizzati da parte dell'utente prima che l'istanza di esecuzione del processo sia stata effettivamente avviata e i \inglese{task form} che invece sono mostrati nelle fasi intermedie e sono finalizzati al completamento dei \inglese{task} di cui sono composte le attività di processo.
+\progname permette inoltre la creazione di \inglese{form} personalizzati per la gestione automatizzata dell'interazione degli utenti finali con il sistema BPM\@. A questo proposito sono distinte due categorie di moduli: i cosiddetti \inglese{start form} visualizzati da parte dell'utente prima che l'istanza di esecuzione del processo sia stata effettivamente avviata e i \inglese{task form} che invece sono mostrati nelle fasi intermedie e sono finalizzati al completamento dei \inglese{task} di cui sono composte le attività di processo.
 
 L'esecuzione dei processi che prevedono l'intervento di attori umani è realizzata attraverso l'applicazione \swname{Tasklist} attraverso la quale è possibile accedere alla lista di compiti che sono assegnato a un determinato utente e possono essere dis-assegnati o delegati ad altri colleghi. Inoltre, all'interno dell'applicazione di interfacciamento sono visualizzati i \inglese{form} sia di tipo \inglese{start} che di tipo \inglese{task}, come esemplificato in \figurename~\ref{fig:camundatasklist}
 
@@ -1198,7 +1198,44 @@ gestione separata dei ruoli                  & \tick$^{*}$  & \cross & \cross   
 \end{longtable}
 \end{small}
 
-\clearpage
+\chapter{Proposta}
+\section{Introduzione}
+In tale sezione sarà indicata la soluzione \sw BPM selezionata da \team per \customer e saranno spiegate le motivazioni alla base di tale scelta. Quest'ultima è scaturita da un'attenta analisi delle migliori soluzioni \sw disponibili in commercio e da una comparazione tra le diverse alternative presenti nel mercato.
+
+\team ha privilegiato soluzioni \inglese{open source} con lo scopo di minimizzare i costi sia dell'attività di consulenza stessa che dell'effettivo \inglese{deployment} dell'applicazione nell'ambiente di produzione di \customer. Inoltre, pur essendo state vagliate soluzioni \inglese{made in Italy}, non è stato possibile testare i \sw dal momento che la maggior parte delle aziende adottano una politica di licenza proprietaria.
+
+\section{Soluzione proposta}
+\renewcommand{\progname}{\swname{Bonita\,BPM}\xspace}
+\begin{picture}(0,0)
+  \put(260, 15){\includegraphics[width=.3\textwidth]{bonitasoft_logo}}
+\end{picture}
+In seguito all'analisi effettuata \team propone l'acquisizione di \hyperref[sec:bonita]{\progname}. Tale scelta è stata determinata da diversi fattori. In primo luogo il \sw è in grado di soddisfare tutti i requisiti posti da \customer tramite l'utilizzo della sola versione di base che è disponibile tramite una licenza \inglese{open source} e in forma totalmente gratuita.
+
+L'acquisizione di un \sw con licenza \inglese{open source} permette di introdurre le metodologie di BPM all'interno del modello di \bsn di \customer minimizzando i costi. Si evidenza inoltre che il \sw scelto può essere esteso con funzionalità di più alto livello tramite la sottoscrizione di abbonamenti a pagamento.
+
+Qualora invece l'azienda volesse passare in seguito a un \sw con maggiori prestazioni con una licenza non totalmente gratuita, sarà comunque possibile sfruttare le competenze acquisite nell'utilizzo di \progname in quanto, in generale, i \sw BPM presentano una configurazione simile. 
+
+\progname dispone infatti delle funzionalità di modellazione che permette di rappresentare i processi aziendali dando la possibilità  di superare le problematiche legate alla non linearità rilevate da \team. Tale rappresentazione è inoltre conforme allo \inglese{standard} BPMN e questo, garantendo l'interoperabilità, ha il vantaggio di minimizzare i costi di riconversione ad un'eventuale altra soluzione.
+
+Inoltre il \sw offre un'ottima gestione dei processi e permette il controllo dello stato di avanzamento degli stessi e integra al suo interno utili funzionalità di simulazione dei processi aziendali e di validazione del modello di \bsn adottato. \progname dispone della funzionalità di esecuzione automatizzata dei processi che permette all'azienda di aumentare la propria efficienza riducendo i tempi di produzione. Il \sw è dotato inoltre di un ottimo sistema di \inglese{reporting} in grado di fornire dettagliate informazioni sullo stato dei processi.
+
+Qualora il \inglese{report} evidenziasse delle problematiche, \progname è in grado di fornire in automatico delle indicazioni volte all'ottimizzazione dei processi che si trovano in stati critici assistendo gli organi decisionali interni ad \customer.
+
+La gestione delle attività avviene tramite un portale che presenta interfacce differenti in relazione ai ruoli ricoperti dagli utilizzatori che possono essere utenti semplici oppure amministratori incaricati del monitoraggio. Tale funzionalità non è offerta da tutti i \sw presenti nel mercato che spesso non operano alcuna distinzione fra le categorie di utilizzatori.
+
+La gestione invece dell'interazione con gli esecutori dei processi avviene mediante \inglese{form} che possono essere creati all'interno di \progname tramite il modulo \swname{Bonita Form Builder} sia in forma statica che in forma dinamica.
+
+Per ulteriori approfondimenti relativi ai pregi e ai difetti rilevati in \progname si rimanda alla sezione \ref{sec:bonita} contenuta nello studio di mercato.
+
+\paragraph{\bfseries\sffamily{}Soluzione ibrida/soluzione ad hoc}\textcolor{white}{ciao ciao stupido LaTeX}\\
+
+\noindent{}In seguito ad un'attenta valutazione \team ha deciso di escludere la possibilità di creare soluzioni ibride o \inglese{ad hoc}. Tale scelta è stata determinata dalla presenza di numerosi \sw già di per sé completi che non giustificherebbe l'ingente esborso di denaro necessario allo sviluppo di una nuova soluzione.
+
+Lo sviluppo di una soluzione ibrida non è stato ritenuto necessario perché, anche qualora i \sw non fossero completi di \inglese{editor}, questi ultimi sono già predisposti per l'interazione con applicazioni specializzate a tale scopo.
+
+Invece, per quanto riguarda lo sviluppo di una soluzione dedicata, il costo necessario per la realizzazione del prodotto non sarebbe stato sostenibile da \customer né necessario viste le esigue dimensioni dell'azienda.
+
+\section{Costo finale}
 
 \begin{thebibliography}{90}
   \bibitem[Mazzolari, 2007]{mazzolari:bpmita} Mazzolari, F. e Testolin, G., \emph{Document Management}, SistemiNEWS, 2007,\newline disponibile all'indirizzo: \url{http://www.arxivar.it/download/doc_download/99-e-document-management} (consultato il 11/07/2013)
