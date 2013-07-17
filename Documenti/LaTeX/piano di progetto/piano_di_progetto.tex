@@ -1151,6 +1151,10 @@ Quest'ultimo permette di creare un collegamento bidirezionale fra la rappresenta
 
 \swname{Cycle} permette inoltre di avere accesso al sistema di gestione delle identità che permette la creazione dei profili degli utenti (semplici o amministratori) del sistema e la loro organizzazione in gruppi che sia in grado di rispecchiare l'organigramma aziendale. La schermata di amministrazione degli utenti di \progname è riportata, a titolo esemplificativo, in \figurename~\ref{fig:comundauserlist}.
 
+\progname permette inoltre la creazione di \inglese{form} personalizzati per la gestione automatizzata dell'interazione degli utenti finali con il sistema BPM. A questo proposito sono distinte due categorie di moduli: i cosiddetti \inglese{start form} visualizzati da parte dell'utente prima che l'istanza di esecuzione del processo sia stata effettivamente avviata e i \inglese{task form} che invece sono mostrati nelle fasi intermedie e sono finalizzati al completamento dei \inglese{task} di cui sono composte le attività di processo.
+
+Il sistema si appoggia a \swname{Apache MyBatis} per la gestione della persistenza dei dati.
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=.8\textwidth]{camunda_userlist}
