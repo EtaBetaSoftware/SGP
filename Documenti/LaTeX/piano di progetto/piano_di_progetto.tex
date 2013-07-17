@@ -1133,7 +1133,9 @@ Si tratta di una funzionalità molto interessante, soprattutto in \inglese{team}
 \end{picture}
 
 \subsubsection{Descrizione}
-\progname è una soluzione realizzata da un \inglese{team} di sviluppatori dell'area tedesca e distribuita sotto licenza \inglese{Apache v2.0} e quindi totalmente \inglese{open source}. Il \sw si basa sulla piattaforma Java e nella sua distribuzione di base comprende un motore di esecuzione dei processi (`\inglese{process engine}') e tre \inglese{front-end} grafici (`\inglese{process applications}') indipendenti: \swname{Tasklist} utilizzato per la gestione dei flussi di lavoro basati sull'interazione con gli utenti umani, \swname{Cockpit} specializzato nella gestione e il controllo delle operazioni aziendali e \swname{Cycle} che permette di importare e rendere eseguibili i modelli di processi BPMN 2.0.
+\progname è una soluzione realizzata da un \inglese{team} di sviluppatori con sede a Berlino e distribuita sotto licenza \inglese{Apache v2.0} e quindi totalmente \inglese{open source}. Il \sw si basa sulla piattaforma Java e sul \inglese{framework} per la realizzazione di soluzioni BPM \swname{Activiti}. 
+
+Nella sua distribuzione di base comprende un motore di esecuzione dei processi (`\inglese{process engine}') e tre \inglese{front-end} grafici (`\inglese{process applications}') indipendenti: \swname{Tasklist} utilizzato per la gestione dei flussi di lavoro basati sull'interazione con gli utenti umani, \swname{Cockpit} specializzato nella gestione e il controllo delle operazioni aziendali e \swname{Cycle} che permette di importare e rendere eseguibili i modelli di processi BPMN 2.0.
 
 \subsubsection{Requisiti di sistema}
 Al fine di eseguire il sistema è richiesta un'installazione di \swname{Apache Tomcat} quindi sono in particolare necessari:
@@ -1151,15 +1153,33 @@ Quest'ultimo permette di creare un collegamento bidirezionale fra la rappresenta
 
 \swname{Cycle} permette inoltre di avere accesso al sistema di gestione delle identità che permette la creazione dei profili degli utenti (semplici o amministratori) del sistema e la loro organizzazione in gruppi che sia in grado di rispecchiare l'organigramma aziendale. La schermata di amministrazione degli utenti di \progname è riportata, a titolo esemplificativo, in \figurename~\ref{fig:comundauserlist}.
 
-\progname permette inoltre la creazione di \inglese{form} personalizzati per la gestione automatizzata dell'interazione degli utenti finali con il sistema BPM. A questo proposito sono distinte due categorie di moduli: i cosiddetti \inglese{start form} visualizzati da parte dell'utente prima che l'istanza di esecuzione del processo sia stata effettivamente avviata e i \inglese{task form} che invece sono mostrati nelle fasi intermedie e sono finalizzati al completamento dei \inglese{task} di cui sono composte le attività di processo.
-
-Il sistema si appoggia a \swname{Apache MyBatis} per la gestione della persistenza dei dati.
-
 \begin{figure}[H]
   \centering
   \includegraphics[width=.8\textwidth]{camunda_userlist}
-  \caption{Configurazione di utenti e gruppi in \progname.}
+  \caption{Configurazione di utenti e gruppi in \swname{Camunda Cycle}.}
   \label{fig:comundauserlist}
+\end{figure}
+
+\progname permette inoltre la creazione di \inglese{form} personalizzati per la gestione automatizzata dell'interazione degli utenti finali con il sistema BPM. A questo proposito sono distinte due categorie di moduli: i cosiddetti \inglese{start form} visualizzati da parte dell'utente prima che l'istanza di esecuzione del processo sia stata effettivamente avviata e i \inglese{task form} che invece sono mostrati nelle fasi intermedie e sono finalizzati al completamento dei \inglese{task} di cui sono composte le attività di processo.
+
+L'esecuzione dei processi che prevedono l'intervento di attori umani è realizzata attraverso l'applicazione \swname{Tasklist} attraverso la quale è possibile accedere alla lista di compiti che sono assegnato a un determinato utente e possono essere dis-assegnati o delegati ad altri colleghi. Inoltre, all'interno dell'applicazione di interfacciamento sono visualizzati i \inglese{form} sia di tipo \inglese{start} che di tipo \inglese{task}, come esemplificato in \figurename~\ref{fig:camundatasklist}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.8\textwidth]{camunda_tasklist}
+  \caption{Visualizzazione di un \inglese{task form} all'interno di \swname{Camunda Tasklist}.}
+  \label{fig:camundatasklist}
+\end{figure}
+
+Il monitoraggio dello svolgimento dei processi integra una funzionalità di \inglese{reporting} di alcune categorie particolari di eventi che possono verificarsi nello svolgimento dei processi (\inglese{incidents}), come ad esempio il fallimento di un'attività interna.
+
+Lo strumento principale per il monitoraggio dei processi all'interno della \inglese{suite} \progname è la `cabina di pilotaggio' \swname{Cockpit}. Grazie a quest'ultimo, è possibile verificare il numero di istanze attive per ciascun processo in un determinato momento e, per ognuna delle istanze, il grado di completamento (qual è l'attività attualmente in esecuzione) e, per le attività già svolte, quali sono stati i dati inseriti nei \inglese{form}, come illustrato dalla schermata riportata in \figurename~\ref{fig:camundacockpit}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.8\textwidth]{camunda_cockpit}
+  \caption{Monitoraggio dell'avanzamento di un processo in \swname{Camunda Cockpit}.}
+  \label{fig:camundacockpit}
 \end{figure}
 
 \section{Analisi comparativa}
@@ -1168,23 +1188,23 @@ Il sistema si appoggia a \swname{Apache MyBatis} per la gestione della persisten
 \toprule
 \bfseries{}Funzionalità & \bfseries{}Bonita\,BPM & \bfseries{}ProcessMaker & \bfseries{}BizAgi & \bfseries{}Camunda\\
 \midrule
-modellazione                                 & \tick  & \tick  & \tick      &      \\
-modellazione tramite editor grafico          & \tick  & \tick  & \tick     &      \\
-rispetto notazione BPMN                      & \tick  & \cross &  \tick     &      \\
-monitoraggio dei processi                    & \tick  & \tick  &  \tick    &      \\
-sistema di \inglese{reporting}               & \tick  & \tick  &  \tick    &      \\
-indicatori grafici stato di avanzamento      & \cross & \tick  &   ¿?    &      \\
-ottimizzazione dei processi                  & \tick$^{*}$ & \cross & ¿?       &      \\
-simulazione                                  & \tick  & \cross &  \tick       &      \\
-sistema di \inglese{reporting} simulazione   & \tick  & \cross &  \tick      &      \\
-validazione modelli                          & \tick  & \cross &  \tick     &      \\
-esecuzione automatizzata processi            & \tick  & \tick  &   ¿?  &        \\
-integrazione con \sw di parti terze          & \tick  & \tick  &   \tick     &      \\
-interfacciamento con utenti                  & \tick  & \tick  &    ¿?    &      \\
-\inglese{form} statici                       & \tick  & \tick  &    ¿?    &      \\
-\inglese{form} dinamici                      & \tick$^{*}$ & \tick  &¿?        &      \\
-\inglese{form} internazionalizzabili         & \tick$^{*}$ & \cross &   ¿?     &      \\
-gestione separata dei ruoli                  & \tick$^{*}$  & \cross & \cross       &      \\
+modellazione                                 & \tick  & \tick  & \tick      & \cross \\
+modellazione tramite editor grafico          & \tick  & \tick  & \tick     & \cross \\
+rispetto notazione BPMN                      & \tick  & \cross &  \tick     & \cross \\
+monitoraggio dei processi                    & \tick  & \tick  &  \tick    & \tick \\
+sistema di \inglese{reporting}               & \tick  & \tick  &  \tick    & \tick \\
+indicatori grafici stato di avanzamento      & \cross & \tick  &   ¿?    & \cross \\
+ottimizzazione dei processi                  & \tick$^{*}$ & \cross & ¿?       & \cross \\
+simulazione                                  & \tick  & \cross &  \tick       & \cross \\
+sistema di \inglese{reporting} simulazione   & \tick  & \cross &  \tick      & \cross \\
+validazione modelli                          & \tick  & \cross &  \tick     & \cross \\
+esecuzione automatizzata processi            & \tick  & \tick  &   ¿?  & \tick \\
+integrazione con \sw di parti terze          & \tick  & \tick  &   \tick     & \tick \\
+interfacciamento con utenti                  & \tick  & \tick  &    ¿?    & \tick \\
+\inglese{form} statici                       & \tick  & \tick  &    ¿?    & \cross \\
+\inglese{form} dinamici                      & \tick$^{*}$ & \tick  &¿?        & \cross \\
+\inglese{form} internazionalizzabili         & \tick$^{*}$ & \cross &   ¿?     & \cross \\
+gestione separata dei ruoli                  & \tick$^{*}$  & \cross & \cross       & \tick \\
 \bottomrule
 \begin{minipage}[b]{.8\textwidth}
 \begin{tabular}{lp{\textwidth}}
