@@ -931,8 +931,6 @@ Occorre considerare che, molte funzionalità aggiuntive potenzialmente molto int
 
 Infine, anticipato in precedenza, \progname comprende la funzionalità di esecuzione automatica dei processi. Infatti, tramite il \inglese{deployment} dei processi è possibile automatizzarne l'esecuzione delle componenti che non devono essere gestite da risorse umane.
 
-
-
 Per concludere, in Tabella~\ref{tab:bonitavers} è riportato un prospetto riassuntivo delle funzionalità che sono disponibili in \progname nella versione \inglese{open source} e sottoscrivendo i diversi abbonamenti.
 
 \begin{small}
@@ -945,19 +943,17 @@ simulazione dei processi                           & \tick  & \tick  & \tick  & 
 connettori a sistemi esterni                       & \tick  & \tick  & \tick  & \tick \\
 generazione \inglese{web forms} semplici           & \tick  & \tick  & \tick  & \tick \\
 generazione \inglese{web forms} dinamici           & \cross & \tick  & \tick  & \tick \\
-sviluppo guidato di connettori                     & \tick  & \tick  & \tick  & \tick \\
 \inglese{debugger} dei processi                    & \tick  & \tick  & \tick  & \tick \\
 profili utente personalizzati                      & \cross & \tick  & \tick  & \tick \\
 generazione documentazione                         & \cross & \tick  & \tick  & \tick \\
 gestione documenti con \inglese{versioning}        & \cross & \tick  & \tick  & \tick \\
 \inglese{repository} BPM collaborativi             & \cross & \tick  & \tick  & \tick \\
 ottimizzazione dei processi                        & \cross & \tick  & \tick  & \tick \\
-connettore SAP con \inglese{wizard}                & \cross & \cross & \tick  & \tick \\
 profili utente personalizzabili                    & \cross & \cross & \tick  & \tick \\
 motore di \inglese{deployment} dei processi        & \tick  & \tick  & \tick  & \tick \\
 \inglese{deployment} remoto                        & \cross & \tick  & \tick  & \tick \\
 gestione utenti                                    & \tick  & \tick  & \tick  & \tick \\
-gestione diritti                                   & \cross & \tick  & \tick  & \tick \\
+gestione privilegi                                 & \cross & \tick  & \tick  & \tick \\
 internazionalizzazione dei \inglese{form}          & \cross & \tick  & \tick  & \tick \\
 sincronizzazione LDAP                              & \cross & \tick  & \tick  & \tick \\
 monitoraggio risorse                               & \cross & \cross & \cross & \tick \\
@@ -1014,7 +1010,7 @@ L'interfaccia \inglese{web} costringe inoltre a ricorrere estensivamente alla \i
 
 Inoltre, l'assenza di una funzionalità di \inglese{undo} rappresenta una grave carenza funzionale in quanto, a causa dei limiti dell'interfaccia utente descritti in precedenza, risulta molto facile per gli analisti di \bsn perdere il \inglese{focus} dell'attenzione e, conseguentemente, commettere errori. Infine, la creazione dei diagrammi nell'editor non è intuitiva.
 
-Infine, si segnala che la localizzazione in lingua italiana non è offerta nativamente ma solo come modulo integrativo e che il file PO (\inglese{Portable Object}) messo a disposizione dalla comunità di utilizzatori di \progname contiene tutte le stringhe per la traduzione dell'interfaccia, con il conseguente risultato che alcune voci di menu non contengono alcuna etichetta testuale, in quanto non viene visualizzata nemmeno la stringa originale.
+Si segnala, d'altro canto, che la localizzazione in lingua italiana non è offerta nativamente ma solo come modulo integrativo e che il file PO (\inglese{Portable Object}) messo a disposizione dalla comunità di utilizzatori di \progname contiene tutte le stringhe per la traduzione dell'interfaccia, con il conseguente risultato che alcune voci di menu non contengono alcuna etichetta testuale, in quanto non viene visualizzata nemmeno la stringa originale.
 
 Un aspetto fortemente positivo dell'interfaccia grafica di \progname è costituito dalla visualizzazione dello stato di avanzamento dei processi tramite una metafora visiva che ricorda esplicitamente gli indicatori presenti sul quadro strumenti di un macchinario o di un veicolo (vedi \figurename~\ref{fig:merdometro}).
 
@@ -1040,7 +1036,9 @@ Per permettere la gestione e la ripartizione del lavoro tra i soggetti coinvolti
   \label{fig:pmuserlist}
 \end{figure}
 
-Infine, all'accesso al sistema, gli utenti cui sono state assegnate le attività possono visualizzare l'elenco dei rispettivi compiti all'interno del \inglese{case} corrente, vale a dire dell'istanza del processo aziendale attualmente in esecuzione, tramite una schermata simile a quella riportata in \figurename~\ref{fig:pmtasklist}.
+Il monitoraggio dei \inglese{case}, vale a dire delle istanze dei processi aziendali in esecuzione, prevede di \inglese{default} la visualizzazione della durata e il numero di \inglese{case} per processo. Tali \inglese{report} di base possono però essere ampliati mediante l'installazione di appositi \inglese{plug-in}.
+
+All'accesso al sistema, gli utenti cui sono state assegnate le attività possono visualizzare l'elenco dei rispettivi compiti all'interno del \inglese{case} corrente tramite una schermata simile a quella riportata in \figurename~\ref{fig:pmtasklist}. 
 
 \begin{figure}[H]
   \centering
@@ -1052,6 +1050,8 @@ Infine, all'accesso al sistema, gli utenti cui sono state assegnate le attività
 L'interazione degli utenti finali, cioè del personale coinvolto nello svolgimento delle attività coordinate di cui si compongono i singoli processi, utilizzando \progname passa anche e soprattutto un'interfaccia \inglese{web} all'interno della quale è prevista la compilazione di \inglese{form} dinamici che per il \inglese{team} di sviluppo assumono il nome \swname{Dynaforms}.
 
 La caratteristica fortemente positiva da questo punto di vista è rappresentata dalla facilità d'uso ma anche di realizzazione di questi \inglese{form} tramite modelli predefiniti messi a disposizione dal sistema.
+
+La visualizzazione dell'interfaccia può anche essere personalizzata a livello di gruppo di utenti -- una volta applicata a un gruppo l'impostazione avrà effetto su tutti i suoi membri -- nelle versioni \textsf{Normal}, \textsf{Simplified} (che dispone di un sottoinsieme delle funzionalità) o \textsf{Switchable} (che permette di alternare fra le due modalità precedentemente descritte). Non si tratta, tuttavia, di una vera e propria personalizzazione dell'interfaccia sulla base del ruolo ricoperto dall'utente.
 	
 \subsection{Bizagi}
 \renewcommand{\progname}{\swname{Bizagi}\xspace}
@@ -1172,7 +1172,7 @@ modellazione                                 & \tick  & \tick  & \tick      &   
 modellazione tramite editor grafico          & \tick  & \tick  & \tick     &      \\
 rispetto notazione BPMN                      & \tick  & \cross &  \tick     &      \\
 monitoraggio dei processi                    & \tick  & \tick  &  \tick    &      \\
-sistema di \inglese{reporting}               & \tick  & ¿?      &  \tick    &      \\
+sistema di \inglese{reporting}               & \tick  & \tick  &  \tick    &      \\
 indicatori grafici stato di avanzamento      & \cross & \tick  &   ¿?    &      \\
 ottimizzazione dei processi                  & \tick$^{*}$ & \cross & ¿?       &      \\
 simulazione                                  & \tick  & \cross &  \tick       &      \\
@@ -1183,8 +1183,8 @@ integrazione con \sw di parti terze          & \tick  & \tick  &   \tick     &  
 interfacciamento con utenti                  & \tick  & \tick  &    ¿?    &      \\
 \inglese{form} statici                       & \tick  & \tick  &    ¿?    &      \\
 \inglese{form} dinamici                      & \tick$^{*}$ & \tick  &¿?        &      \\
-\inglese{form} internazionalizzabili         & \tick$^{*}$ & ¿?  &   ¿?     &      \\
-gestione separata dei ruoli                  & \tick$^{*}$  & ¿?  & \cross       &      \\
+\inglese{form} internazionalizzabili         & \tick$^{*}$ & \cross &   ¿?     &      \\
+gestione separata dei ruoli                  & \tick$^{*}$  & \cross & \cross       &      \\
 \bottomrule
 \begin{minipage}[b]{.8\textwidth}
 \begin{tabular}{lp{\textwidth}}
