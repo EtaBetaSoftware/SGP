@@ -123,12 +123,12 @@ Pertanto questo WP prevede la collaborazione di \team con la \customer per la re
 \item{\bfseries Tempo di realizzazione:} 2 giorni lavorativi
 \end{description}
 
-\subsubsection{\bfseries\sffamily{}Studio di mercato}
+\subsubsection{Studio di mercato}
 In questa fase devono essere eseguite tutte le attività inerenti allo studio di mercato sui \sw BPM\@.
 
 Il primo passo da compiere è l'analisi generica del mercato e l'individuazione dei prodotti esistenti. Sarà poi necessario selezionare alcuni \sw atti all'analisi approfondita in modo tale da poter scegliere la migliore soluzione. 
 
-\paragraph{Studio dei \sw esistenti }
+\paragraph{\bfseries\sffamily{}Studio dei \sw esistenti }
 \begin{description}
 \item{\bfseries Descrizione:}\\
 Questo WP prevede l'analisi dei \sw già presenti nel mercato. Si tratta di analizzare le diverse soluzioni già esistenti in commercio ed individuare quelle più adatte all'obiettivo del progetto. 
@@ -374,24 +374,19 @@ La seguente tabella espone i costi orari per ogni ruolo individuato. Si evidenzi
 
 \begin{table}[H]
 \centering
-\begin{tabular}{|p{.25\textwidth}|c|c|}
-\hline
-\textbf{Ruolo}& \textbf{Costo Medio} \\
-\hline
+\rowcolors{1}{black!1}{black!10}
+\begin{tabular}{p{.3\textwidth}c}
+\toprule
+\textbf{\sffamily{}Ruolo}& \textbf{\sffamily{}CMO}\\
+\midrule
 Amministratore			  & \EUR{40,00}\\
-\hline
 Project Manager			  & \EUR{30,00}\\
-\hline
 Responsabile MKTG		  & \EUR{25,00}\\
-\hline
 Responsabile Qualità	& \EUR{20,00}\\
-\hline
 Analista				      & \EUR{25,00}\\
-\hline
 Programmatore		     	& \EUR{15,00}\\
-\hline
 Consulente				    & \EUR{30,00}\\
-\hline
+\bottomrule
 \end{tabular}
 \caption{Costo medio orario dei ruoli aziendali.}
 \label{tab:pianificazione}
@@ -416,7 +411,7 @@ redazione \inglese{business plan}	            & 1 & &16& & & &  	\EUR{520,00}\\
 \scshape{}pianificazione   							      & 1 & &37 &	6 &	&	8 &	\textcolor{red}{\EUR{1.470,00}}\\		 
 \hline
 \end{tabular}
-\caption{costo attività `Pianificazione'}\label{tab:pianificazione}
+\caption{Costo dell'attività `Pianificazione'.}\label{tab:pianificazione}
 \end{table}
 
 \subsubsection{Studio di Mercato}
@@ -439,7 +434,7 @@ analisi proposta nuovo SW/soluzione ibrida 					  & & &2 & 	&5	&  8  & \EUR{335,
 \scshape{}studio di mercato  							& 1 &  &3 & &69	&47	&	\textcolor{red}{\EUR{2.300,00}}\\		 
 \hline
 \end{tabular}
-\caption{costo attività `Studio di Mercato'}\label{tab:mercato}
+\caption{Costo dell'attività `Studio di Mercato'.}\label{tab:mercato}
 \end{table}
 
 \subsubsection{Proposta}
@@ -461,28 +456,27 @@ presentazione proposta		 & & 2&  	1	& & 	& & \EUR{80,00}\\
 \scshape{}proposta  							& 1  &10 &10& &	4&	6&	\textcolor{red}{\EUR{905,00}}\\		 
 \hline
 \end{tabular}
-\caption{costo attività `Redazione Proposta'}\label{tab:proposta}
+\caption{Costo dell'attività `Redazione Proposta'.}\label{tab:proposta}
 \end{table}	
-	
-	
-\subsubsection*{Consulenza}
 
+\subsubsection*{Consulenza}
 Si noti che nelle tabelle relative alle attività non sono inclusi i costi inerenti alla figura del consulente. Il \inglese{team} ha infatti deciso di trattarli a parte. La seguente tabella indica i costi che \team prevede di sostenere per le spese di consulenza in ogni fase.
 	
 \begin{table}[H]
 \centering
-\begin{tabular}{|l|c|r|}
-\hline
-\textbf{Attività}& \textbf{Consulente} & \textbf{Costo}  \\           
-\hline
-\scshape{}pianificazione		& 1 & \EUR{30,00}\\
-\scshape{}studio di mercato & 5 & \EUR{150,00}\\
-\scshape{}proposta 			    &   &	\EUR{60,00}\\	
-\hline
-Totale				              & 6 & \EUR{240,00}\\	
-\hline
+\rowcolors{1}{black!1}{black!10}
+\begin{tabular}{lcr}
+\toprule
+\textbf{\sffamily{}Attività}& \textbf{\sffamily{}Consulente} & \textbf{\sffamily{}Costo}\\           
+\midrule
+Pianificazione		& 1 & \EUR{30,00}\\
+Studio di Mercato & 5 & \EUR{150,00}\\
+Proposta 			    &   &	\EUR{60,00}\\	
+\midrule
+\rowcolor{white} \textsc{Totale}   & 6 & \EUR{240,00}\\	
+\bottomrule
 \end{tabular}
-\caption{costo attività `Consulenza'}\label{tab:consulenza}
+\caption{Costo per le attività di consulenza.}\label{tab:consulenza}
 \end{table}
 
 Come si evince dalla tabella~\ref{tab:consulenza} il costo stimato per le spese di consulenza ammonta a \textbf{\EUR{240,00}}.
@@ -507,31 +501,34 @@ Per rendere efficace l'analisi di ogni rischio si è deciso di quantificarlo med
 
 \begin{table}[h!]
 \centering
-\begin{tabular}{|l|c|}
-\hline
-\bfseries{}Probabilità& \bfseries{}Descrizione\\
-\hline
-\hi & probabilità elevata che si verifichi\\
-\med & probabilità equivalente nel verificarsi o meno\\
-\lo & probabilità bassa che si verifichi\\
-\hline
+\rowcolors{1}{black!1}{black!10}
+\begin{tabular}{p{.12\textwidth}p{.6\textwidth}}
+\toprule
+\bfseries\sffamily{}Probabilità& \bfseries\sffamily{}Descrizione\\
+\midrule
+\multicolumn{1}{c}{\hi} & probabilità elevata che si verifichi\\
+\multicolumn{1}{c}{\med} & probabilità equivalente nel verificarsi o meno\\
+\multicolumn{1}{c}{\lo} & probabilità bassa che si verifichi\\
+\bottomrule
 \end{tabular}
-\caption{Probabilità e Descrizione probabilità di un rischio}\label{tab:livellorischi}
+\caption{Probabilità e Descrizione probabilità di un rischio.}\label{tab:livellorischi}
 \end{table}
+
 \begin{table}[H]
 \centering
-\begin{tabular}{|c|c|}
-\hline
-\bfseries{}Scala& \bfseries{}Descrizione  \\
-\hline
-5 & conseguenze molto gravi\\
-4 & conseguenze gravi\\
-3 & conseguenze medio-gravi\\
-2 & conseguenze minimali\\
-1 & nessuna/lievi conseguenze\\
-\hline
+\rowcolors{1}{black!1}{black!10}
+\begin{tabular}{p{.12\textwidth}p{.6\textwidth}}
+\toprule
+\bfseries\sffamily{}Scala& \bfseries\sffamily{}Descrizione  \\
+\midrule
+\multicolumn{1}{c}{5} & conseguenze molto gravi\\
+\multicolumn{1}{c}{4} & conseguenze gravi\\
+\multicolumn{1}{c}{3} & conseguenze medio-gravi\\
+\multicolumn{1}{c}{2} & conseguenze minimali\\
+\multicolumn{1}{c}{1} & nessuna/lievi conseguenze\\
+\bottomrule
 \end{tabular}
-\caption{Scala e descrizione delle conseguenze di un rischio}\label{tab:impattorischi}
+\caption{Scala e descrizione delle conseguenze di un rischio.}\label{tab:impattorischi}
 \end{table}
 
 \subsection{Rischi relativi al Personale}
@@ -612,7 +609,7 @@ Infine, tramite una gestione controllata dei processi, è possibile incrementare
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=.6\textwidth]{bpmcycle}
+  \includegraphics[width=.5\textwidth]{bpmcycle}
   \caption{Il tipico ciclo del BPM nelle attività aziendali.}
   \label{fig:bpmcycle}
 \end{figure}
@@ -702,8 +699,8 @@ Il grafico riportato in \figurename~\ref{fig:trend} rappresenta l'andamento mond
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=.85\textwidth]{markettrend}
-  \caption{Situazione del mercato fornitori nel 2012.}
+  \includegraphics[width=.7\textwidth]{markettrend}
+  \caption{Tendenza delli investimenti nel settore dell'innovazione aziendale.}
   \label{fig:trend}
 \end{figure}
 
@@ -741,6 +738,8 @@ Tale situazione è dovuta al fatto che il settore ha raggiunto un buon livello d
   \label{fig:map2}
 \end{figure}
 
+\clearpage
+
 \section{Software selezionati}
 	I \sw oggetto della presente analisi saranno considerati sulla base di una lista di caratteristiche significative delineate sulla base dei requisti esposti dalla \customer.
 	
@@ -751,7 +750,7 @@ Tale situazione è dovuta al fatto che il settore ha raggiunto un buon livello d
 \renewcommand{\labelenumii}{\arabic{enumi}.\arabic{enumii}}
   \item modellazione
  	\begin{enumerate}
-	  \item modellazione tramite editor grafico
+	  \item modellazione tramite \inglese{editor} grafico
 	  \item rispetto di notazioni \inglese{standard}	
 	\end{enumerate}
 	\item monitoraggio dei processi
@@ -787,7 +786,7 @@ Il \sw è realizzato dalla \sw \inglese{house} \swname{BonitaSoft} e distribuito
 
 Il nucleo `open' dell'applicativo è costituito a sua volta in una serie di moduli grafici e da un motore di esecuzione dei processi.
 
-I tre moduli grafici permettono, rispettivamente, di modellare i processi esistenti mediante un editor di flussi di lavoro (\swname{Bonita Studio}), di realizzare dei \inglese{form} personalizzati a supporto dello svolgimento delle attività codificate nell'editor dei processi (\swname{Bonita Form Builder}) e, infine, dal modulo \swname{Bonita User Experience} che permette di visualizzare per ciascun soggetto coinvolto nella realizzazione di un processo delle attività da svolgere.
+I tre moduli grafici permettono, rispettivamente, di modellare i processi esistenti mediante un \inglese{editor} di flussi di lavoro (\swname{Bonita Studio}), di realizzare dei \inglese{form} personalizzati a supporto dello svolgimento delle attività codificate nell'\inglese{editor} dei processi (\swname{Bonita Form Builder}) e, infine, dal modulo \swname{Bonita User Experience} che permette di visualizzare per ciascun soggetto coinvolto nella realizzazione di un processo delle attività da svolgere.
 
 Il motore di esecuzione permette invece, una volta creato e configurato il processo e ottenuto il \inglese{business archive} (BAR) corrispondente al diagramma eseguibile BPMN,\footnote{%
 Il \inglese{Business Process Model and Notation} è un linguaggio \inglese{standard} di rappresentazione dei processi di \bsn che si inseriscono all'interno del modello di \bsn di un'azienda. La versione 2.0 dello \inglese{standard} introduce, accanto alla notazione per la rappresentazione visuale, il BPMN eseguibile che permette l'automazione dei processi.
@@ -796,7 +795,7 @@ di portarne a termine l'esecuzione provocando la visualizzazione dei \inglese{fo
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=.8\textwidth]{bonita_architecture}
+  \includegraphics[width=.7\textwidth]{bonita_architecture}
   \caption{Architettura ad alto livello di \progname.}
   \label{fig:bonitaarchitecture}
 \end{figure}
@@ -830,16 +829,14 @@ Si riporta in figura \ref{fig:simulazione} un estratto del \inglese{report} deri
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=.9\textwidth]{simulazione}
+  \includegraphics[width=.7\textwidth]{simulazione}
   \caption{Estratto di un \inglese{report} di una simulazione con \progname.}
   \label{fig:simulazione}
 \end{figure}
 
 \progname è dotato della funzionalità di monitoraggio dei processi comprendente un sistema di \inglese{reporting} in grado di attivarsi automaticamente al termine del singoli processi e con possibilità di impostazione di tempistiche intermedie. Questo permette ai responsabili del processo decisionale di essere sempre informati, anche in modo automatico, sulla situazione vigente.
 
-Il sistema di \inglese{reporting} è ben strutturato, restituisce un documento sia in formato \texttt{.pdf} che in \texttt{xls}. Tuttavia, il \sw fornisce il \inglese{report} in solo lingua inglese.
-
-Il sistema supporta la funzionalità di interfacciamento con servizi LDAP\footnote{LDAP,  Lightweight Directory Access Protocol, è un protocollo \inglese{standard} per l'interrogazione e la modifica dei servizi di directory per la condivisione dei dati.\label{note:ldap}}. 
+Il sistema di \inglese{reporting} è ben strutturato, restituisce un documento sia in formato \texttt{.pdf} che in \texttt{xls}. Tuttavia, il \sw fornisce il \inglese{report} in solo lingua inglese. Il sistema supporta la funzionalità di interfacciamento con servizi LDAP.\footnote{Acrononimo per \inglese{Lightweight Directory Access Protocol}, è un protocollo \inglese{standard} per l'interrogazione e la modifica dei servizi di \inglese{directory} per la condivisione dei dati.\label{note:ldap}}
 
 Questa funzionalità è richiesta dalla maggior parte delle aziende che fanno uso di \sw BPM\@. Infatti, tale funzione, permette loro di gestire la propria documentazione in modo semplice ed efficace centralizzando l'accesso ai documenti che costituiscono il flusso informativo aziendale.
 
@@ -847,15 +844,11 @@ Inoltre, \progname è in grado di interfacciarsi tramite l'utilizzo di appositi 
 
 La condivisione delle risorse non fa parte del pacchetto base di \progname. Tuttavia l'azienda può usufruirne tramite l'installazione del pacchetto \textsf{teamwork}, dietro un minimale corrispettivo. Anche questa funzionalità è molto richiesta dalle aziende. Si tratta di una necessità molto risentita in quanto per loro stessa natura i progetti coinvolgono una pluralità di soggetti che hanno l'esigenza di  operare sinergicamente da diverse postazioni.
 
-La versione base del \sw dispone, inoltre, del modulo \swname{User Experience}. Tale modulo permette all'azienda che adotta \swname{Bointa BPM}, di disporre di due tipologie di interfacciamento:
-\begin{itemize}[noitemsep]
- \item utente semplice
- \item amministratore
-\end{itemize}
+La versione base del \sw dispone, inoltre, del modulo \swname{User Experience}. Tale modulo permette all'azienda che adotta \progname, di disporre di due tipologie di interfacciamento: `utente semplice' e `amministratore'.
 
-In questo modo l'utente semplice, specialmente se inesperto, non disponendo di alcuni permessi, non potrà causare eventuali danni che minerebbero il buon funzionamento del \sw.
-Inoltre, le due interfacce permettono di gestire in maniera adeguata il compito dei diversi ruoli. Infatti, mentre l'interfaccia utente consente di eseguire \inglese{task} e comunicarne, sempre tramite il \sw, lo stato intermedio o la terminazione, l'interfaccia amministrativa permette ai responsabili decisionali, invece, di monitorare la situazione, essendo loro informati sullo stato di ogni \inglese{task} e di effettuare delle modifiche alla pianificazione laddove lo ritengano necessario.
-Si riporta nella figura \ref{fig:utente} un esempio dell'interfaccia utente e in figura \ref{fig:amministratore} un esempio dell'interfaccia amministrativa.
+In questo modo l'utente semplice, specialmente se inesperto, non disponendo di alcuni permessi, non potrà causare eventuali danni che minerebbero il buon funzionamento del \sw. Si riporta nella figura \ref{fig:utente} un esempio dell'interfaccia utente e in figura \ref{fig:amministratore} un esempio dell'interfaccia amministrativa.
+
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=.9\textwidth]{utente}
@@ -869,6 +862,8 @@ Si riporta nella figura \ref{fig:utente} un esempio dell'interfaccia utente e in
   \caption{Interfaccia da amministratore di \progname.}
   \label{fig:amministratore}
 \end{figure}
+
+Inoltre, le due interfacce permettono di gestire in maniera adeguata il compito dei diversi ruoli. Infatti, mentre l'interfaccia utente consente di eseguire \inglese{task} e comunicarne, sempre tramite il \sw, lo stato intermedio o la terminazione, l'interfaccia amministrativa permette ai responsabili decisionali, invece, di monitorare la situazione, essendo loro informati sullo stato di ogni \inglese{task} e di effettuare delle modifiche alla pianificazione laddove lo ritengano necessario.
 
 Per quanto riguarda la documentazione fornita dal \inglese{team} di sviluppo, fornisce spiegazioni molto esaustive e comprende anche degli ottimi \inglese{tutorial} di supporto. 
 Tuttavia, la documentazione è disponibile solo nelle versione inglese. Questo potrebbe causare dei problemi all'azienda acquirente qualora non disponga di personale con una sufficiente preparazione linguistica.
@@ -885,6 +880,8 @@ Occorre considerare che, molte funzionalità aggiuntive potenzialmente molto int
 Infine, come anticipato in precedenza, \progname comprende la funzionalità di esecuzione automatica dei processi. Infatti, tramite il \inglese{deployment} dei processi è possibile automatizzarne l'esecuzione delle componenti che non devono essere gestite da risorse umane.
 
 Per concludere, in Tabella~\ref{tab:bonitavers} è riportato un prospetto riassuntivo delle funzionalità che sono disponibili in \progname nella versione \inglese{open source} e sottoscrivendo i diversi abbonamenti.
+
+\clearpage
 
 \begin{small}
 \begin{longtable}{>{\sffamily}p{.35\textwidth}*{4}{>{\sffamily}c}}
@@ -945,14 +942,14 @@ Inoltre, la procedura di installazione di tutti i servizi citati nei requisiti d
 
 Per quanto concerne l'interfacciamento con applicativi di terze parti, \progname nativamente non dispone di funzionalità degne di nota ma è possibile ricorrere a una serie di \inglese{plug-in} esterni. In tal modo, ad esempio, è possibile integrare la soluzione con piattaforme per la condivisione di risorse basate su LDAP (cfr.~nota~\ref{note:ldap}) o per la gestione del materiale documentale con \swname{KnowledgeTree}.
 
-Un'ulteriore possibilità di estensione ottenibile tramite \inglese{plug-in} è l'integrazione con \swname{Microsoft Outlook} per gestire automaticamente l'invio delle notifiche ai collaboratori coinvolti nei processi aziendali. \progname consente infatti la gestione automatizzata dei processi che sono stati modellati attraverso l'editor grafico e l'invio delle notifiche	via \inglese{email} ai collaboratori.
+Un'ulteriore possibilità di estensione ottenibile tramite \inglese{plug-in} è l'integrazione con \swname{Microsoft Outlook} per gestire automaticamente l'invio delle notifiche ai collaboratori coinvolti nei processi aziendali. \progname consente infatti la gestione automatizzata dei processi che sono stati modellati attraverso l'\inglese{editor} grafico e l'invio delle notifiche	via \inglese{email} ai collaboratori.
 
 Per quanto riguarda l'editor di diagrammi, riportato in \figurename{fig:pmeditor}, sono da segnalare alcune carenze piuttosto rilevanti. In primo luogo, il modello di rappresentazione visuale dei processi utilizza una sintassi simile ai diagrammi di flusso o ai diagrammi di attività UML ma non rispetta lo \inglese{standard} BPMN e questo pone seri limiti all'interoperabilità con applicativi di terze parti.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=.9\textwidth]{pm_editor}
-  \caption{L'editor visuale dei processi interno a \progname.}
+  \caption{L'\inglese{editor} visuale dei processi interno a \progname.}
   \label{fig:pmeditor}
 \end{figure}
 
@@ -960,7 +957,7 @@ In secondo luogo, non sono presenti alcune funzionalità visuali come l'inserime
 
 L'interfaccia \inglese{web} costringe inoltre a ricorrere estensivamente alla \inglese{gesture} `\inglese{drag and drop}' per la creazione di diagrammi, caratteristica che non può essere considerata positiva alla luce dei più recenti studi di usabilità in quanto presuppone una maggiore difficoltà di utilizzo e di discosta dalle buone prassi per la realizzazione di interfacce utente \cite{nielsen:mistakes}.
 
-Inoltre, l'assenza di una funzionalità di \inglese{undo} rappresenta una grave carenza funzionale in quanto, a causa dei limiti dell'interfaccia utente descritti in precedenza, risulta molto facile per gli analisti di \bsn perdere il \inglese{focus} dell'attenzione e, conseguentemente, commettere errori. Infine, la creazione dei diagrammi nell'editor non è intuitiva.
+Inoltre, l'assenza di una funzionalità di \inglese{undo} rappresenta una grave carenza funzionale in quanto, a causa dei limiti dell'interfaccia utente descritti in precedenza, risulta molto facile per gli analisti di \bsn perdere il \inglese{focus} dell'attenzione e, conseguentemente, commettere errori. Infine, la creazione dei diagrammi nell'\inglese{editor} non è intuitiva.
 
 Si segnala, d'altro canto, che la localizzazione in lingua italiana non è offerta nativamente ma solo come modulo integrativo e che il file PO (\inglese{Portable Object}) messo a disposizione dalla comunità di utilizzatori di \progname contiene tutte le stringhe per la traduzione dell'interfaccia, con il conseguente risultato che alcune voci di menu non contengono alcuna etichetta testuale, in quanto non viene visualizzata nemmeno la stringa originale.
 
@@ -1014,7 +1011,7 @@ La visualizzazione dell'interfaccia può anche essere personalizzata a livello d
 \subsubsection{Descrizione}
 La soluzione \inglese{open source} sviluppata dalla società inglese \swname{Bizagi} si compone di due moduli:
 \begin{itemize}
-  \item \swname{Bizagi Process Modeler}, editor per la modellazione dei processi 
+  \item \swname{Bizagi Process Modeler}, \inglese{editor} per la modellazione dei processi 
   \item \swname{Bizagi Suite}, \sw per la gestione ed il monitoraggio dei processi aziendali
 \end{itemize}
 
@@ -1027,7 +1024,9 @@ La soluzione offerta da \progname è completa ed è sicuramente alla portata di 
 \end{itemize}
 
 \subsubsection{Caratteristiche}
-L'\inglese{editor} grafico è sufficientemente intuitivo e rispetta la notazione BPMN 2.0. Inoltre, l'interfaccia grafica ha un \inglese{look and feel} consistente con la applicazioni del sistema \swname{Windows}. Questo permette alle aziende che decidono di acquisire \progname di ritrovarsi in un contesto già conosciuto e quindi la curva di apprendimento diventa meno ripida.
+L'\inglese{editor} grafico è sufficientemente intuitivo e rispetta la notazione BPMN 2.0. Inoltre, l'interfaccia grafica ha un \inglese{look and feel} consistente con la applicazioni del sistema \swname{Windows}.
+
+Questo permette alle aziende che decidono di acquisire \progname di ritrovarsi in un contesto già conosciuto e quindi la curva di apprendimento diventa meno ripida.
 Si riporta in figura \ref{fig:diagramma_biz} un esempio di diagramma prodotto con \swname{Bizagi Process Modeler}.
 
 \begin{figure}[H]
@@ -1037,8 +1036,7 @@ Si riporta in figura \ref{fig:diagramma_biz} un esempio di diagramma prodotto co
   \label{fig:diagramma_biz}
 \end{figure}
 
-L'\inglese{editor} comprende anche la funzionalità di verifica dei diagrammi, che permette di fare il  \inglese{debugging} sui grafici prodotti.
-In figura \ref{fig:verifica} è riportato il messaggio restituito dal programma in seguito alla verifica effettuata.
+L'\inglese{editor} comprende anche la funzionalità di verifica dei diagrammi, che permette di fare il  \inglese{debugging} sui grafici prodotti. In figura \ref{fig:verifica} è riportato il messaggio restituito dal programma in seguito alla verifica effettuata.
 
 \begin{figure}[H]
   \centering
@@ -1046,15 +1044,24 @@ In figura \ref{fig:verifica} è riportato il messaggio restituito dal programma 
   \caption{Messaggio restituito dalla funzionalità di verifica di \swname{Bizagi Process Modeler}}
   \label{fig:verifica}
 \end{figure}
+
 Per quanto riguarda invece, la gestione della lingua, l'italiano è offerto come funzionalità nativa del \sw \progname. Tuttavia, la localizzazione in lingua italiana non è completa e diverse parti risultano essere tradotte male o non tradotte affatto.
 
-\progname permette la simulazione dei processi. In seguito ai test eseguiti, però, risulta essere più deludente rispetto a quella offerta da altri \sw presi in considerazione nel corso della presente analisi.
+\progname offre un ottimo sistema di \inglese{reporting}. I dati forniti sono molto dettagliati e la documentazione è disponibile in diversi formati.
+
+\progname supporta inoltre l'integrazione con altre applicazioni, in particolare, tra le più importanti troviamo l'integrazione con gli \inglese{Enterprise Content Management} (ECM) come \swname{Sharepoint} e con gestionali \inglese{Customer Relationship Management} (CRM).
+
+\progname permette la simulazione dei processi. In seguito ai \inglese{test} eseguiti, però, risulta essere più deludente rispetto a quella offerta da altri \sw presi in considerazione nel corso della presente analisi.
 I \inglese{report} restituiti dalla simulazione risultano essere poco comprensibili, incompleti e non contengono alcun grafico, il quale, permetterebbe ai responsabili decisionali di avere una realizzazione molto più veloce della situazione.
  
 La documentazione fornita dal \inglese{team} di sviluppo è completa e comprende anche dei video \inglese{tutorial} di supporto. Purtroppo, sia la documentazione che i \inglese{tutorial} sono forniti solo in lingua inglese. Inoltre, \progname mette a disposizione dei \inglese{process template}, che permettono agli utenti non esperti di avere la concezione delle potenzialità del programma.
 
+Come indicato tra i requisiti di sistema, \progname può essere installato solo su piattaforme \swname{Windows}. Questo, in generale, costituisce un limite, tuttavia, in questo caso, visto che \customer dispone di un'infrastruttura \swname{Windows}-\inglese{based}, non vi è alcun problema.
+
 L'interfaccia offerta da \swname{Bizagi Suite} è particolarmente attraente e performante, ma purtroppo poco intuitiva. L'utente, soprattutto se inesperto, fa molta fatica a capire come utilizzare l'applicativo. Anche se la gestione dei processi non è per nulla \inglese{user friendly}, il \sw offre molti strumenti di \inglese{management} e permette di ricavare molte informazioni sull'andamento dei processi.
 Inoltre, non esistono diverse tipologie di interfacce in relazione ai ruoli ricoperti, funzionalità offerta, invece, da molti altri \sw BPM.
+
+\clearpage
 
 Si riporta in figura \ref{fig:suite} un immagine dell'interfaccia di \swname{Bizagi Suite}
 
@@ -1064,12 +1071,6 @@ Si riporta in figura \ref{fig:suite} un immagine dell'interfaccia di \swname{Biz
   \caption{Interfaccia di \swname{Bizagi Suite}}
   \label{fig:suite}
 \end{figure}
-
-\progname offre un ottimo sistema di \inglese{reporting}. I dati forniti sono molto dettagliati e la documentazione è disponibile in diversi formati.
-
-\progname supporta l'integrazione con altre applicazioni, in particolare, tra le più importanti troviamo l'integrazione con gli \inglese{Enterprise Content Management} (ECM) come \swname{Sharepoint} e con gestionali \inglese{Customer Relationship Management} (CRM).
-
-Come indicato tra i requisiti di sistema, \progname può essere installato solo su piattaforme \swname{Windows}. Questo, in generale, costituisce un limite, tuttavia, in questo caso, visto che \customer dispone di un'infrastruttura \swname{Windows}-\inglese{based}, non vi è alcun problema.
 
 Infine, \swname{Bizagi Process Modeler} comprende una \inglese{feature} che permette a più utenti di collaborare contemporaneamente alla modellazione di un processo.  Si tratta di una funzionalità molto interessante, soprattutto in \inglese{team} numerosi, per parallelizzare il lavoro e quindi aumentare la produttività.
 
@@ -1094,9 +1095,9 @@ Al fine di eseguire il sistema è richiesta un'installazione di \swname{Apache T
 tuttavia, nella sua distribuzione \inglese{standard}, il \sw comprende anche gli eseguibili binari di un sistema \swname{Tomcat} con \progname già installato e configurato, più gli \inglese{script} di lancio automatico per i sistemi \swname{Windows}.
 
 \subsubsection{Caratteristiche}
-\progname non comprende alcun editor visuale per la modellazione dei processi aziendali al suo interno: tale funzionalità è demandata a \sw di terze parti specializzate a tale scopo (ne esistono anche di \inglese{open source} come, ad esempio, \swname{Yaoqiang}) ed essendo il BPMN un formato \inglese{standard} questo non rappresenta un problema in sede di importazione dei dati all'interno del sistema tramite \swname{Cycle}.
+\progname non comprende alcun \inglese{editor} visuale per la modellazione dei processi aziendali al suo interno: tale funzionalità è demandata a \sw di terze parti specializzate a tale scopo (ne esistono anche di \inglese{open source} come, ad esempio, \swname{Yaoqiang}) ed essendo il BPMN un formato \inglese{standard} questo non rappresenta un problema in sede di importazione dei dati all'interno del sistema tramite \swname{Cycle}.
 
-Quest'ultimo permette di creare un collegamento bidirezionale fra la rappresentazione in BPMN del processo di \bsn e il suo \inglese{deployment} nel sistema BPM sia attraverso il \inglese{file system} del server in cui è installato \progname che tramite un sistema di controllo versione (SVN) in modo da permettere ai \bsn \inglese{analyst} di intervenire anche da remoto utilizzando strumenti di modellazione in locale. In alternativa, è possibile utilizzare anche editor di modelli BPMN \inglese{cloud-based} (SaaS) come \swname{Signavio}, per cui \progname mette a disposizione un apposito connettore.
+Quest'ultimo permette di creare un collegamento bidirezionale fra la rappresentazione in BPMN del processo di \bsn e il suo \inglese{deployment} nel sistema BPM sia attraverso il \inglese{file system} del server in cui è installato \progname che tramite un sistema di controllo versione (SVN) in modo da permettere ai \bsn \inglese{analyst} di intervenire anche da remoto utilizzando strumenti di modellazione in locale. In alternativa, è possibile utilizzare anche \inglese{editor} di modelli BPMN \inglese{cloud-based} (SaaS) come \swname{Signavio}, per cui \progname mette a disposizione un apposito connettore.
 
 \swname{Cycle} permette inoltre di avere accesso al sistema di gestione delle identità che permette la creazione dei profili degli utenti (semplici o amministratori) del sistema e la loro organizzazione in gruppi che sia in grado di rispecchiare l'organigramma aziendale. La schermata di amministrazione degli utenti di \progname è riportata, a titolo esemplificativo, in \figurename~\ref{fig:comundauserlist}.
 
@@ -1129,6 +1130,8 @@ Lo strumento principale per il monitoraggio dei processi all'interno della \ingl
   \label{fig:camundacockpit}
 \end{figure}
 
+\clearpage
+
 \section{Analisi comparativa}
 \begin{small}
 \begin{longtable}{>{\sffamily}p{.4\textwidth}*{4}{>{\sffamily}c}}
@@ -1136,7 +1139,7 @@ Lo strumento principale per il monitoraggio dei processi all'interno della \ingl
 \bfseries{}Funzionalità & \bfseries{}Bonita\,BPM & \bfseries{}ProcessMaker & \bfseries{}Bizagi & \bfseries{}Camunda\\
 \midrule
 modellazione                                 & \tick  & \tick  & \tick      & \cross \\
-modellazione tramite editor grafico          & \tick  & \tick  & \tick     & \cross \\
+modellazione tramite \inglese{editor} grafico          & \tick  & \tick  & \tick     & \cross \\
 rispetto notazione BPMN                      & \tick  & \cross &  \tick     & \cross \\
 importazione/esportazione file XPDL          & \tick  & \tick &  \tick     & \cross \\
 monitoraggio dei processi                    & \tick  & \tick  &  \tick    & \tick \\
@@ -1204,15 +1207,16 @@ Si riporta un riepilogo delle spese per la consulenza effettuata da \team per \c
 
 \begin{center}
 \small
+\rowcolors{1}{black!1}{black!10}
 \begin{tabular}{p{.5\textwidth}r}
 \toprule
 \bfseries\sffamily{}Attività & \bfseries\sffamily{}Costo\\
 \midrule
-\scshape{} pianificazione    & \EUR{1.500,00}\\
-\scshape{} studio di mercato & \EUR{2.450,00}\\
-\scshape{} proposta          & \EUR{905,00}\\
+Pianificazione    & \EUR{1.500,00}\\
+Studio di Mercato & \EUR{2.450,00}\\
+Proposta          & \EUR{905,00}\\
 \midrule
-Totale                       & \textcolor{red}{\EUR{4.855,00}}\\
+\rowcolor{white}\scshape{}Totale            & \EUR{4.855,00}\\
 \bottomrule
 \end{tabular}
 \end{center}
