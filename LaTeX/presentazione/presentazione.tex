@@ -1,0 +1,198 @@
+\documentclass[compress,9pt]{beamer}
+\mode<presentation>
+%*******************************************************************************
+% Codifica e lingua
+%*******************************************************************************
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,italian]{babel}
+
+%*******************************************************************************
+% Carattere
+%*******************************************************************************
+\usepackage{lmodern}
+
+%*******************************************************************************
+% Le solite macro
+%*******************************************************************************
+\newcommand{\team}{\textsf{Eta\,Beta\,Software}}
+\newcommand{\customer}{\textsf{Alpha\,and\,Partners}}
+\newcommand{\inglese}[1]{\foreignlanguage{english}{#1}}
+\newcommand{\tick}{\textcolor{green}{\ding{52}}}
+\newcommand{\cross}{\textcolor{red}{\ding{56}}}
+
+%*******************************************************************************
+% Tabelle
+%*******************************************************************************
+\usepackage{array}
+\usepackage{booktabs}
+
+%*******************************************************************************
+% Immagini
+%*******************************************************************************
+\graphicspath{{../pictures/}}
+
+%*******************************************************************************
+% Pacchetti utili
+%*******************************************************************************
+\usepackage{pifont} % per i dingbat
+\usepackage{multicol} % per dividere contenuto in più colonne
+
+%*******************************************************************************
+% Tema di beamer
+%*******************************************************************************
+\usetheme{JuanLesPins}
+\setbeamercovered{dynamic}
+\usecolortheme{orchid}
+
+%*******************************************************************************
+% Un po' di metadati
+%*******************************************************************************
+\title{Consulenza per software BPM}
+\author{\team}
+\date{24 luglio 2013}
+
+% fine del preambolo e inizio del documento
+\begin{document}
+
+%*******************************************************************************
+% Titolo
+%*******************************************************************************
+\begin{frame}
+\maketitle
+\begin{figure}
+  \setlength{\fboxsep}{.2pt}
+  \fbox{\includegraphics[width=.6\textwidth]{logo}}
+\end{figure}
+\end{frame}
+
+%*******************************************************************************
+% Indice
+%*******************************************************************************
+\begin{frame}
+\begin{multicols}{2}
+  \tableofcontents
+\end{multicols}
+\end{frame}
+
+\section{Progetto di consulenza}
+
+\subsection{Introduzione}
+\begin{frame}% #0
+\frametitle{Prospettiva}
+% chi è Alpha e Beta
+\end{frame}
+
+\subsection{Pianificazione}
+\subsubsection{Work Breakdown Structure}
+\begin{frame}% #1
+\frametitle{Organizzazione del lavoro}
+\end{frame}
+
+\subsubsection{Organizational Breakdown Structure}
+\begin{frame}% #2
+\frametitle{Organigramma}
+\end{frame}
+
+\subsubsection{Matrice delle responsabilità}
+\begin{frame}% #3
+\frametitle{Matrice delle responsabilità}
+\end{frame}
+
+\subsubsection{Resource Breakdown Structure}
+\begin{frame} % #4
+\frametitle{Classificazione delle risorse}
+\end{frame}
+
+\subsubsection{Pianificazione temporale}
+\begin{frame}% #5
+\frametitle{Pianificazione temporale}
+\end{frame}
+
+\subsection{Aspetto economico}
+\begin{frame}% #6
+\frametitle{Aspetto economico-finanziario}
+\end{frame}
+
+\subsection{Gestione dei rischi}
+\begin{frame}% #7
+\frametitle{Gestione dei rischi}
+\end{frame}
+
+\section{Studio di mercato}
+\subsection{Software BPM}
+\begin{frame}% #8
+\frametitle{I software di Business Process Management}
+\end{frame}
+
+\subsection{Analisi temporale}
+\begin{frame}% #9
+\frametitle{Prospettiva temporale}
+\end{frame}
+
+\subsection{Analisi geotopografica}
+\begin{frame}% #10
+\frametitle{Analisi geotopografica}
+\end{frame}
+
+\section{Software selezionati}
+\newcommand{\progname}{Bonita\,BPM}
+\subsection{\progname}
+\begin{frame}% #11
+\frametitle{\progname}
+\end{frame}
+
+\renewcommand{\progname}{ProcessMaker}
+\subsection{\progname}
+\begin{frame}% #12
+\frametitle{\progname}
+\end{frame}
+
+\renewcommand{\progname}{Bizagi}
+\subsection{\progname}
+\begin{frame}% #13
+\frametitle{\progname}
+\end{frame}
+
+\renewcommand{\progname}{Camunda}
+\subsection{\progname}
+\begin{frame}% #14
+\frametitle{\progname}
+\end{frame}
+
+\subsection{Analisi comparativa}
+\begin{frame}% #15
+\frametitle{Analisi comparativa}
+\scalebox{.7}{
+\begin{tabular}{>{\sffamily}p{.6\textwidth}*{4}{>{\sffamily}c}}
+\toprule
+\bfseries{}Funzionalità & \bfseries{}Bonita\,BPM & \bfseries{}ProcessMaker & \bfseries{}Bizagi & \bfseries{}Camunda\\
+\midrule
+modellazione                                 & \tick  & \tick  & \tick      & \cross \\
+modellazione tramite editor grafico          & \tick  & \tick  & \tick     & \cross \\
+rispetto notazione BPMN                      & \tick  & \cross &  \tick     & \cross \\
+monitoraggio dei processi                    & \tick  & \tick  &  \tick    & \tick \\
+sistema di \inglese{reporting}               & \tick  & \tick  &  \tick    & \tick \\
+indicatori grafici stato di avanzamento      & \cross & \tick  &   \cross   & \cross \\
+ottimizzazione dei processi                  & \tick  & \cross & \cross      & \cross \\
+simulazione                                  & \tick  & \cross &  \tick       & \cross \\
+sistema di \inglese{reporting} simulazione   & \tick  & \cross &  \tick      & \cross \\
+validazione modelli                          & \tick  & \cross &  \tick     & \cross \\
+esecuzione automatizzata processi            & \tick  & \tick  &   \tick & \tick \\
+integrazione con software di parti terze     & \tick  & \tick  &   \tick     & \tick \\
+interfacciamento con utenti                  & \tick  & \tick  &    \tick    & \tick \\
+\inglese{form} statici                       & \tick  & \tick  &    \tick    & \cross \\
+\inglese{form} dinamici                      & \tick  & \tick  & \cross        & \cross \\
+\inglese{form} internazionalizzabili         & \tick  & \cross &   \cross     & \cross \\
+gestione separata dei ruoli                  & \tick  & \cross & \cross       & \tick \\
+\bottomrule
+\end{tabular}
+}
+\end{frame}
+
+\section{Proposta di soluzione}
+\begin{frame}% #16
+\frametitle{La nostra proposta}
+\end{frame}
+
+\end{document}
