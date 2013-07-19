@@ -38,7 +38,7 @@
 % Grafica vettoriale
 %*******************************************************************************
 \usepackage{tikz}
-\usetikzlibrary{arrows}
+\usetikzlibrary{shadows,arrows}
 
 %*******************************************************************************
 % Pacchetti utili
@@ -193,7 +193,91 @@ Nel mondo l'abito\\ fa il monaco:\\ il nostro obiettivo è\\ farvi l'abito, il m
 
 \subsubsection{Organizational Breakdown Structure}
 \begin{frame}% #2
-\frametitle{Organigramma}
+\frametitle{Organigramma aziendale}
+
+\begin{tikzpicture}
+\node[drop shadow,fill=white,inner sep=0pt] (head) at (6, 10) {
+  \begin{tabular}{|c|}
+  \hline
+  Titolare\\
+  \hline  
+  \end{tabular}
+};
+
+\node[drop shadow,fill=white,inner sep=0pt] (pm) at (4.5, 9) {
+  \begin{tabular}{|c|}
+  \hline
+  PM\\
+  \hline  
+  \end{tabular}
+};
+
+\node[drop shadow,fill=white,inner sep=0pt] (admin) at (2, 9) {
+  \begin{tabular}{|c|}
+  \hline
+  Amministratore\\
+  \hline  
+  \end{tabular}
+};
+
+\node[drop shadow,fill=white,inner sep=0pt] (mktg) at (7, 9) {
+  \begin{tabular}{|c|}
+  \hline
+  Resp. MKTG\\
+  \hline  
+  \end{tabular}
+};
+
+\node[drop shadow, fill=white, inner sep=0pt] (qa) at (10, 9) {
+  \begin{tabular}{|c|}
+  \hline
+  Resp. QA\\
+  \hline  
+  \end{tabular}
+};
+
+\node[drop shadow,fill=white,inner sep=0pt] (anal) at (3, 8) {
+  \begin{tabular}{|c|}
+  \hline
+  Analista\\
+  \hline  
+  \end{tabular}
+};
+
+\node[drop shadow,fill=white,inner sep=0pt] (prog) at (6, 8) {
+  \begin{tabular}{|c|}
+  \hline
+  Programmatore\\
+  \hline  
+  \end{tabular}
+};
+
+% linea di primo livello
+\draw (admin.north) -- ++(0, .2) -- ++(8, 0) -- (qa.north);
+\draw (pm.north) -- ++(0, .2);
+\draw (mktg.north) -- ++(0, .2);
+\draw (head.south) -- ++(0, -.35);
+
+% linea di secondo livello
+\draw (anal.north) -- ++(0, .2) -- ++(3, 0) -- (prog.north);
+\draw (pm.south) -- ++(0, -.35);
+\end{tikzpicture}
+
+\bigskip
+\pause
+\begin{columns}
+\column{.49\textwidth}{
+\begin{alertblock}{Attenzione:}
+ Risorse limitate e tempi restrittivi!
+\end{alertblock}
+}
+\column{.49\textwidth}{
+\begin{figure}
+  \includegraphics<2->[width=.6\textwidth]{hardwork}
+\end{figure}
+}
+\end{columns}
+
 \end{frame}
 
 \subsubsection{Matrice delle responsabilità}
