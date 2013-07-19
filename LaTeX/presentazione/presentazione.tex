@@ -15,11 +15,13 @@
 %*******************************************************************************
 % Le solite macro
 %*******************************************************************************
-\newcommand{\team}{\textsf{Eta\,Beta\,Software}}
-\newcommand{\customer}{\textsf{Alpha\,and\,Partners}}
+\newcommand{\team}{\textsf{Eta\,Beta\,Software}\xspace}
+\newcommand{\customer}{\textsf{Alpha\,\&\,Partners}\xspace}
 \newcommand{\inglese}[1]{\foreignlanguage{english}{#1}}
 \newcommand{\tick}{\textcolor{green}{\ding{52}}}
 \newcommand{\cross}{\textcolor{red}{\ding{56}}}
+\newcommand{\mktg}{\foreignlanguage{english}{marketing}\xspace}
+\newcommand{\sw}{\foreignlanguage{english}{software}\xspace}
 
 %*******************************************************************************
 % Tabelle
@@ -33,10 +35,18 @@
 \graphicspath{{../pictures/}}
 
 %*******************************************************************************
+% Grafica vettoriale
+%*******************************************************************************
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+%*******************************************************************************
 % Pacchetti utili
 %*******************************************************************************
 \usepackage{pifont} % per i dingbat
 \usepackage{multicol} % per dividere contenuto in più colonne
+\usepackage{xspace} % per spazi condizionali
+\usepackage{eurosym} % per il benedetto simbolo dell'euro
 
 %*******************************************************************************
 % Tema di beamer
@@ -53,6 +63,7 @@
 \date{24 luglio 2013}
 
 % fine del preambolo e inizio del documento
+\setcounter{tocdepth}{2}
 \begin{document}
 
 %*******************************************************************************
@@ -60,10 +71,6 @@
 %*******************************************************************************
 \begin{frame}
 \maketitle
-\begin{figure}
-  \setlength{\fboxsep}{.2pt}
-  \fbox{\includegraphics[width=.6\textwidth]{logo}}
-\end{figure}
 \end{frame}
 
 %*******************************************************************************
@@ -71,7 +78,12 @@
 %*******************************************************************************
 \begin{frame}
 \begin{multicols}{2}
-  \tableofcontents
+\tableofcontents
+\newpage
+\begin{figure}
+\setlength{\fboxsep}{.2pt}
+\rotatebox{-10}{\fbox{\includegraphics[width=.4\textwidth]{logo}}}
+\end{figure}
 \end{multicols}
 \end{frame}
 
@@ -80,7 +92,64 @@
 \subsection{Introduzione}
 \begin{frame}% #0
 \frametitle{Prospettiva}
-% chi è Alpha e Beta
+\begin{columns}
+\column{.49\textwidth}{
+\begin{figure}
+  \centering
+  \includegraphics[width=.7\textwidth]{alpha}
+\end{figure}
+\begin{block}{Informazioni:}
+  \begin{itemize}
+    \item \mktg tradizionale \& digitale
+    \item 2 dipendenti $+$ titolare
+    \item fatturato di \EUR{200.000}
+  \end{itemize}
+\end{block}
+
+\uncover<2->{
+\begin{alertblock}{Problemi:}
+  Difficoltà gestione processi aziendali:
+  \begin{itemize}
+    \item analisi necessità clienti
+    \item predisposizione offerte
+    \item negoziazione e stesura proposte
+  \end{itemize}
+\end{alertblock}
+}
+}
+\column{.49\textwidth}{
+
+\hspace{2em}
+\begin{tikzpicture}
+\node[inner sep=0pt] at (0, 0) {
+\includegraphics[width=.6\textwidth]{postit}
+};
+\node[inner sep=0pt] at (.2, .1) {
+\rotatebox{3}{\begin{minipage}[b]{.45\textwidth}
+\scriptsize
+Nel mondo l'abito\\ fa il monaco:\\ il nostro obiettivo è\\ farvi l'abito, il monaco\\ lo dovete mettere voi!
+\end{minipage}
+}
+};
+\end{tikzpicture}
+
+\uncover<3->{
+\begin{block}{Informazioni:}
+  \begin{itemize}
+    \item consulenza e sviluppo soluzioni \sw aziendali
+    \item 6 dipendenti
+  \end{itemize}
+\end{block}
+
+\vspace{-10pt}
+
+\begin{figure}
+  \phantom{\includegraphics<1>[width=.7\textwidth]{logo}}
+  \includegraphics<3->[width=.7\textwidth]{logo}
+\end{figure}
+}
+}
+\end{columns}
 \end{frame}
 
 \subsection{Pianificazione}
@@ -136,7 +205,7 @@
 \end{frame}
 
 \section{Software selezionati}
-\newcommand{\progname}{Bonita\,BPM}
+\newcommand{\progname}{Bonita BPM}
 \subsection{\progname}
 \begin{frame}% #11
 \frametitle{\progname}
