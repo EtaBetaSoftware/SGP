@@ -46,7 +46,8 @@
 \usepackage{pifont} % per i dingbat
 \usepackage{multicol} % per dividere contenuto in più colonne
 \usepackage{xspace} % per spazi condizionali
-\usepackage{eurosym} % per il benedetto simbolo dell'euro
+\usepackage{eurosym}
+\usepackage{graphicx} % per il benedetto simbolo dell'euro
 
 %*******************************************************************************
 % Tema di beamer
@@ -155,32 +156,33 @@ Nel mondo l'abito\\ fa il monaco:\\ il nostro obiettivo è\\ farvi l'abito, il m
 \subsection{Pianificazione}
 \subsubsection{Work Breakdown Structure}
 \begin{frame}% #1
-\frametitle{Scomposizione gerarchica delle attività}
+\frametitle{Scomposizione gerarchica delle attività (WBS)}
 \begin{columns}
 \column{.6\textwidth}{
-\begin{enumerate}
-  \item Pianificazione
-  \begin{itemize}
+\begin{block}{\ding{182} Pianificazione}
+  \begin{enumerate}
     \item analisi di mercato e studio di fattibilità
     \item pianificazione del lavoro
     \item business plan
-  \end{itemize}
-  \pause
-  \item Studio di Mercato
-  \begin{itemize}
+  \end{enumerate}
+\end{block}
+
+\begin{block}{\ding{183} Studio di Mercato}
+  \begin{enumerate}
     \item analisi \sw esistenti
     \item analisi \sw prescelti
     \item valutazione soluzione ibrida / \textit{ad~hoc}
-  \end{itemize}
-  \pause
-  \item Proposta
-  \begin{itemize}
+  \end{enumerate}
+\end{block}
+
+\begin{block}{\ding{184} Proposta}
+  \begin{enumerate}
     \item scelta \sw
     \item redazione proposta
     \item manuale / consigli d'uso
     \item presentazione proposta
-  \end{itemize}
-\end{enumerate}
+  \end{enumerate}
+\end{block}
 }
 \column{.38\textwidth}{
 \begin{figure}
@@ -193,7 +195,7 @@ Nel mondo l'abito\\ fa il monaco:\\ il nostro obiettivo è\\ farvi l'abito, il m
 
 \subsubsection{Organizational Breakdown Structure}
 \begin{frame}% #2
-\frametitle{Organigramma aziendale}
+\frametitle{Organigramma aziendale (OBS)}
 
 \begin{tikzpicture}
 \node[drop shadow,fill=white,inner sep=0pt] (head) at (6, 10) {
@@ -278,12 +280,48 @@ Nel mondo l'abito\\ fa il monaco:\\ il nostro obiettivo è\\ farvi l'abito, il m
 \end{figure}
 }
 \end{columns}
-
 \end{frame}
 
 \subsubsection{Matrice delle responsabilità}
 \begin{frame}% #3
-\frametitle{Matrice delle responsabilità}
+\frametitle{Intersezione fra WBS e OBS}
+\begin{columns}
+\column{.75\textwidth}{
+\vspace{1em}
+  \includegraphics[width=1.3\textwidth]{WBS_OBS}
+\vfill
+}
+\column{.35\textwidth}{
+\scalebox{.7}{
+\hspace{2pt}\begin{minipage}[b]{\textwidth}
+\begin{block}{\ding{182} Pianificazione}
+\begin{enumerate}
+  \item analisi di mercato
+  \item piaificazione lavoro
+  \item stesura BP
+\end{enumerate}
+\end{block}
+
+\begin{block}{\ding{183} Studio di Mercato}
+\begin{enumerate}
+  \item analisi SW esistenti
+  \item analisi SW prescelti
+  \item valutazione soluzione ibrida
+\end{enumerate}
+\end{block}
+
+\begin{block}{\ding{184} Proposta}
+\begin{enumerate}
+  \item scelta SW
+  \item redazione proposta
+  \item redazione manuale
+  \item presentazione proposta
+\end{enumerate}
+\end{block}
+\end{minipage}
+}
+}
+\end{columns}
 \end{frame}
 
 \subsubsection{Resource Breakdown Structure}
