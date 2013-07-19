@@ -15,10 +15,19 @@
 %*******************************************************************************
 \begin{document}
 
+%*******************************************************************************
+% Frontespizio
+%*******************************************************************************
 \input{\sharedPath/front.tex}
 
+%*******************************************************************************
+% Registro delle modifiche
+%*******************************************************************************
 
-\section*{Registro delle modifiche}
+\chapter*{Registro delle modifiche}
+\thispagestyle{toc}
+\pagenumbering{roman}
+\bigskip
 
 \begin{longtable}{p{.6\textwidth}lr}
 \toprule
@@ -44,7 +53,11 @@ stesura scheletro del documento e  & \die & 1 luglio 2013\\
 \bottomrule
 \end{longtable}
 
+%*******************************************************************************
+% Indice
+%*******************************************************************************
 \input{\sharedPath/toc.tex}
+
 \chapter{Piano di Progetto}
 
 %\section{Introduzione}
