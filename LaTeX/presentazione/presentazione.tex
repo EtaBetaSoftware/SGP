@@ -444,6 +444,7 @@ Costo totale: \textcolor{red}{\EUR{4.915}}
 \column{.5\textwidth}{
 \scalebox{.8}{
 \begin{minipage}[b]{\textwidth}
+\only<1>{
 \begin{block}{Rischi legati al personale}
 \begin{description}
   \item[Motivo:] impegni personali
@@ -452,6 +453,17 @@ Costo totale: \textcolor{red}{\EUR{4.915}}
   \item[Strategia:] slack temporale
 \end{description}
 \end{block}
+}
+\only<2>{
+\begin{alertblock}{Rischi legati al personale}
+\begin{description}
+  \item[Motivo:] impegni personali
+  \item[Probabilità:] media
+  \item[Impatto:] variabile
+  \item[Strategia:] slack temporale
+\end{description}
+\end{alertblock}
+}
 
 \begin{block}{Rischi legati alla tecnologia}
 \begin{description}
