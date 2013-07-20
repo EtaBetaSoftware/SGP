@@ -535,7 +535,7 @@ Costo totale: \textcolor{red}{\EUR{4.915}}
 \begin{frame}% #9
 \frametitle{Prospettiva temporale}
 \hfill\begin{minipage}[b]{.4\textwidth}
-\begin{block}{Situazione attuale:}
+\begin{block}<2->{Situazione attuale:}
 \begin{itemize}
   \item concentrazione offerta
   \item colossi come MS e Oracle
@@ -548,9 +548,10 @@ Costo totale: \textcolor{red}{\EUR{4.915}}
   \includegraphics[width=.5\textwidth]{mercato_2000}
 };
 \node (market2012) at (5, -1.2) {
-  \includegraphics[width=.5\textwidth]{mercato_2012}
+  \phantom{\includegraphics<1>[width=.5\textwidth]{mercato_2012}}
+  \includegraphics<2->[width=.5\textwidth]{mercato_2012}
 };
-\path[very thick,->,blue] (market2000.south) edge[bend right] (market2012.west);
+\path<2->[very thick,->,blue] (market2000.south) edge[bend right] (market2012.west);
 \end{tikzpicture}
 
 \begin{minipage}[b]{.4\textwidth}
