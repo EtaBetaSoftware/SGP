@@ -528,7 +528,7 @@ Costo totale: \textcolor{red}{\EUR{4.915}}
   \includegraphics[width=.4\textwidth]{sap}
 }
 \column{.5\textwidth}{
-\begin{block}{Vantaggi:}
+\begin{exampleblock}{Vantaggi:}
 \begin{itemize}
   \item incremento efficienza
   \item controllo coordinato e continuativo
@@ -537,7 +537,7 @@ Costo totale: \textcolor{red}{\EUR{4.915}}
   \item dematerializzazione documenti
   \item gestione flusso informativo
 \end{itemize}
-\end{block}
+\end{exampleblock}
 
 \begin{block}{Caratteristiche:}
 \begin{itemize}
@@ -632,7 +632,7 @@ Costo totale: \textcolor{red}{\EUR{4.915}}
 \frametitle{\progname}
 \begin{columns}
 \column{.5\textwidth}{
-\begin{block}{\ding{52} Vantaggi:}
+\begin{exampleblock}{\ding{52} Vantaggi:}
 \begin{itemize}
   \item editor BPMN potente e intuitivo
   \item simulazione + report
@@ -641,7 +641,7 @@ Costo totale: \textcolor{red}{\EUR{4.915}}
   \item modulo Bonita XP (ruoli)
   \item Bonita Form Builder
 \end{itemize}
-\end{block}
+\end{exampleblock}
 }
 \column{.5\textwidth}{
 \begin{figure}
@@ -677,7 +677,7 @@ Costo totale: \textcolor{red}{\EUR{4.915}}
 \end{figure}
 }
 \column{.5\textwidth}{
-\begin{block}{\ding{52} Vantaggi:}
+\begin{exampleblock}{\ding{52} Vantaggi:}
 \begin{itemize}
   \item piattaforma AMP
   \item servizi esterni \\(DBMS, email, LDAP)
@@ -685,7 +685,7 @@ Costo totale: \textcolor{red}{\EUR{4.915}}
   \item supporto della community
   \item form dinamici
 \end{itemize}
-\end{block}
+\end{exampleblock}
 }
 \end{columns}
 
@@ -713,7 +713,7 @@ Costo totale: \textcolor{red}{\EUR{4.915}}
 \frametitle{Una terza soluzione (Bizagi)}
 \begin{columns}
 \column{.5\textwidth}{
-\begin{block}{\ding{52} Vantaggi:}
+\begin{exampleblock}{\ding{52} Vantaggi:}
 \begin{itemize}
   \item editor facile da usare
   \item validazione diagrammi
@@ -722,7 +722,7 @@ Costo totale: \textcolor{red}{\EUR{4.915}}
   \item process template
   \item tool collaborativi
 \end{itemize}
-\end{block}
+\end{exampleblock}
 }
 
 \column{.5\textwidth}{
@@ -760,14 +760,14 @@ Costo totale: \textcolor{red}{\EUR{4.915}}
 \end{figure}
 }
 \column{.5\textwidth}{
-\begin{block}{\ding{52} Vantaggi:}
+\begin{exampleblock}{\ding{52} Vantaggi:}
 \begin{itemize}
   \item front-end modulari
   \item connettori per strumenti esterni
   \item cockpit di monitoraggio
   \item installazione facilitata
 \end{itemize}
-\end{block}
+\end{exampleblock}
 }
 \end{columns}
 
@@ -839,7 +839,48 @@ multipiattaforma                              & \tick  & \tick  & \cross & \tick
 
 \section{Proposta di soluzione}
 \begin{frame}% #16
-\frametitle{La nostra proposta}
+\frametitle{La proposta di EBS}
+\begin{columns}
+\column{.5\textwidth}{
+\begin{block}{Motivazioni}
+\begin{itemize}
+  \item potente e completo
+  \item OSS (espandibile a pagamento)
+  \item rispetto degli standard
+  \item grande numero di connettori\tikz \coordinate (conn);
+  \item report e ottimizzazione
+  \item separazione dei ruoli
+  \item creazione form semplificata
+\end{itemize}
+\end{block}
+}
+\column{.5\textwidth}{
+\begin{figure}
+  \includegraphics[width=\textwidth]{bosconnectors}
+\end{figure}
+}
+\end{columns}
+
+\begin{columns}
+\column{.5\textwidth}{
+\only<2->{
+\rotatebox{10}{\begin{tikzpicture}
+\node at (0, 0) {
+Costo finale: \EUR{4.855}!
+};
+\draw[semithick,green] (0,0) circle [x radius=2, y radius=.4];
+\end{tikzpicture}}
+}
+}
+\column{.5\textwidth}{
+\begin{exampleblock}<2->{Consuntivo:}
+\begin{itemize}
+  \item no manuale d'uso (doc online)
+  \item no soluzione ibrida / ad hoc
+\end{itemize}
+\end{exampleblock}
+}
+\end{columns}
 \end{frame}
 
 \end{document}
