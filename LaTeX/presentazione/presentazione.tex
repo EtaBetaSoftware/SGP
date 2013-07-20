@@ -77,14 +77,22 @@
 % Indice
 %*******************************************************************************
 \begin{frame}
-\begin{multicols}{2}
+\begin{columns}
+\column{.5\textwidth}{
 \tableofcontents
-\newpage
-\begin{figure}
-\setlength{\fboxsep}{.2pt}
-\rotatebox{-10}{\fbox{\includegraphics[width=.4\textwidth]{logo}}}
-\end{figure}
-\end{multicols}
+}
+\column{.5\textwidth}{
+
+{\setlength{\fboxsep}{.2pt}
+\rotatebox{-10}{\fbox{\includegraphics[width=.8\textwidth]{logo}}}}
+
+\begin{center}
+\includegraphics[width=.4\textwidth]{globe}
+\end{center}
+
+\includegraphics[width=.4\textwidth]{test}
+}
+\end{columns}
 \end{frame}
 
 \section{Progetto di consulenza}
@@ -597,27 +605,42 @@ Costo totale: \textcolor{red}{\EUR{4.915}}
 \end{columns}
 \end{frame}
 
-\section{Software selezionati}
+\section{Analisi dei \sw}
+\subsection{Software selezionati}
 \newcommand{\progname}{Bonita BPM}
-\subsection{\progname}
 \begin{frame}% #11
 \frametitle{\progname}
+\begin{columns}
+\column{.5\textwidth}{
+\begin{block}{\ding{52} Vantaggi:}
+\end{block}
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{diagrammi}
+\end{figure}
+}
+\column{.5\textwidth}{
+\begin{figure}
+  \includegraphics[width=.6\textwidth]{bonitasoft_logo}
+\end{figure}
+
+\begin{alertblock}{\ding{56} Svantaggi:}
+\end{alertblock}
+}
+\end{columns}
 \end{frame}
 
 \renewcommand{\progname}{ProcessMaker}
-\subsection{\progname}
 \begin{frame}% #12
 \frametitle{\progname}
 \end{frame}
 
 \renewcommand{\progname}{Bizagi}
-\subsection{\progname}
 \begin{frame}% #13
 \frametitle{\progname}
 \end{frame}
 
 \renewcommand{\progname}{Camunda}
-\subsection{\progname}
 \begin{frame}% #14
 \frametitle{\progname}
 \end{frame}
