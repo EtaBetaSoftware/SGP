@@ -792,31 +792,49 @@ Costo totale: \textcolor{red}{\EUR{4.915}}
 \subsection{Analisi comparativa}
 \begin{frame}% #15
 \frametitle{Confronto fra le funzionalità delle soluzioni}
-\scalebox{.7}{
-\begin{tabular}{>{\sffamily}p{.6\textwidth}*{4}{>{\sffamily}c}}
+\begin{columns}
+\column{.25\textwidth}{
+\begin{figure}
+  \includegraphics[width=.9\textwidth]{test}
+\end{figure}
+}
+\column{.75\textwidth}{
+\scalebox{.65}{
+\begin{tabular}{>{\sffamily}p{.75\textwidth}*{4}{>{\sffamily}c}}
 \toprule
 \bfseries{}Funzionalità & \bfseries{}BOS & \bfseries{}PM & \bfseries{}Bizagi & \bfseries{}Camunda\\
 \midrule
-modellazione                                 & \tick  & \tick  & \tick      & \cross \\
-modellazione tramite editor grafico          & \tick  & \tick  & \tick     & \cross \\
-rispetto notazione BPMN                      & \tick  & \cross &  \tick     & \cross \\
-monitoraggio dei processi                    & \tick  & \tick  &  \tick    & \tick \\
-sistema di \inglese{reporting}               & \tick  & \tick  &  \tick    & \tick \\
-indicatori grafici stato di avanzamento      & \cross & \tick  &   \cross   & \cross \\
-ottimizzazione dei processi                  & \tick  & \cross & \cross      & \cross \\
-simulazione                                  & \tick  & \cross &  \tick       & \cross \\
-sistema di \inglese{reporting} simulazione   & \tick  & \cross &  \tick      & \cross \\
-validazione modelli                          & \tick  & \cross &  \tick     & \cross \\
-esecuzione automatizzata processi            & \tick  & \tick  &   \tick & \tick \\
-integrazione con software di parti terze     & \tick  & \tick  &   \tick     & \tick \\
-interfacciamento con utenti                  & \tick  & \tick  &    \tick    & \tick \\
-\inglese{form} statici                       & \tick  & \tick  &    \tick    & \cross \\
-\inglese{form} dinamici                      & \tick  & \tick  & \cross        & \cross \\
-\inglese{form} internazionalizzabili         & \tick  & \cross &   \cross     & \cross \\
-gestione separata dei ruoli                  & \tick  & \cross & \cross       & \tick \\
-\bottomrule
+modellazione                                  & \tick  & \tick  & \tick  & \cross \\
+modellazione tramite \inglese{editor} grafico & \tick  & \tick  & \tick  & \cross \\
+rispetto notazione BPMN                       & \tick  & \cross & \tick  & \cross \\
+importazione/esportazione file XPDL           & \tick  & \tick  & \tick  & \cross \\
+riutilizzo processi da adattare               & \tick  & \tick  & \tick  & \tick  \\
+\inglese{template} di processi                & \tick  & \tick  & \tick  & \tick  \\
+monitoraggio attività di processo (BAM)       & \tick  & \tick  & \tick  & \tick  \\
+sistema di \inglese{reporting}                & \tick  & \tick  & \tick  & \tick  \\
+indicatori grafici stato di avanzamento       & \cross & \tick  & \cross & \cross \\
+ottimizzazione dei processi                   & \tick  & \cross & \cross & \cross \\
+simulazione                                   & \tick  & \cross & \tick  & \cross \\
+sistema di \inglese{reporting} simulazione    & \tick  & \cross & \tick  & \cross \\
+validazione modelli                           & \tick  & \cross & \tick  & \cross \\
+esecuzione automatizzata processi             & \tick  & \tick  & \tick  & \tick  \\
+integrazione con \sw di parti terze           & \tick  & \tick  & \tick  & \tick  \\
+interfacciamento con utenti                   & \tick  & \tick  & \tick  & \tick  \\
+\inglese{form} statici                        & \tick  & \tick  & \tick  & \cross \\
+\inglese{form} dinamici                       & \tick  & \tick  & \cross & \cross \\
+\inglese{form} internazionalizzabili          & \tick  & \cross & \cross & \cross \\
+gestione separata dei ruoli                   & \tick  & \cross & \cross & \tick  \\
+usabilità                                     & \tick  & \tick  & \tick  & \tick  \\
+facilità di installazione                     & \cross & \cross & \cross & \tick  \\
+facilità di apprendimento                     & \cross & \cross & \cross & \cross \\
+facilità utilizzo del \inglese{designer}      & \tick  & \cross & \cross & n.\,p. \\
+disponibilità di documentazione               & \tick  & \tick  & \tick  & \tick  \\
+multipiattaforma                              & \tick  & \tick  & \cross & \tick  \\
+\bottomrule 
 \end{tabular}
 }
+}
+\end{columns}
 \end{frame}
 
 \section{Proposta di soluzione}
