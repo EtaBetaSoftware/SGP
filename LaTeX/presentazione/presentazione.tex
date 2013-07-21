@@ -215,7 +215,7 @@ Nel mondo l'abito\\ fa il monaco:\\ il nostro obiettivo è\\ farvi l'abito, il m
 \column{.49\textwidth}{
 \begin{figure}
   \phantom{\includegraphics<1>[width=.6\textwidth]{hardwork}}
-  \includegraphics<2->[width=.6\textwidth]{hardwork}
+  \includegraphics<2->[width=.5\textwidth]{hardwork}
 \end{figure}
 }
 \end{columns}
@@ -266,27 +266,23 @@ Nel mondo l'abito\\ fa il monaco:\\ il nostro obiettivo è\\ farvi l'abito, il m
 \subsubsection{Resource Breakdown Structure}
 \begin{frame} % #4
 \frametitle{Classificazione delle risorse}
-
-\begin{figure}
+\begin{tikzpicture}
+\node at (0, 0) {
   \includegraphics[width=\textwidth]{RBS}
-\end{figure}
+};
 
-\hspace{7em}\begin{tikzpicture}
-\path[<-,semithick] (0, 0) edge[out=-20,in=160] ++(5.5, -.8);
-\end{tikzpicture}
+\path[->,semithick,blue] (1.3, -2.6) edge[out=180,in=270] ++(-3, 1.2);
 
-\begin{columns}
-\column{.5\textwidth}{
-\begin{figure}
-  \includegraphics[width=.4\textwidth]{hardwork}
-\end{figure}
-}
-\column{.5\textwidth}{
+\node at (2, -3) {
 \rotatebox{20}{\scalebox{.5}{
 \input{../shared/organigramma.tex}
 }}
-}
-\end{columns}
+};
+
+\node at (-3, -3.5) {
+  \includegraphics[width=.2\textwidth]{hardwork}
+};
+\end{tikzpicture}
 \end{frame}
 
 \subsubsection{Pianificazione temporale}
@@ -863,22 +859,26 @@ multipiattaforma                              & \tick  & \tick  & \cross & \tick
 
 \begin{columns}
 \column{.5\textwidth}{
-\only<2->{
-\rotatebox{10}{\begin{tikzpicture}
-\node at (0, 0) {
-Costo finale: \EUR{4.855}!
-};
-\draw[semithick,green] (0,0) circle [x radius=2, y radius=.4];
-\end{tikzpicture}}
-}
-}
-\column{.5\textwidth}{
 \begin{exampleblock}<2->{Consuntivo:}
 \begin{itemize}
   \item no manuale d'uso (doc online)
   \item no soluzione ibrida / ad hoc
 \end{itemize}
 \end{exampleblock}
+}
+\column{.5\textwidth}{
+\uncover<2->{
+\rotatebox{10}{\begin{tikzpicture}
+\node at (0, 0) {
+Costo totale: \EUR{4.915}
+};
+\draw[thick, red] (-1.5, -.3) -- ++(3, .5);
+\draw[thick, red] (-1.5, .2) -- ++(3, -.5);
+\node at (2, -1) {\Huge
+\rotatebox{-10}{\textcolor{green}{\EUR{4.855}!}}
+};
+\end{tikzpicture}}
+}
 }
 \end{columns}
 \end{frame}
