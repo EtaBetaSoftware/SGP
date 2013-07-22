@@ -42,6 +42,11 @@
 \fbox{$\mathcal{ELENA}$}
 \end{center}
 }
+\newcommand{\question}[1]{%
+\textbf{\textit{#1}}
+
+\smallskip
+}
 
 \begin{document}
 
@@ -206,4 +211,22 @@ Infine, si presenta il consuntivo dei costi per lo svolgimento del progetto che 
 \cambioslide
 
 Concludiamo la presentazione con un video in cui si dimostra l'utilizzo di Bonita BPM.
+
+\clearpage
+
+\section{Domande e risposte}
+\question{Potreste usare il nome \team per un'azienda del mondo reale?}
+No, perché il logo sarebbe protetto da diritto d'autore in quanto personaggio Disney. Tuttavia è consentito utilizzare immagini a bassa risoluzione e non per finalità commerciali ma a scopo puramente didattico come nel caso di specie.
+
+\medskip
+
+\question{Perché non avete preso in considerazione le soluzioni di IBM, Microsoft e Oracle?}
+Si trattava di soluzioni commerciali disponibili solo previo pagamento che non sono stati ritenuti adatti allo scopo di \customer che mira ad adottare una soluzione BPM a costi ridotti al fine di testarne l'utilizzo e l'impatto -- in positivo o in negativo -- sul proprio modello di \inglese{business}.
+
+A scopo valutativo, abbiamo inoltre ottenuto una copia di IBM WebSphere Business Modeler Advanced e abbiamo constato che offre delle funzionalità del tutto omologhe a Bonita BPM.
+
+\medskip
+
+\question{Qual è il funzionamento `concreto' della soluzione che avete proposto?}
+È richiesta la presenza di un Application Server basato su Java (es. Tomcat o JBoss) su cui effettuare il \inglese{deployment} dell'\inglese{installation bundle} fornito dal \inglese{team} di sviluppo. È in seguito necessario configurare il Bonita BPM Engine per accedere al database aziendale (MySQL, Oracle, \ldots).
 \end{document}
