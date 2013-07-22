@@ -1,0 +1,147 @@
+\documentclass[a4paper,10pt]{article}
+%*******************************************************************************
+% Codifica e lingua
+%*******************************************************************************
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english,italian]{babel}
+\usepackage{lmodern}
+\usepackage[osf]{mathpazo}
+
+%*******************************************************************************
+% Qualche macro utile a tutti
+%*******************************************************************************
+\newcommand{\inglese}[1]{\foreignlanguage{english}{\textit{#1}}}
+\newcommand{\team}{\textsf{EtaBeta\,Software}\xspace}
+\newcommand{\caName}{BPM-1.0\xspace}
+\newcommand{\sw}{\inglese{software}\xspace}
+\newcommand{\customer}{\textsf{Alpha\,\&\,Partners}\xspace}
+\newcommand{\cambioslide}{%
+\begin{center}
+\Large
+\rule[4pt]{0.2\linewidth}{.7pt} \ding{167} \rule[4pt]{0.2\linewidth}{.7pt}
+\end{center}
+}
+
+\usepackage{enumitem}
+\setlist[itemize]{label=--,noitemsep,nolistsep}
+\usepackage{pifont}
+\usepackage{xspace}
+\usepackage{eurosym}
+\usepackage{layaureo}
+\usepackage{microtype} % qualche accorgimento tipografico
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\section{Introduzione}
+Il materiale che presenteremo oggi si compone di 5 sezioni. La prima parte riguarda la presentazione del piano di progetto redatto per la consulenza di \team. La seconda parte è relativa allo studio di mercato effettuato sul mondo dei \sw BPM, la terza parte è relativa alla presentazione delle caratteristiche dei \sw selezionati. La quarta parte riguarda la proposta di soluzione e, infine, la presentazione terminerà con una \inglese{demo}.
+
+\cambioslide
+
+\section{Prospettiva}
+Per la realizzazione del progetto ci siamo immedesimati nella societa \team con lo scopo di portare a termine un progetto di consulenza per un \sw BPM per la \customer.
+
+\customer ha infatti individuato dei problemi relativi alla gestione dei processi che possono essere riassunti nei seguenti punti
+\begin{itemize}
+  \item analisi necessità dei clienti
+  \item predisposizione offerte
+  \item stesura proposta
+  \item negoziazione proposta
+\end{itemize}
+ha quindi optato perl'acquisto di un \sw che la supporti nella gestione dei processi aziendali.
+
+\cambioslide
+
+Abbiamo immaginato pertanto di essere \team: un'azienda alla quale \team ha chiesto una consulenza per l'acquisto di un \sw BPM.
+
+\cambioslide
+
+\section{Progetto}
+
+\subsection{WBS}
+Iniziamo con l'esposizione della pianificazione elaborata da \team per la consulenza. La prima strategia utilizzata è stata la stesura del \inglese{work breakdown structure} che ci ha permesso di identificare le attività di cui si compone il progetto.
+
+Il WBS ci ha permesso di identificare le relazioni gerarchiche che sussistono tra le varie attività e di identificare quindi i \inglese{work package} che sono riportati nella \inglese{slide}.
+
+\cambioslide
+
+\subsection{OBS}
+Viene qui riportata l'\inglese{organizational breakdown structure} che comprende le risorse umane coinvolte nel progetto. Si noti che \team ha impiegato nel progetto il suo intero organico data la ridotta disponbilità di tempo.
+
+\cambioslide
+
+\subsection{Matrice delle responsabilità}
+Questa \inglese{slide} riporta la matrice dei compiti e delle responsabilità che permette di individuare il livello di partecipazione di ogni risorsa umana nelle attività di progetto, in altre parole, `chi fa cosa'.
+
+\cambioslide
+
+\subsection{Gantt}
+Per quanto riguarda la pianificazione temporale, si riporta il diagramma di Gantt che mette in evidenza la successione temporale delle attività permettendo di inviduare le tempistiche legate allo svolgimento del progetto.
+
+\cambioslide
+
+\subsection{Costi}
+Passiamo ora alla stima dei costi. Sono stati individuati i costi per ogni attività sulla base del costo medio orario dei singoli ruoli di progetto tenendo conto del coivolgimento di ognuno dei soggetti nelle attività in termini di tempo e impegno. È stato preventivato infine un costo totale di \EUR{4.915}.
+
+\cambioslide
+
+\subsection{Rischi}
+In sede di pianficazione sono stati identificati e classificati i fattori di rischio valutando per ognuno di essi la probabilità di incidenza e l'impatto sullo svolgimento del progetto.
+
+\cambioslide
+
+Una simile valutazione si è rivelata particolarmente utile: i `rischi legati al personale' si sono infatti effettivamente verificati all'interno del nostro \inglese{team} di progetto.
+
+\cambioslide
+
+\section{Analisi di mercato}
+
+\subsection{Cosa offre il mercato}
+Passiamo ora alla seconda sezione, dedicata allo studio di mercato. Come primo approccio al mondo dei \sw BPM abbiamo cercato di individuare quali sono i problemi che le soluzioni sono chiamate a risolvere e l'insieme delle caratteristiche comuni che sono alla base di un \emph{buon} \sw BPM.
+
+Dal breve studio di mercato che è stato effettuato è emerso che i protagonisti attuali del mercato sono grandi colossi del calibro di
+\begin{itemize}
+  \item IBM
+  \item Oracle
+  \item Microsoft
+\end{itemize}
+
+\cambioslide
+
+\subsection{Analisi temporale}
+Il mercato nel 2010 si presentava frammentato con una serie di piccoli fornitori (vedi \inglese{slide})\ldots
+\cambioslide
+mentre ad oggi IBM e Oracle detengono il controllo, con una quota rispettivamente del 30\% e del 22\%.
+
+\subsection{Analisi geotopografica}
+Abbiamo inoltre effettuato uno studio geotopografico del marcato dei \sw BPM\@. La seguente cartina rappresenta la situazione degli investimenti in tale settore, da cui emerge che il volume più alto si registra nelle Americhe.
+
+\cambioslide
+
+La seconda cartina (con i toni del rosa) riporta la percentuale di incremento degli investimenti che risulta essere più elevata in Europa. Si tratta di un segnale del fatto che anche in questo campo l'Europa evidenzia un sostanziale ritardo rispetto alle Americhe.
+
+\cambioslide
+
+\section{Software selezionati}
+
+\subsection{Bonita BPM}
+Iniziamo con la presentazione del primo \sw selezionato, Bonita BPM. Si tratta di un \sw complesso e completo che comprende diverse funzionalità dalla modellazione dei processi alla creazione dei \inglese{form} personalizzati.
+L'editor di Bonita si presenta molto intuitivo e permette la creazione di diagrammi rispettando la notazione BPMN~2.0.
+
+Il \sw restituisce dei \inglese{report} periodici sullo stato di avanzamento dei processi e comprende inoltre una funzionalità di ottimizzazione che permette di individuare le criticità e fornisce indicazioni sui possibili interventi correttivi.
+
+\subsection{Bizagi}
+
+\subsection{ProcessMaker}
+
+\subsection{Camunda}
+
+\section{Proposta finale}
+
+\subsection{Analisi comparativa}
+
+\subsection{Motivazioni della scelta}
+
+\subsection{Consuntivo}
+
+\end{document}
