@@ -41,7 +41,7 @@ Il materiale che presenteremo oggi si compone di 5 sezioni. La prima parte rigua
 \section{Prospettiva}
 Per la realizzazione del progetto ci siamo immedesimati nella societa \team con lo scopo di portare a termine un progetto di consulenza per un \sw BPM per la \customer.
 
-\customer ha infatti individuato dei problemi relativi alla gestione dei processi che possono essere riassunti nei seguenti punti
+Quest'ultima ha infatti individuato dei problemi relativi alla gestione dei processi che possono essere riassunti nei seguenti punti
 \begin{itemize}
   \item analisi necessità dei clienti
   \item predisposizione offerte
@@ -52,7 +52,7 @@ ha quindi optato perl'acquisto di un \sw che la supporti nella gestione dei proc
 
 \cambioslide
 
-Abbiamo immaginato pertanto di essere \team: un'azienda alla quale \team ha chiesto una consulenza per l'acquisto di un \sw BPM.
+Abbiamo immaginato pertanto di essere \team: un'azienda alla quale \customer ha chiesto una consulenza per l'acquisto di un \sw BPM.
 
 \cambioslide
 
@@ -81,7 +81,11 @@ Per quanto riguarda la pianificazione temporale, si riporta il diagramma di Gant
 \cambioslide
 
 \subsection{Costi}
-Passiamo ora alla stima dei costi. Sono stati individuati i costi per ogni attività sulla base del costo medio orario dei singoli ruoli di progetto tenendo conto del coivolgimento di ognuno dei soggetti nelle attività in termini di tempo e impegno. È stato preventivato infine un costo totale di \EUR{4.915}.
+Passiamo ora alla stima dei costi. Sono stati individuati i costi per ogni attività sulla base del costo medio orario dei singoli ruoli di progetto tenendo conto del coivolgimento di ognuno dei soggetti nelle attività in termini di tempo e impegno
+
+\cambioslide
+
+È stato preventivato infine un costo totale di \EUR{4.915}.
 
 \cambioslide
 
@@ -133,19 +137,24 @@ Il \sw restituisce dei \inglese{report} periodici sullo stato di avanzamento dei
 \cambioslide
 
 \subsection{Bizagi}
+Il secondo \sw analizzato si compone di due moduli: Bizagi BPM Modeler e Bizagi Suite. Il primo modulo permette una modellazione semplice e intuitiva dei diagrammi grazie soprattutto all'uso di un \inglese{look and feel} consistente con la applicazioni del sistema Windows.
+
+Bizagi BPM Suite si occupa invece della gestione e dell'esecuzione dei processi permettendo anche l'interfacciamento con \sw di \inglese{enterprise resource planning} e \inglese{customer relationship management}.
 
 \cambioslide
 
 \subsection{ProcessMaker}
-ProcessMaker comprende anch'esso un \inglese{editor} grafico per la modellazione dei processi che ricorda lo standard BPMN ma non lo rispetta totalmente. È in grado inoltre di interfacciarsi con servizi esterni per l'invio di email e integra un modulo per la creazione di \inglese{form} statici e dinamici.
+Il terzo \sw che è stato preso in considerazione è ProcessMaker che comprende anch'esso un \inglese{editor} grafico per la modellazione dei processi che ricorda lo standard BPMN ma non lo rispetta totalmente. È in grado inoltre di interfacciarsi con servizi esterni per l'invio di email e integra un modulo per la creazione di \inglese{form} statici e dinamici.
 
 Fra i suoi principali pregi sono da segnalare gli indicatori grafici di avanzamento dei processi nonché il supporto della \inglese{community} che mette a disposizione numerosi \inglese{plug-in} e un'esaustiva documentazione.
 \cambioslide
 
 \subsection{Camunda}
-Camunda rappresenta una soluzione non propriamente completa, dal momento che non comprende alcun \inglese{editor} visuale per la modellazione dei processi né un'assistente per la creazione dei \inglese{form}.
+Infine, come quarto \sw, presentiamo Camunda che non costituisce una propriamente completa, dal momento che non comprende alcun \inglese{editor} visuale di modellazione né un'assistente per la creazione dei \inglese{form}.
 
-Si tratta, invece, di una soluzione pensata per la gestione dell'esecuzione automatica dei processi, per il tracciamento dello stato di avanzamento e per gestire l'interazione con gli utenti finali tramite i \inglese{form} iniziali e intermedi che accompagnano gli esecutori nel corso del ciclo di vita dei processi aziendali.
+Si tratta, invece, di una soluzione pensata per la gestione dell'esecuzione automatica dei processi, per il tracciamento dello stato di avanzamento degli stessi e per gestire l'interazione con gli utenti finali.
+
+Tuttavia è possibile disporre di \inglese{editor} esterni dal momento che il programma è in grado di importare file \texttt{.bpmn}.
 
 \cambioslide
 
@@ -158,9 +167,13 @@ In questa tabella si riporta il risultato dell'attività di \inglese{test} effet
 
 La scelta di \team è ricaduta su Bonita BPM, che si è contraddistinta come la soluzione più potente, completa e al tempo stesso usabile e ben documentata. Fra i punti di forza di Bonita BPM sono da evidenziare il pieno rispetto degli standard, la funzionalità di \inglese{report} e di simulazione, il Bonita Form Builder per la creazione delle interfacce e la separazione dei ruoli degli utenti nell'utilizzo del portale.
 
-Il gran numero di connettori verso servizi esterni che sono disponibili (alcuni nella versione \inglese{free} e altri a pagamento) rende inoltre la soluzione appetibile per un utilizzo in un ambito aziendale come quello di \customer, rendendo inoltre l'azienda indipendente dalla soluzione adottata e in condizioni di rivolgersi a nuovi fornitori in futuro.
+Il gran numero di connettori verso servizi esterni che sono disponibili (alcuni nella versione \inglese{free} e altri a pagamento) rende inoltre la soluzione appetibile per un utilizzo in un ambito aziendale come quello di \customer, rendendo inoltre l'azienda indipendente dalla soluzione adottata e in condizioni di rivolgersi in futuro a nuovi fornitori.
 
 \cambioslide
 
 Infine, si presenta il consuntivo dei costi per lo svolgimento del progetto che si rivela inferiore al preventivo iniziale dal momento che non è stato realizzato un manuale né si è proceduti all'integrazione di soluzioni esistenti in una soluzione ibrida.
+
+\cambioslide
+
+Concludiamo la presentazione con un video in cui si dimostra l'utilizzo di Bonita BPM.
 \end{document}
