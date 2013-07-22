@@ -30,9 +30,10 @@
 \usepackage{booktabs}
 
 %*******************************************************************************
-% Immagini
+% Immagini e multimedia
 %*******************************************************************************
 \graphicspath{{../pictures/}}
+\usepackage{multimedia}
 
 %*******************************************************************************
 % Grafica vettoriale
@@ -725,8 +726,8 @@ Costo totale: \textcolor{red}{\EUR{4.915}}
 \begin{columns}
 \column{.5\textwidth}{
 \begin{tabular}{m{.2\textwidth}m{.8\textwidth}}
-\includegraphics[width=.15\textwidth]{biz_suite_logo} & Bizagi BPM Suite\\
-\includegraphics[width=.15\textwidth]{biz_modeler_logo} & Bizagi Modeler\\
+\includegraphics[width=.13\textwidth]{biz_suite_logo} & Bizagi BPM Suite\\
+\includegraphics[width=.13\textwidth]{biz_modeler_logo} & Bizagi Modeler\\
 \end{tabular}
 }
 \column{.5\textwidth}{
@@ -919,4 +920,8 @@ Costo totale: \EUR{4.915}
 \end{columns}
 \end{frame}
 
+\begin{frame}
+\frametitle{Una dimostrazione pratica\ldots}
+\movie[showcontrols=true,width=.7\textwidth]{BOS}{tutorial.ogg}
+\end{frame}
 \end{document}
