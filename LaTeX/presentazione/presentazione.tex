@@ -104,8 +104,11 @@
 \column{.49\textwidth}{
 \begin{figure}
   \centering
-  \includegraphics[width=.7\textwidth]{alpha}
+  \phantom{\includegraphics<2>[width=.7\textwidth]{alpha}}
+  \includegraphics<1>[width=.7\textwidth]{alpha}
 \end{figure}
+
+\only<1>{
 \begin{block}{Informazioni:}
   \begin{itemize}
     \item \mktg tradizionale \& digitale
@@ -113,6 +116,16 @@
     \item fatturato di \EUR{200.000}
   \end{itemize}
 \end{block}
+}
+
+\only<2>{
+\vskip 1.25cm
+\begin{flushright}
+\begin{tikzpicture}
+  \path[thick,red,->] (0,0) edge[bend left] ++(2, 1);
+\end{tikzpicture}
+\end{flushright}
+}
 
 \begin{alertblock}{Problemi:}
   Difficoltà gestione processi aziendali:
@@ -125,6 +138,7 @@
 }
 
 \column{.49\textwidth}{
+\only<1>{
 \hspace{2em}
 \begin{tikzpicture}
 \node[inner sep=0pt] at (0, 0) {
@@ -138,8 +152,14 @@ Nel mondo l'abito\\ fa il monaco:\\ il nostro obiettivo è\\ farvi l'abito, il m
 }
 };
 \end{tikzpicture}
+}
 
-\uncover<2->{
+\only<2>{
+\begin{figure}
+  \setlength{\fboxsep}{2pt}
+  \fbox{\includegraphics<2->[width=.9\textwidth]{logo}}
+\end{figure}
+
 \begin{block}{Informazioni:}
   \begin{itemize}
     \item consulenza e sviluppo soluzioni \sw aziendali
@@ -147,12 +167,19 @@ Nel mondo l'abito\\ fa il monaco:\\ il nostro obiettivo è\\ farvi l'abito, il m
   \end{itemize}
 \end{block}
 
-\vspace{-10pt}
+\begin{center}
+\begin{tikzpicture}
+  \draw[thick, blue,->] (0, 1) -- (0, .5);
+\end{tikzpicture}
+\end{center}
 
-\begin{figure}
-  \phantom{\includegraphics<1>[width=.7\textwidth]{logo}}
-  \includegraphics<2->[width=.7\textwidth]{logo}
-\end{figure}
+\begin{exampleblock}{Soluzione:}
+\begin{itemize}
+  \item piano di sviluppo biennale
+  \item adozione di una soluzione BPM
+\end{itemize}
+\end{exampleblock}
+\vspace{-10pt}
 }
 }
 \end{columns}
